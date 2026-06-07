@@ -1,0 +1,68 @@
+import Dexie, { type Table } from 'dexie'
+
+export interface Session {
+  id?: number
+  week: number
+  day: string
+  original_day: string | null
+  type: 'run' | 'strength' | 'rest'
+  title: string
+  duration_min: number | null
+  zone: string | null
+  phase: string
+  notes: string | null
+}
+
+export interface Exercise {
+  id?: number
+  session_id: number
+  name: string
+  sets: number
+  reps: number
+  hint: string | null
+}
+
+export interface LoggedSet {
+  id?: number
+  exercise_id: number
+  log_date: string
+  set_number: number
+  reps_done: number | null
+  weight_kg: number | null
+  completed: number
+}
+
+export interface SessionLog {
+  id?: number
+  session_id: number
+  log_date: string
+  rpe: number | null
+  duration_actual_min: number | null
+  notes: string | null
+}
+
+export interface UserMeta {
+  key: string
+  value: string
+}
+
+class Sub75DB extends Dexie {
+  sessions!: Table<Session>
+  exercises!: Table<Exercise>
+  logged_sets!: Table<LoggedSet>
+  session_logs!: Table<SessionLog>
+  user_meta!: Table<UserMeta>
+
+  constructor() {
+    super('sub75')
+    this.version(1).stores({
+      sessions: '++id, week, day, [week+day]',
+      exercises: '++id, session_id',
+      logged_sets: '++id, [exercise_id+log_date+set_number], exercise_id, log_date',
+      session_logs: '++id, session_id, log_date, [session_id+log_date]',
+      user_meta: 'key',
+    })
+  }
+}
+
+export const db = new Sub75DB()
