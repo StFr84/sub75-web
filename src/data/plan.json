@@ -1,0 +1,4273 @@
+{
+  "version": 3,
+  "weeks": [
+    {
+      "week": 1,
+      "phase": "comeback",
+      "startDate": "2026-05-24",
+      "rpeTarget": {
+        "min": 400,
+        "max": 700
+      },
+      "sessions": [
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "LDL Laufen",
+          "durationMin": 40,
+          "zone": "<130 bpm",
+          "notes": "Zweiter Lauf Comeback – unter 130 bpm strikt."
+        },
+        {
+          "day": "tuesday",
+          "type": "rest",
+          "title": "Pause",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Pause / Mobilität"
+        },
+        {
+          "day": "wednesday",
+          "type": "strength",
+          "title": "Grundkraft Körpergewicht",
+          "durationMin": 40,
+          "zone": "RPE max 4",
+          "notes": "Nur Körpergewicht, kein Gewicht.",
+          "exercises": [
+            {
+              "name": "Goblet Squat",
+              "sets": 2,
+              "reps": 10,
+              "hint": "Körpergewicht"
+            },
+            {
+              "name": "Liegestütz",
+              "sets": 2,
+              "reps": 8,
+              "hint": "langsam"
+            },
+            {
+              "name": "Plank",
+              "sets": 2,
+              "reps": 20,
+              "hint": "20s halten"
+            },
+            {
+              "name": "Ausfallschritt",
+              "sets": 2,
+              "reps": 8,
+              "hint": "je Seite, langsam"
+            }
+          ]
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "LDL Laufen",
+          "durationMin": 55,
+          "zone": "<130 bpm",
+          "notes": "LDL locker, gleiche Regeln."
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "saturday",
+          "type": "rest",
+          "title": "Pause",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Pause oder Spaziergang"
+        },
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "LDL – Erster Lauf nach Krankheit",
+          "durationMin": 38,
+          "zone": "<130 bpm",
+          "notes": "Erster Lauf des Neustartes. HF unter 130 bpm. RPE max 4. HRV vorher messen – bei Rot: Spaziergang statt Lauf."
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "phase": "comeback",
+      "startDate": "2026-05-31",
+      "rpeTarget": {
+        "min": 400,
+        "max": 700
+      },
+      "sessions": [
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "LDL Laufen",
+          "durationMin": 50,
+          "zone": "<137 bpm",
+          "notes": "LDL locker, HF unter 137 bpm."
+        },
+        {
+          "day": "tuesday",
+          "type": "rest",
+          "title": "Pause",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Pause / Mobilität"
+        },
+        {
+          "day": "wednesday",
+          "type": "strength",
+          "title": "Grundkraft leicht",
+          "durationMin": 50,
+          "zone": "RPE 5",
+          "notes": "Erste Gewichte, sehr moderat.",
+          "exercises": [
+            {
+              "name": "Goblet Squat",
+              "sets": 3,
+              "reps": 10,
+              "hint": "leichtes Gewicht"
+            },
+            {
+              "name": "Romanian Deadlift",
+              "sets": 3,
+              "reps": 10,
+              "hint": "leicht"
+            },
+            {
+              "name": "Rudern am Kabelzug",
+              "sets": 3,
+              "reps": 10,
+              "hint": "leicht"
+            },
+            {
+              "name": "Liegestütz",
+              "sets": 3,
+              "reps": 10,
+              "hint": ""
+            },
+            {
+              "name": "Plank",
+              "sets": 3,
+              "reps": 30,
+              "hint": "30s halten"
+            }
+          ]
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "LDL Laufen",
+          "durationMin": 70,
+          "zone": "<137 bpm",
+          "notes": "LDL locker."
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "saturday",
+          "type": "strength",
+          "title": "Körpergewicht optional",
+          "durationMin": 30,
+          "zone": "RPE max 4",
+          "notes": "Optional – nur wenn HRV grün.",
+          "exercises": [
+            {
+              "name": "Goblet Squat",
+              "sets": 2,
+              "reps": 10,
+              "hint": "leicht"
+            },
+            {
+              "name": "Liegestütz",
+              "sets": 2,
+              "reps": 10,
+              "hint": ""
+            },
+            {
+              "name": "Plank",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s"
+            }
+          ]
+        },
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "LDL Lang",
+          "durationMin": 65,
+          "zone": "<137 bpm",
+          "notes": "LDL lang. HF bis 145 bpm erlaubt wenn gut erholt."
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "phase": "base",
+      "startDate": "2026-06-07",
+      "rpeTarget": {
+        "min": 1000,
+        "max": 1500
+      },
+      "sessions": [
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "MDL Laufen",
+          "durationMin": 60,
+          "zone": "138-158 bpm",
+          "notes": "MDL gleichmäßig."
+        },
+        {
+          "day": "tuesday",
+          "type": "strength",
+          "title": "Grundkraft",
+          "durationMin": 60,
+          "zone": "RPE 6-7",
+          "notes": "Grundkraft Beine + Rücken. Kraft VOR Ausdauer.",
+          "exercises": [
+            {
+              "name": "Goblet Squat",
+              "sets": 4,
+              "reps": 10,
+              "hint": "Gewicht progressiv steigern"
+            },
+            {
+              "name": "Romanian Deadlift",
+              "sets": 4,
+              "reps": 10,
+              "hint": "kontrolliert"
+            },
+            {
+              "name": "Lat-Pulldown / Klimmzug",
+              "sets": 4,
+              "reps": 8,
+              "hint": "Schulterbreite"
+            },
+            {
+              "name": "Liegestütz / Bankdrücken",
+              "sets": 4,
+              "reps": 10,
+              "hint": ""
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 3,
+              "reps": 30,
+              "hint": "30m"
+            },
+            {
+              "name": "Plank",
+              "sets": 3,
+              "reps": 45,
+              "hint": "45s halten"
+            }
+          ]
+        },
+        {
+          "day": "wednesday",
+          "type": "strength",
+          "title": "Stationstechnik",
+          "durationMin": 60,
+          "zone": "technisch",
+          "notes": "SkiErg + RowErg Technikfokus, Burpee und Sandbag einschleifen.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 4,
+              "reps": 500,
+              "hint": "500m, Technikfokus, 90s Pause"
+            },
+            {
+              "name": "RowErg",
+              "sets": 4,
+              "reps": 500,
+              "hint": "500m, Technikfokus, 90s Pause"
+            },
+            {
+              "name": "Burpee Technik",
+              "sets": 3,
+              "reps": 10,
+              "hint": "langsam, Bewegungsablauf"
+            },
+            {
+              "name": "Sandbag Aufnehmen/Ablegen",
+              "sets": 3,
+              "reps": 8,
+              "hint": "Technik ohne Last"
+            }
+          ]
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "MDL + Fahrtspiel",
+          "durationMin": 80,
+          "zone": "138-158 bpm",
+          "notes": "MDL mit Fahrtspiel: 3×5 Min MDL/TDL-Wechsel."
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "saturday",
+          "type": "strength",
+          "title": "Kraft + Core + Hyrox leicht",
+          "durationMin": 60,
+          "zone": "RPE 5-6",
+          "notes": "Kraft + Core + leichte Hyrox-Stationen.",
+          "exercises": [
+            {
+              "name": "Sandbag Squat",
+              "sets": 3,
+              "reps": 10,
+              "hint": "leichtes Gewicht"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 3,
+              "reps": 5,
+              "hint": "langsam, technisch"
+            },
+            {
+              "name": "Sled Push Simulation",
+              "sets": 3,
+              "reps": 20,
+              "hint": "20m, Körpergewicht + leicht"
+            },
+            {
+              "name": "Hollow Body",
+              "sets": 3,
+              "reps": 20,
+              "hint": "20s halten"
+            },
+            {
+              "name": "Side Plank",
+              "sets": 3,
+              "reps": 20,
+              "hint": "20s je Seite"
+            },
+            {
+              "name": "Dead Bug",
+              "sets": 3,
+              "reps": 10,
+              "hint": "je Seite"
+            }
+          ]
+        },
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "LDL Langer Lauf",
+          "durationMin": 80,
+          "zone": "<137 bpm",
+          "notes": "LDL lang, strikt unter 137 bpm."
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "phase": "base",
+      "startDate": "2026-06-14",
+      "rpeTarget": {
+        "min": 1000,
+        "max": 1500
+      },
+      "sessions": [
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "MDL Laufen",
+          "durationMin": 65,
+          "zone": "138-158 bpm",
+          "notes": "MDL gleichmäßig."
+        },
+        {
+          "day": "tuesday",
+          "type": "strength",
+          "title": "Grundkraft",
+          "durationMin": 60,
+          "zone": "RPE 6-7",
+          "notes": "Grundkraft Beine + Rücken. Kraft VOR Ausdauer.",
+          "exercises": [
+            {
+              "name": "Goblet Squat",
+              "sets": 4,
+              "reps": 10,
+              "hint": "Gewicht progressiv steigern"
+            },
+            {
+              "name": "Romanian Deadlift",
+              "sets": 4,
+              "reps": 10,
+              "hint": "kontrolliert"
+            },
+            {
+              "name": "Lat-Pulldown / Klimmzug",
+              "sets": 4,
+              "reps": 8,
+              "hint": "Schulterbreite"
+            },
+            {
+              "name": "Liegestütz / Bankdrücken",
+              "sets": 4,
+              "reps": 10,
+              "hint": ""
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 3,
+              "reps": 30,
+              "hint": "30m"
+            },
+            {
+              "name": "Plank",
+              "sets": 3,
+              "reps": 45,
+              "hint": "45s halten"
+            }
+          ]
+        },
+        {
+          "day": "wednesday",
+          "type": "strength",
+          "title": "Stationstechnik",
+          "durationMin": 60,
+          "zone": "technisch",
+          "notes": "SkiErg + RowErg Technikfokus, Burpee und Sandbag einschleifen.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 4,
+              "reps": 500,
+              "hint": "500m, Technikfokus, 90s Pause"
+            },
+            {
+              "name": "RowErg",
+              "sets": 4,
+              "reps": 500,
+              "hint": "500m, Technikfokus, 90s Pause"
+            },
+            {
+              "name": "Burpee Technik",
+              "sets": 3,
+              "reps": 10,
+              "hint": "langsam, Bewegungsablauf"
+            },
+            {
+              "name": "Sandbag Aufnehmen/Ablegen",
+              "sets": 3,
+              "reps": 8,
+              "hint": "Technik ohne Last"
+            }
+          ]
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "MDL + Fahrtspiel",
+          "durationMin": 85,
+          "zone": "138-158 bpm",
+          "notes": "MDL mit Fahrtspiel: 3×5 Min MDL/TDL-Wechsel."
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "saturday",
+          "type": "strength",
+          "title": "Kraft + Core + Hyrox leicht",
+          "durationMin": 60,
+          "zone": "RPE 5-6",
+          "notes": "Kraft + Core + leichte Hyrox-Stationen.",
+          "exercises": [
+            {
+              "name": "Sandbag Squat",
+              "sets": 3,
+              "reps": 10,
+              "hint": "leichtes Gewicht"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 3,
+              "reps": 5,
+              "hint": "langsam, technisch"
+            },
+            {
+              "name": "Sled Push Simulation",
+              "sets": 3,
+              "reps": 20,
+              "hint": "20m, Körpergewicht + leicht"
+            },
+            {
+              "name": "Hollow Body",
+              "sets": 3,
+              "reps": 20,
+              "hint": "20s halten"
+            },
+            {
+              "name": "Side Plank",
+              "sets": 3,
+              "reps": 20,
+              "hint": "20s je Seite"
+            },
+            {
+              "name": "Dead Bug",
+              "sets": 3,
+              "reps": 10,
+              "hint": "je Seite"
+            }
+          ]
+        },
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "LDL Langer Lauf",
+          "durationMin": 85,
+          "zone": "<137 bpm",
+          "notes": "LDL lang, strikt unter 137 bpm."
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "phase": "base",
+      "startDate": "2026-06-21",
+      "rpeTarget": {
+        "min": 1100,
+        "max": 1500
+      },
+      "sessions": [
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "MDL Laufen",
+          "durationMin": 65,
+          "zone": "138-158 bpm",
+          "notes": "MDL gleichmäßig."
+        },
+        {
+          "day": "tuesday",
+          "type": "strength",
+          "title": "Grundkraft",
+          "durationMin": 60,
+          "zone": "RPE 6-7",
+          "notes": "Grundkraft Beine + Rücken. Kraft VOR Ausdauer.",
+          "exercises": [
+            {
+              "name": "Goblet Squat",
+              "sets": 4,
+              "reps": 10,
+              "hint": "Gewicht progressiv steigern"
+            },
+            {
+              "name": "Romanian Deadlift",
+              "sets": 4,
+              "reps": 10,
+              "hint": "kontrolliert"
+            },
+            {
+              "name": "Lat-Pulldown / Klimmzug",
+              "sets": 4,
+              "reps": 8,
+              "hint": "Schulterbreite"
+            },
+            {
+              "name": "Liegestütz / Bankdrücken",
+              "sets": 4,
+              "reps": 10,
+              "hint": ""
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 3,
+              "reps": 30,
+              "hint": "30m"
+            },
+            {
+              "name": "Plank",
+              "sets": 3,
+              "reps": 45,
+              "hint": "45s halten"
+            }
+          ]
+        },
+        {
+          "day": "wednesday",
+          "type": "strength",
+          "title": "Stationstechnik",
+          "durationMin": 60,
+          "zone": "technisch",
+          "notes": "SkiErg + RowErg Technikfokus, Burpee und Sandbag einschleifen.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 4,
+              "reps": 500,
+              "hint": "500m, Technikfokus, 90s Pause"
+            },
+            {
+              "name": "RowErg",
+              "sets": 4,
+              "reps": 500,
+              "hint": "500m, Technikfokus, 90s Pause"
+            },
+            {
+              "name": "Burpee Technik",
+              "sets": 3,
+              "reps": 10,
+              "hint": "langsam, Bewegungsablauf"
+            },
+            {
+              "name": "Sandbag Aufnehmen/Ablegen",
+              "sets": 3,
+              "reps": 8,
+              "hint": "Technik ohne Last"
+            }
+          ]
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "MDL + Fahrtspiel",
+          "durationMin": 90,
+          "zone": "138-158 bpm",
+          "notes": "MDL mit Fahrtspiel: 3×5 Min MDL/TDL-Wechsel."
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "saturday",
+          "type": "strength",
+          "title": "Kraft + Core + Hyrox leicht",
+          "durationMin": 60,
+          "zone": "RPE 5-6",
+          "notes": "Kraft + Core + leichte Hyrox-Stationen.",
+          "exercises": [
+            {
+              "name": "Sandbag Squat",
+              "sets": 3,
+              "reps": 10,
+              "hint": "leichtes Gewicht"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 3,
+              "reps": 5,
+              "hint": "langsam, technisch"
+            },
+            {
+              "name": "Sled Push Simulation",
+              "sets": 3,
+              "reps": 20,
+              "hint": "20m, Körpergewicht + leicht"
+            },
+            {
+              "name": "Hollow Body",
+              "sets": 3,
+              "reps": 20,
+              "hint": "20s halten"
+            },
+            {
+              "name": "Side Plank",
+              "sets": 3,
+              "reps": 20,
+              "hint": "20s je Seite"
+            },
+            {
+              "name": "Dead Bug",
+              "sets": 3,
+              "reps": 10,
+              "hint": "je Seite"
+            }
+          ]
+        },
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "LDL Langer Lauf",
+          "durationMin": 90,
+          "zone": "<137 bpm",
+          "notes": "LDL lang, strikt unter 137 bpm."
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "phase": "base",
+      "startDate": "2026-06-28",
+      "rpeTarget": {
+        "min": 700,
+        "max": 1000
+      },
+      "sessions": [
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "LDL locker",
+          "durationMin": 45,
+          "zone": "<137 bpm",
+          "notes": "Deload – LDL locker."
+        },
+        {
+          "day": "tuesday",
+          "type": "strength",
+          "title": "Kraft leicht",
+          "durationMin": 40,
+          "zone": "RPE max 5",
+          "notes": "Deload: −2 Sätze, −20% Gewicht.",
+          "exercises": [
+            {
+              "name": "Goblet Squat",
+              "sets": 2,
+              "reps": 8,
+              "hint": "leicht"
+            },
+            {
+              "name": "Romanian Deadlift",
+              "sets": 2,
+              "reps": 8,
+              "hint": "leicht"
+            },
+            {
+              "name": "Lat-Pulldown",
+              "sets": 2,
+              "reps": 8,
+              "hint": "leicht"
+            },
+            {
+              "name": "Plank",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s"
+            }
+          ]
+        },
+        {
+          "day": "wednesday",
+          "type": "strength",
+          "title": "SkiErg + RowErg Technik",
+          "durationMin": 40,
+          "zone": "locker",
+          "notes": "Deload: nur Technik.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 3,
+              "reps": 500,
+              "hint": "Technik, locker"
+            },
+            {
+              "name": "RowErg",
+              "sets": 3,
+              "reps": 500,
+              "hint": "Technik, locker"
+            }
+          ]
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "MDL locker",
+          "durationMin": 60,
+          "zone": "138-158 bpm",
+          "notes": "Deload – MDL locker."
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "saturday",
+          "type": "strength",
+          "title": "Core + leichte Stationen",
+          "durationMin": 40,
+          "zone": "locker",
+          "notes": "Deload: Core + Burpee Technik.",
+          "exercises": [
+            {
+              "name": "Burpee Technik",
+              "sets": 3,
+              "reps": 6,
+              "hint": "langsam"
+            },
+            {
+              "name": "Hollow Body",
+              "sets": 3,
+              "reps": 20,
+              "hint": "20s"
+            },
+            {
+              "name": "Side Plank",
+              "sets": 3,
+              "reps": 20,
+              "hint": "20s je Seite"
+            }
+          ]
+        },
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "LDL",
+          "durationMin": 70,
+          "zone": "<137 bpm",
+          "notes": "Deload – LDL lang."
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "phase": "base",
+      "startDate": "2026-07-05",
+      "rpeTarget": {
+        "min": 1000,
+        "max": 1500
+      },
+      "sessions": [
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "MDL Laufen",
+          "durationMin": 60,
+          "zone": "138-158 bpm",
+          "notes": "MDL gleichmäßig."
+        },
+        {
+          "day": "tuesday",
+          "type": "strength",
+          "title": "Grundkraft",
+          "durationMin": 60,
+          "zone": "RPE 6-7",
+          "notes": "Grundkraft.",
+          "exercises": [
+            {
+              "name": "Goblet Squat",
+              "sets": 4,
+              "reps": 10,
+              "hint": "Gewicht progressiv steigern"
+            },
+            {
+              "name": "Romanian Deadlift",
+              "sets": 4,
+              "reps": 10,
+              "hint": "kontrolliert"
+            },
+            {
+              "name": "Lat-Pulldown / Klimmzug",
+              "sets": 4,
+              "reps": 8,
+              "hint": "Schulterbreite"
+            },
+            {
+              "name": "Liegestütz / Bankdrücken",
+              "sets": 4,
+              "reps": 10,
+              "hint": ""
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 3,
+              "reps": 30,
+              "hint": "30m"
+            },
+            {
+              "name": "Plank",
+              "sets": 3,
+              "reps": 45,
+              "hint": "45s halten"
+            }
+          ]
+        },
+        {
+          "day": "wednesday",
+          "type": "strength",
+          "title": "Stationstechnik",
+          "durationMin": 60,
+          "zone": "technisch",
+          "notes": "SkiErg + RowErg, Burpee.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 4,
+              "reps": 500,
+              "hint": "500m, Technikfokus, 90s Pause"
+            },
+            {
+              "name": "RowErg",
+              "sets": 4,
+              "reps": 500,
+              "hint": "500m, Technikfokus, 90s Pause"
+            },
+            {
+              "name": "Burpee Technik",
+              "sets": 3,
+              "reps": 10,
+              "hint": "langsam, Bewegungsablauf"
+            },
+            {
+              "name": "Sandbag Aufnehmen/Ablegen",
+              "sets": 3,
+              "reps": 8,
+              "hint": "Technik ohne Last"
+            }
+          ]
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "MDL + erste TDL-Intervalle",
+          "durationMin": 90,
+          "zone": "138-161 bpm",
+          "notes": "MDL + 3×3 Min bei TDL-Pace (159-161 bpm), je 3 Min Trabpause."
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "saturday",
+          "type": "strength",
+          "title": "Kraft + Core + Burpee erhöht",
+          "durationMin": 60,
+          "zone": "RPE 5-6",
+          "notes": "Burpee Broad Jump auf 4×6 erhöht.",
+          "exercises": [
+            {
+              "name": "Sandbag Squat",
+              "sets": 3,
+              "reps": 10,
+              "hint": "leichtes Gewicht"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 4,
+              "reps": 6,
+              "hint": "langsam, technisch"
+            },
+            {
+              "name": "Sled Push Simulation",
+              "sets": 3,
+              "reps": 20,
+              "hint": "20m leicht"
+            },
+            {
+              "name": "Hollow Body",
+              "sets": 3,
+              "reps": 20,
+              "hint": "20s"
+            },
+            {
+              "name": "Dead Bug",
+              "sets": 3,
+              "reps": 10,
+              "hint": "je Seite"
+            }
+          ]
+        },
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "LDL Langer Lauf",
+          "durationMin": 90,
+          "zone": "<137 bpm",
+          "notes": "LDL lang, strikt unter 137 bpm."
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "phase": "base",
+      "startDate": "2026-07-12",
+      "rpeTarget": {
+        "min": 1100,
+        "max": 1600
+      },
+      "sessions": [
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "MDL Laufen",
+          "durationMin": 65,
+          "zone": "138-158 bpm",
+          "notes": "MDL gleichmäßig."
+        },
+        {
+          "day": "tuesday",
+          "type": "strength",
+          "title": "Grundkraft",
+          "durationMin": 60,
+          "zone": "RPE 7",
+          "notes": "Grundkraft – Gewichte erhöhen.",
+          "exercises": [
+            {
+              "name": "Goblet Squat",
+              "sets": 4,
+              "reps": 10,
+              "hint": "Gewicht progressiv steigern"
+            },
+            {
+              "name": "Romanian Deadlift",
+              "sets": 4,
+              "reps": 10,
+              "hint": "kontrolliert"
+            },
+            {
+              "name": "Lat-Pulldown / Klimmzug",
+              "sets": 4,
+              "reps": 8,
+              "hint": "Schulterbreite"
+            },
+            {
+              "name": "Liegestütz / Bankdrücken",
+              "sets": 4,
+              "reps": 10,
+              "hint": ""
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 3,
+              "reps": 30,
+              "hint": "30m"
+            },
+            {
+              "name": "Plank",
+              "sets": 3,
+              "reps": 45,
+              "hint": "45s halten"
+            }
+          ]
+        },
+        {
+          "day": "wednesday",
+          "type": "strength",
+          "title": "Stationstechnik erhöht",
+          "durationMin": 60,
+          "zone": "technisch",
+          "notes": "SkiErg + RowErg auf 5×500m. Sandbag Lunges einführen.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 5,
+              "reps": 500,
+              "hint": "500m, 90s Pause"
+            },
+            {
+              "name": "RowErg",
+              "sets": 5,
+              "reps": 500,
+              "hint": "500m, 90s Pause"
+            },
+            {
+              "name": "Burpee Technik",
+              "sets": 3,
+              "reps": 10,
+              "hint": "langsam"
+            },
+            {
+              "name": "Sandbag Lunges",
+              "sets": 3,
+              "reps": 10,
+              "hint": "10m – erstes Mal, technisch"
+            }
+          ]
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "MDL + TDL-Intervalle",
+          "durationMin": 90,
+          "zone": "138-161 bpm",
+          "notes": "MDL + 4×3 Min bei TDL-Pace (159-161 bpm), 3 Min Trabpause."
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "saturday",
+          "type": "strength",
+          "title": "Kraft + Burpee erhöht",
+          "durationMin": 60,
+          "zone": "RPE 6",
+          "notes": "Burpee Broad Jump auf 4×8.",
+          "exercises": [
+            {
+              "name": "Sandbag Squat",
+              "sets": 3,
+              "reps": 12,
+              "hint": "leichtes Gewicht"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 4,
+              "reps": 8,
+              "hint": "technisch, etwas flotter"
+            },
+            {
+              "name": "Sled Push Simulation",
+              "sets": 3,
+              "reps": 20,
+              "hint": "20m"
+            },
+            {
+              "name": "Hollow Body",
+              "sets": 3,
+              "reps": 25,
+              "hint": "25s"
+            },
+            {
+              "name": "Side Plank",
+              "sets": 3,
+              "reps": 25,
+              "hint": "25s"
+            }
+          ]
+        },
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "LDL Langer Lauf",
+          "durationMin": 90,
+          "zone": "<137 bpm",
+          "notes": "LDL lang."
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "phase": "base",
+      "startDate": "2026-07-19",
+      "rpeTarget": {
+        "min": 700,
+        "max": 1000
+      },
+      "sessions": [
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "LDL locker",
+          "durationMin": 45,
+          "zone": "<137 bpm",
+          "notes": "Deload – LDL locker."
+        },
+        {
+          "day": "tuesday",
+          "type": "strength",
+          "title": "Kraft leicht",
+          "durationMin": 40,
+          "zone": "RPE max 5",
+          "notes": "Deload: −2 Sätze, −20% Gewicht.",
+          "exercises": [
+            {
+              "name": "Goblet Squat",
+              "sets": 2,
+              "reps": 8,
+              "hint": "leicht"
+            },
+            {
+              "name": "Romanian Deadlift",
+              "sets": 2,
+              "reps": 8,
+              "hint": "leicht"
+            },
+            {
+              "name": "Lat-Pulldown",
+              "sets": 2,
+              "reps": 8,
+              "hint": "leicht"
+            },
+            {
+              "name": "Plank",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s"
+            }
+          ]
+        },
+        {
+          "day": "wednesday",
+          "type": "strength",
+          "title": "SkiErg + RowErg Technik",
+          "durationMin": 40,
+          "zone": "locker",
+          "notes": "Deload: nur Technik.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 3,
+              "reps": 500,
+              "hint": "Technik, locker"
+            },
+            {
+              "name": "RowErg",
+              "sets": 3,
+              "reps": 500,
+              "hint": "Technik, locker"
+            }
+          ]
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "MDL locker",
+          "durationMin": 60,
+          "zone": "138-158 bpm",
+          "notes": "Deload – MDL locker."
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "saturday",
+          "type": "strength",
+          "title": "Core + leichte Stationen",
+          "durationMin": 40,
+          "zone": "locker",
+          "notes": "Deload: Core + Burpee Technik.",
+          "exercises": [
+            {
+              "name": "Burpee Technik",
+              "sets": 3,
+              "reps": 6,
+              "hint": "langsam"
+            },
+            {
+              "name": "Hollow Body",
+              "sets": 3,
+              "reps": 20,
+              "hint": "20s"
+            },
+            {
+              "name": "Side Plank",
+              "sets": 3,
+              "reps": 20,
+              "hint": "20s je Seite"
+            }
+          ]
+        },
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "LDL",
+          "durationMin": 70,
+          "zone": "<137 bpm",
+          "notes": "Deload – LDL lang."
+        }
+      ]
+    },
+    {
+      "week": 10,
+      "phase": "build1",
+      "startDate": "2026-07-26",
+      "rpeTarget": {
+        "min": 1500,
+        "max": 2000
+      },
+      "sessions": [
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "HIIT",
+          "durationMin": 60,
+          "zone": "Max >165 bpm",
+          "notes": "HIIT: 4×4 Min bei >165 bpm, 3 Min Trabpause. Build-Einstieg."
+        },
+        {
+          "day": "tuesday",
+          "type": "strength",
+          "title": "Kraftausdauer",
+          "durationMin": 60,
+          "zone": "moderat-intensiv",
+          "notes": "Kraftausdauer: Sandbag, Burpee, Sled. Prio-1-Schwächen.",
+          "exercises": [
+            {
+              "name": "Sandbag Lunges",
+              "sets": 4,
+              "reps": 20,
+              "hint": "20m, Gewicht progressiv Richtung 20kg"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 4,
+              "reps": 10,
+              "hint": "zügig, mit Sprung"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 4,
+              "reps": 20,
+              "hint": "20m"
+            },
+            {
+              "name": "Sled Pull",
+              "sets": 4,
+              "reps": 20,
+              "hint": "20m"
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 3,
+              "reps": 40,
+              "hint": "40m schwer"
+            }
+          ]
+        },
+        {
+          "day": "wednesday",
+          "type": "strength",
+          "title": "Transitions + Circuit",
+          "durationMin": 60,
+          "zone": "moderat",
+          "notes": "2-3 Stationen + Läufe. Transitions üben – kein Anhalten.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 3,
+              "reps": 500,
+              "hint": "500m, sofort weiter"
+            },
+            {
+              "name": "Lauf",
+              "sets": 3,
+              "reps": 400,
+              "hint": "400m"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 3,
+              "reps": 20,
+              "hint": "20 Reps"
+            },
+            {
+              "name": "Lauf kurz",
+              "sets": 3,
+              "reps": 200,
+              "hint": "200m, dann 3 Min Pause"
+            }
+          ]
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "Intervalle",
+          "durationMin": 90,
+          "zone": "ETL 12,4-13,4 km/h",
+          "notes": "5×1 km bei ETL-Pace (12,4-13,4 km/h), 90s Pause."
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "saturday",
+          "type": "strength",
+          "title": "Hyrox-Simulation",
+          "durationMin": 60,
+          "zone": "intensiv",
+          "notes": "3-Stationen-Simulation. Wettkampftempo, max 30s Pause zwischen Stationen.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m nach 1km Lauf"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m nach 1km Lauf"
+            },
+            {
+              "name": "Sandbag Lunges",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m nach 1km Lauf"
+            }
+          ]
+        },
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "Langer Lauf MDL",
+          "durationMin": 90,
+          "zone": "138-158 bpm",
+          "notes": "MDL gleichmäßig."
+        }
+      ]
+    },
+    {
+      "week": 11,
+      "phase": "build1",
+      "startDate": "2026-08-02",
+      "rpeTarget": {
+        "min": 1500,
+        "max": 2000
+      },
+      "sessions": [
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "HIIT",
+          "durationMin": 60,
+          "zone": "Max >165 bpm",
+          "notes": "HIIT: 4×4 Min bei >165 bpm, 3 Min Trabpause."
+        },
+        {
+          "day": "tuesday",
+          "type": "strength",
+          "title": "Kraftausdauer",
+          "durationMin": 60,
+          "zone": "moderat-intensiv",
+          "notes": "Kraftausdauer: Sandbag, Burpee, Sled. Prio-1-Schwächen.",
+          "exercises": [
+            {
+              "name": "Sandbag Lunges",
+              "sets": 4,
+              "reps": 20,
+              "hint": "20m, Gewicht progressiv Richtung 20kg"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 4,
+              "reps": 10,
+              "hint": "zügig, mit Sprung"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 4,
+              "reps": 20,
+              "hint": "20m"
+            },
+            {
+              "name": "Sled Pull",
+              "sets": 4,
+              "reps": 20,
+              "hint": "20m"
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 3,
+              "reps": 40,
+              "hint": "40m schwer"
+            }
+          ]
+        },
+        {
+          "day": "wednesday",
+          "type": "strength",
+          "title": "Transitions + Circuit",
+          "durationMin": 60,
+          "zone": "moderat",
+          "notes": "2-3 Stationen + Läufe. Transitions üben – kein Anhalten.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 3,
+              "reps": 500,
+              "hint": "500m, sofort weiter"
+            },
+            {
+              "name": "Lauf",
+              "sets": 3,
+              "reps": 400,
+              "hint": "400m"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 3,
+              "reps": 20,
+              "hint": "20 Reps"
+            },
+            {
+              "name": "Lauf kurz",
+              "sets": 3,
+              "reps": 200,
+              "hint": "200m, dann 3 Min Pause"
+            }
+          ]
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "Intervalle",
+          "durationMin": 90,
+          "zone": "ETL 12,4-13,4 km/h",
+          "notes": "6×1 km bei ETL-Pace (12,4-13,4 km/h), 90s Pause."
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "saturday",
+          "type": "strength",
+          "title": "Hyrox-Simulation",
+          "durationMin": 60,
+          "zone": "intensiv",
+          "notes": "3-Stationen-Simulation. Wettkampftempo, max 30s Pause zwischen Stationen.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m nach 1km Lauf"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m nach 1km Lauf"
+            },
+            {
+              "name": "Sandbag Lunges",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m nach 1km Lauf"
+            }
+          ]
+        },
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "Langer Lauf MDL",
+          "durationMin": 90,
+          "zone": "138-158 bpm",
+          "notes": "MDL gleichmäßig."
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "phase": "build1",
+      "startDate": "2026-08-09",
+      "rpeTarget": {
+        "min": 1600,
+        "max": 2100
+      },
+      "sessions": [
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "HIIT",
+          "durationMin": 60,
+          "zone": "Max >165 bpm",
+          "notes": "HIIT: 4×4 Min bei >165 bpm, 3 Min Trabpause."
+        },
+        {
+          "day": "tuesday",
+          "type": "strength",
+          "title": "Kraftausdauer",
+          "durationMin": 60,
+          "zone": "moderat-intensiv",
+          "notes": "Kraftausdauer: Sandbag, Burpee, Sled. Prio-1-Schwächen.",
+          "exercises": [
+            {
+              "name": "Sandbag Lunges",
+              "sets": 4,
+              "reps": 20,
+              "hint": "20m, Gewicht progressiv Richtung 20kg"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 4,
+              "reps": 10,
+              "hint": "zügig, mit Sprung"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 4,
+              "reps": 20,
+              "hint": "20m"
+            },
+            {
+              "name": "Sled Pull",
+              "sets": 4,
+              "reps": 20,
+              "hint": "20m"
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 3,
+              "reps": 40,
+              "hint": "40m schwer"
+            }
+          ]
+        },
+        {
+          "day": "wednesday",
+          "type": "strength",
+          "title": "Transitions + Circuit",
+          "durationMin": 60,
+          "zone": "moderat",
+          "notes": "2-3 Stationen + Läufe. Transitions üben – kein Anhalten.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 3,
+              "reps": 500,
+              "hint": "500m, sofort weiter"
+            },
+            {
+              "name": "Lauf",
+              "sets": 3,
+              "reps": 400,
+              "hint": "400m"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 3,
+              "reps": 20,
+              "hint": "20 Reps"
+            },
+            {
+              "name": "Lauf kurz",
+              "sets": 3,
+              "reps": 200,
+              "hint": "200m, dann 3 Min Pause"
+            }
+          ]
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "Intervalle",
+          "durationMin": 90,
+          "zone": "ETL 12,4-13,4 km/h",
+          "notes": "6×1 km bei ETL-Pace (12,4-13,4 km/h), 90s Pause."
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "saturday",
+          "type": "strength",
+          "title": "Hyrox-Simulation",
+          "durationMin": 60,
+          "zone": "intensiv",
+          "notes": "3-Stationen-Simulation. Wettkampftempo, max 30s Pause zwischen Stationen.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m nach 1km Lauf"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m nach 1km Lauf"
+            },
+            {
+              "name": "Sandbag Lunges",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m nach 1km Lauf"
+            }
+          ]
+        },
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "Langer Lauf MDL",
+          "durationMin": 90,
+          "zone": "138-158 bpm",
+          "notes": "MDL gleichmäßig."
+        }
+      ]
+    },
+    {
+      "week": 13,
+      "phase": "build1",
+      "startDate": "2026-08-16",
+      "rpeTarget": {
+        "min": 800,
+        "max": 1200
+      },
+      "sessions": [
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "MDL locker",
+          "durationMin": 45,
+          "zone": "138-158 bpm",
+          "notes": "Deload – MDL locker."
+        },
+        {
+          "day": "tuesday",
+          "type": "strength",
+          "title": "Kraft leicht",
+          "durationMin": 45,
+          "zone": "RPE max 5",
+          "notes": "Deload: −2 Sätze, −20% Gewicht.",
+          "exercises": [
+            {
+              "name": "Goblet Squat",
+              "sets": 2,
+              "reps": 8,
+              "hint": "leicht"
+            },
+            {
+              "name": "Romanian Deadlift",
+              "sets": 2,
+              "reps": 8,
+              "hint": "leicht"
+            },
+            {
+              "name": "Lat-Pulldown",
+              "sets": 2,
+              "reps": 8,
+              "hint": "leicht"
+            },
+            {
+              "name": "Plank",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s"
+            }
+          ]
+        },
+        {
+          "day": "wednesday",
+          "type": "strength",
+          "title": "Stationstechnik locker",
+          "durationMin": 45,
+          "zone": "locker",
+          "notes": "Deload: Technik locker.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 3,
+              "reps": 500,
+              "hint": "locker"
+            },
+            {
+              "name": "RowErg",
+              "sets": 3,
+              "reps": 500,
+              "hint": "locker"
+            },
+            {
+              "name": "Burpee Technik",
+              "sets": 3,
+              "reps": 8,
+              "hint": "langsam"
+            }
+          ]
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "MDL",
+          "durationMin": 60,
+          "zone": "138-158 bpm",
+          "notes": "Deload – MDL."
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "saturday",
+          "type": "strength",
+          "title": "Leichte Stationen + Core",
+          "durationMin": 45,
+          "zone": "locker",
+          "notes": "Deload: leicht.",
+          "exercises": [
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 3,
+              "reps": 8,
+              "hint": "locker"
+            },
+            {
+              "name": "Hollow Body",
+              "sets": 3,
+              "reps": 20,
+              "hint": "20s"
+            },
+            {
+              "name": "Side Plank",
+              "sets": 3,
+              "reps": 20,
+              "hint": "20s"
+            }
+          ]
+        },
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "LDL",
+          "durationMin": 70,
+          "zone": "<137 bpm",
+          "notes": "Deload – LDL lang."
+        }
+      ]
+    },
+    {
+      "week": 14,
+      "phase": "build1",
+      "startDate": "2026-08-23",
+      "rpeTarget": {
+        "min": 1500,
+        "max": 2000
+      },
+      "sessions": [
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "HIIT",
+          "durationMin": 60,
+          "zone": "Max >165 bpm",
+          "notes": "HIIT: 5×4 Min bei >165 bpm, 3 Min Pause."
+        },
+        {
+          "day": "tuesday",
+          "type": "strength",
+          "title": "Kraftausdauer Aufbau",
+          "durationMin": 60,
+          "zone": "intensiv",
+          "notes": "Kraftausdauer. Sandbag-Gewicht steigern.",
+          "exercises": [
+            {
+              "name": "Sandbag Lunges",
+              "sets": 4,
+              "reps": 20,
+              "hint": "20m, Gewicht progressiv Richtung 20kg"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 4,
+              "reps": 10,
+              "hint": "zügig, mit Sprung"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 4,
+              "reps": 20,
+              "hint": "20m"
+            },
+            {
+              "name": "Sled Pull",
+              "sets": 4,
+              "reps": 20,
+              "hint": "20m"
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 3,
+              "reps": 40,
+              "hint": "40m schwer"
+            }
+          ]
+        },
+        {
+          "day": "wednesday",
+          "type": "strength",
+          "title": "Transitions Circuit",
+          "durationMin": 60,
+          "zone": "moderat",
+          "notes": "3-Stationen-Circuit mit Transitions. Übergänge ohne Pause.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 3,
+              "reps": 500,
+              "hint": "500m, sofort weiter"
+            },
+            {
+              "name": "Lauf",
+              "sets": 3,
+              "reps": 400,
+              "hint": "400m"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 3,
+              "reps": 20,
+              "hint": "20 Reps"
+            },
+            {
+              "name": "Lauf kurz",
+              "sets": 3,
+              "reps": 200,
+              "hint": "200m, dann 3 Min Pause"
+            }
+          ]
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "Intervalle",
+          "durationMin": 90,
+          "zone": "ETL 12,4-13,4 km/h",
+          "notes": "6×1 km ETL-Pace, 90s Pause."
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "saturday",
+          "type": "strength",
+          "title": "Hyrox-Simulation",
+          "durationMin": 60,
+          "zone": "intensiv",
+          "notes": "Simulation mit Wettkampftempo. Max 30s Pause.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m nach 1km Lauf"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m nach 1km Lauf"
+            },
+            {
+              "name": "Sandbag Lunges",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m nach 1km Lauf"
+            }
+          ]
+        },
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "Langer Lauf MDL/TDL",
+          "durationMin": 90,
+          "zone": "138-161 bpm",
+          "notes": "MDL bis TDL-Anteil gegen Ende."
+        }
+      ]
+    },
+    {
+      "week": 15,
+      "phase": "build1",
+      "startDate": "2026-08-30",
+      "rpeTarget": {
+        "min": 1700,
+        "max": 2200
+      },
+      "sessions": [
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "HIIT",
+          "durationMin": 60,
+          "zone": "Max >165 bpm",
+          "notes": "HIIT: 5×4 Min bei >165 bpm, 3 Min Pause."
+        },
+        {
+          "day": "tuesday",
+          "type": "strength",
+          "title": "Kraftausdauer Aufbau",
+          "durationMin": 60,
+          "zone": "intensiv",
+          "notes": "Kraftausdauer. Sandbag-Gewicht steigern.",
+          "exercises": [
+            {
+              "name": "Sandbag Lunges",
+              "sets": 4,
+              "reps": 20,
+              "hint": "20m, Gewicht progressiv Richtung 20kg"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 4,
+              "reps": 10,
+              "hint": "zügig, mit Sprung"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 4,
+              "reps": 20,
+              "hint": "20m"
+            },
+            {
+              "name": "Sled Pull",
+              "sets": 4,
+              "reps": 20,
+              "hint": "20m"
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 3,
+              "reps": 40,
+              "hint": "40m schwer"
+            }
+          ]
+        },
+        {
+          "day": "wednesday",
+          "type": "strength",
+          "title": "Transitions Circuit",
+          "durationMin": 60,
+          "zone": "moderat",
+          "notes": "3-Stationen-Circuit mit Transitions. Übergänge ohne Pause.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 3,
+              "reps": 500,
+              "hint": "500m, sofort weiter"
+            },
+            {
+              "name": "Lauf",
+              "sets": 3,
+              "reps": 400,
+              "hint": "400m"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 3,
+              "reps": 20,
+              "hint": "20 Reps"
+            },
+            {
+              "name": "Lauf kurz",
+              "sets": 3,
+              "reps": 200,
+              "hint": "200m, dann 3 Min Pause"
+            }
+          ]
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "Intervalle",
+          "durationMin": 90,
+          "zone": "ETL 12,4-13,4 km/h",
+          "notes": "7×1 km ETL-Pace, 90s Pause."
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "saturday",
+          "type": "strength",
+          "title": "Hyrox-Simulation",
+          "durationMin": 60,
+          "zone": "intensiv",
+          "notes": "Simulation mit Wettkampftempo. Max 30s Pause.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m nach 1km Lauf"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m nach 1km Lauf"
+            },
+            {
+              "name": "Sled Pull",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m nach 1km Lauf"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 1,
+              "reps": 80,
+              "hint": "80m nach 1km Lauf"
+            },
+            {
+              "name": "RowErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m nach 1km Lauf"
+            }
+          ]
+        },
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "Langer Lauf MDL/TDL",
+          "durationMin": 90,
+          "zone": "138-161 bpm",
+          "notes": "MDL bis TDL-Anteil gegen Ende."
+        }
+      ]
+    },
+    {
+      "week": 16,
+      "phase": "build1",
+      "startDate": "2026-09-06",
+      "rpeTarget": {
+        "min": 1800,
+        "max": 2300
+      },
+      "sessions": [
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "HIIT",
+          "durationMin": 60,
+          "zone": "Max >165 bpm",
+          "notes": "HIIT: 5×4 Min >165 bpm, 3 Min Pause."
+        },
+        {
+          "day": "tuesday",
+          "type": "strength",
+          "title": "Kraftausdauer Wettkampfgewichte",
+          "durationMin": 60,
+          "zone": "intensiv",
+          "notes": "Wettkampfgewichte anstreben.",
+          "exercises": [
+            {
+              "name": "Sandbag Lunges",
+              "sets": 4,
+              "reps": 20,
+              "hint": "20m – 20kg Wettkampfgewicht"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 4,
+              "reps": 12,
+              "hint": "zügig, mit Sprung, Wettkampftempo"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 4,
+              "reps": 25,
+              "hint": "25m – Richtung 102kg"
+            },
+            {
+              "name": "Sled Pull",
+              "sets": 4,
+              "reps": 25,
+              "hint": "25m – Richtung 78kg"
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 3,
+              "reps": 40,
+              "hint": "40m – 2×24kg"
+            }
+          ]
+        },
+        {
+          "day": "wednesday",
+          "type": "strength",
+          "title": "Vollsimulation Segments",
+          "durationMin": 60,
+          "zone": "Wettkampftempo",
+          "notes": "4-5 Stationen + Läufe, Transitions ohne Pause.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 3,
+              "reps": 500,
+              "hint": "500m"
+            },
+            {
+              "name": "Lauf",
+              "sets": 3,
+              "reps": 400,
+              "hint": "400m"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 3,
+              "reps": 20,
+              "hint": "zügig"
+            },
+            {
+              "name": "Lauf",
+              "sets": 3,
+              "reps": 400,
+              "hint": "400m, 3 Min Pause"
+            }
+          ]
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "Intervalle",
+          "durationMin": 90,
+          "zone": "ETL 12,4-13,4 km/h",
+          "notes": "8×1 km ETL-Pace, 90s Pause."
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "saturday",
+          "type": "strength",
+          "title": "Hyrox-Halbsimulation",
+          "durationMin": 75,
+          "zone": "Wettkampftempo",
+          "notes": "5-6 Stationen vollständig, Wettkampfgewicht.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m nach 1km Lauf"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m nach 1km Lauf"
+            },
+            {
+              "name": "Sled Pull",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m nach 1km Lauf"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 1,
+              "reps": 80,
+              "hint": "80m nach 1km Lauf"
+            },
+            {
+              "name": "RowErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m nach 1km Lauf"
+            }
+          ]
+        },
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "Langer Lauf TDL/MDL",
+          "durationMin": 90,
+          "zone": "158-161 bpm",
+          "notes": "TDL/MDL-Mix, gleichmäßig."
+        }
+      ]
+    },
+    {
+      "week": 17,
+      "phase": "build1",
+      "startDate": "2026-09-13",
+      "rpeTarget": {
+        "min": 800,
+        "max": 1200
+      },
+      "sessions": [
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "MDL locker",
+          "durationMin": 45,
+          "zone": "138-158 bpm",
+          "notes": "Deload – MDL locker."
+        },
+        {
+          "day": "tuesday",
+          "type": "strength",
+          "title": "Kraft leicht",
+          "durationMin": 45,
+          "zone": "RPE max 5",
+          "notes": "Deload: −2 Sätze, −20% Gewicht.",
+          "exercises": [
+            {
+              "name": "Goblet Squat",
+              "sets": 2,
+              "reps": 8,
+              "hint": "leicht"
+            },
+            {
+              "name": "Romanian Deadlift",
+              "sets": 2,
+              "reps": 8,
+              "hint": "leicht"
+            },
+            {
+              "name": "Lat-Pulldown",
+              "sets": 2,
+              "reps": 8,
+              "hint": "leicht"
+            },
+            {
+              "name": "Plank",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s"
+            }
+          ]
+        },
+        {
+          "day": "wednesday",
+          "type": "strength",
+          "title": "Stationstechnik locker",
+          "durationMin": 45,
+          "zone": "locker",
+          "notes": "Deload: Technik locker.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 3,
+              "reps": 500,
+              "hint": "locker"
+            },
+            {
+              "name": "RowErg",
+              "sets": 3,
+              "reps": 500,
+              "hint": "locker"
+            },
+            {
+              "name": "Burpee Technik",
+              "sets": 3,
+              "reps": 8,
+              "hint": "langsam"
+            }
+          ]
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "MDL",
+          "durationMin": 60,
+          "zone": "138-158 bpm",
+          "notes": "Deload – MDL."
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "saturday",
+          "type": "strength",
+          "title": "Leichte Stationen + Core",
+          "durationMin": 45,
+          "zone": "locker",
+          "notes": "Deload: leicht.",
+          "exercises": [
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 3,
+              "reps": 8,
+              "hint": "locker"
+            },
+            {
+              "name": "Hollow Body",
+              "sets": 3,
+              "reps": 20,
+              "hint": "20s"
+            },
+            {
+              "name": "Side Plank",
+              "sets": 3,
+              "reps": 20,
+              "hint": "20s"
+            }
+          ]
+        },
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "LDL",
+          "durationMin": 70,
+          "zone": "<137 bpm",
+          "notes": "Deload – LDL lang."
+        }
+      ]
+    },
+    {
+      "week": 18,
+      "phase": "build1",
+      "startDate": "2026-09-20",
+      "rpeTarget": {
+        "min": 1800,
+        "max": 2400
+      },
+      "sessions": [
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "HIIT",
+          "durationMin": 60,
+          "zone": "Max >165 bpm",
+          "notes": "HIIT: 5×4 Min >165 bpm, 3 Min Pause."
+        },
+        {
+          "day": "tuesday",
+          "type": "strength",
+          "title": "Alle 8 Stationen",
+          "durationMin": 60,
+          "zone": "Wettkampftempo",
+          "notes": "Alle 8 Stationen, Wettkampfgewicht.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m Wettkampftempo"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m / 102kg Wettkampftempo"
+            },
+            {
+              "name": "Sled Pull",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m / 78kg Wettkampftempo"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 1,
+              "reps": 80,
+              "hint": "80m – Prio 1 Schwäche"
+            },
+            {
+              "name": "RowErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m Wettkampftempo"
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 1,
+              "reps": 200,
+              "hint": "200m / 2×24kg"
+            },
+            {
+              "name": "Sandbag Lunges",
+              "sets": 1,
+              "reps": 100,
+              "hint": "100m / 20kg – Prio 1 Schwäche"
+            },
+            {
+              "name": "Wall Balls",
+              "sets": 1,
+              "reps": 100,
+              "hint": "100 Reps / 6kg"
+            }
+          ]
+        },
+        {
+          "day": "wednesday",
+          "type": "strength",
+          "title": "6-Stationen-Simulation",
+          "durationMin": 75,
+          "zone": "Wettkampftempo",
+          "notes": "6 Stationen + Läufe, Transitions ohne Pause.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m nach 1km Lauf"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m nach 1km Lauf"
+            },
+            {
+              "name": "Sled Pull",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m nach 1km Lauf"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 1,
+              "reps": 80,
+              "hint": "80m nach 1km Lauf"
+            },
+            {
+              "name": "RowErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m nach 1km Lauf"
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 1,
+              "reps": 200,
+              "hint": "200m / 2×24kg nach 1km Lauf"
+            }
+          ]
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "Intervalle",
+          "durationMin": 90,
+          "zone": "ETL 12,4-13,4 km/h",
+          "notes": "8×1 km ETL-Pace, 90s Pause."
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "saturday",
+          "type": "strength",
+          "title": "Halbsimulation alle 8 Stationen",
+          "durationMin": 75,
+          "zone": "Wettkampftempo",
+          "notes": "Alle 8 Stationen, halbe Streckenlängen, Wettkampfgewicht.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m Wettkampftempo"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m / 102kg Wettkampftempo"
+            },
+            {
+              "name": "Sled Pull",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m / 78kg Wettkampftempo"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 1,
+              "reps": 80,
+              "hint": "80m – Prio 1 Schwäche"
+            },
+            {
+              "name": "RowErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m Wettkampftempo"
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 1,
+              "reps": 200,
+              "hint": "200m / 2×24kg"
+            },
+            {
+              "name": "Sandbag Lunges",
+              "sets": 1,
+              "reps": 100,
+              "hint": "100m / 20kg – Prio 1 Schwäche"
+            },
+            {
+              "name": "Wall Balls",
+              "sets": 1,
+              "reps": 100,
+              "hint": "100 Reps / 6kg"
+            }
+          ]
+        },
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "Langer Lauf TDL",
+          "durationMin": 90,
+          "zone": "159-161 bpm",
+          "notes": "TDL, gleichmäßig."
+        }
+      ]
+    },
+    {
+      "week": 19,
+      "phase": "build1",
+      "startDate": "2026-09-27",
+      "rpeTarget": {
+        "min": 2000,
+        "max": 2600
+      },
+      "sessions": [
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "HIIT",
+          "durationMin": 60,
+          "zone": "Max >165 bpm",
+          "notes": "HIIT: 5×4 Min >165 bpm, 3 Min Pause."
+        },
+        {
+          "day": "tuesday",
+          "type": "strength",
+          "title": "Alle 8 Stationen",
+          "durationMin": 60,
+          "zone": "Wettkampftempo",
+          "notes": "Alle 8 Stationen vollständig, Wettkampfgewicht.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m Wettkampftempo"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m / 102kg Wettkampftempo"
+            },
+            {
+              "name": "Sled Pull",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m / 78kg Wettkampftempo"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 1,
+              "reps": 80,
+              "hint": "80m – Prio 1 Schwäche"
+            },
+            {
+              "name": "RowErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m Wettkampftempo"
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 1,
+              "reps": 200,
+              "hint": "200m / 2×24kg"
+            },
+            {
+              "name": "Sandbag Lunges",
+              "sets": 1,
+              "reps": 100,
+              "hint": "100m / 20kg – Prio 1 Schwäche"
+            },
+            {
+              "name": "Wall Balls",
+              "sets": 1,
+              "reps": 100,
+              "hint": "100 Reps / 6kg"
+            }
+          ]
+        },
+        {
+          "day": "wednesday",
+          "type": "strength",
+          "title": "Vollsimulation 7-8 Stationen",
+          "durationMin": 90,
+          "zone": "Wettkampftempo",
+          "notes": "7-8 Stationen + 8×1 km Läufe. Zeit messen. Transitions ohne Anhalten.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m nach 1km Lauf"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m / 102kg nach 1km Lauf"
+            },
+            {
+              "name": "Sled Pull",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m / 78kg nach 1km Lauf"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 1,
+              "reps": 80,
+              "hint": "80m nach 1km Lauf"
+            },
+            {
+              "name": "RowErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m nach 1km Lauf"
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 1,
+              "reps": 200,
+              "hint": "200m / 2×24kg nach 1km Lauf"
+            },
+            {
+              "name": "Sandbag Lunges",
+              "sets": 1,
+              "reps": 100,
+              "hint": "100m / 20kg nach 1km Lauf"
+            },
+            {
+              "name": "Wall Balls",
+              "sets": 1,
+              "reps": 100,
+              "hint": "100 Reps / 6kg / 3m Ziel nach 1km Lauf"
+            }
+          ]
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "Intervalle",
+          "durationMin": 90,
+          "zone": "ETL 12,4-13,4 km/h",
+          "notes": "8×1 km ETL-Pace, 90s Pause."
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "saturday",
+          "type": "strength",
+          "title": "¾ Race Simulation",
+          "durationMin": 75,
+          "zone": "Wettkampftempo",
+          "notes": "Alle 8 Stationen, ¾-Streckenlänge, Wettkampfgewicht.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m Wettkampftempo"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m / 102kg Wettkampftempo"
+            },
+            {
+              "name": "Sled Pull",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m / 78kg Wettkampftempo"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 1,
+              "reps": 80,
+              "hint": "80m – Prio 1 Schwäche"
+            },
+            {
+              "name": "RowErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m Wettkampftempo"
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 1,
+              "reps": 200,
+              "hint": "200m / 2×24kg"
+            },
+            {
+              "name": "Sandbag Lunges",
+              "sets": 1,
+              "reps": 100,
+              "hint": "100m / 20kg – Prio 1 Schwäche"
+            },
+            {
+              "name": "Wall Balls",
+              "sets": 1,
+              "reps": 100,
+              "hint": "100 Reps / 6kg"
+            }
+          ]
+        },
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "MDL/TDL Mix",
+          "durationMin": 90,
+          "zone": "138-161 bpm",
+          "notes": "MDL/TDL Mix."
+        }
+      ]
+    },
+    {
+      "week": 20,
+      "phase": "peak1",
+      "startDate": "2026-10-04",
+      "rpeTarget": {
+        "min": 2000,
+        "max": 2800
+      },
+      "sessions": [
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "HIIT",
+          "durationMin": 60,
+          "zone": "Max >165 bpm",
+          "notes": "HIIT: 5×4 Min >165 bpm, 3 Min Pause."
+        },
+        {
+          "day": "tuesday",
+          "type": "strength",
+          "title": "Alle 8 Stationen",
+          "durationMin": 60,
+          "zone": "Wettkampftempo",
+          "notes": "Alle 8 Stationen, Wettkampfgewicht.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m Wettkampftempo"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m / 102kg Wettkampftempo"
+            },
+            {
+              "name": "Sled Pull",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m / 78kg Wettkampftempo"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 1,
+              "reps": 80,
+              "hint": "80m – Prio 1 Schwäche"
+            },
+            {
+              "name": "RowErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m Wettkampftempo"
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 1,
+              "reps": 200,
+              "hint": "200m / 2×24kg"
+            },
+            {
+              "name": "Sandbag Lunges",
+              "sets": 1,
+              "reps": 100,
+              "hint": "100m / 20kg – Prio 1 Schwäche"
+            },
+            {
+              "name": "Wall Balls",
+              "sets": 1,
+              "reps": 100,
+              "hint": "100 Reps / 6kg"
+            }
+          ]
+        },
+        {
+          "day": "wednesday",
+          "type": "strength",
+          "title": "Vollsimulation",
+          "durationMin": 90,
+          "zone": "Wettkampftempo",
+          "notes": "Alle 8 Stationen + 8×1 km. Zeit messen. Transitions.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m nach 1km Lauf"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m / 102kg nach 1km Lauf"
+            },
+            {
+              "name": "Sled Pull",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m / 78kg nach 1km Lauf"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 1,
+              "reps": 80,
+              "hint": "80m nach 1km Lauf"
+            },
+            {
+              "name": "RowErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m nach 1km Lauf"
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 1,
+              "reps": 200,
+              "hint": "200m / 2×24kg nach 1km Lauf"
+            },
+            {
+              "name": "Sandbag Lunges",
+              "sets": 1,
+              "reps": 100,
+              "hint": "100m / 20kg nach 1km Lauf"
+            },
+            {
+              "name": "Wall Balls",
+              "sets": 1,
+              "reps": 100,
+              "hint": "100 Reps / 6kg / 3m Ziel nach 1km Lauf"
+            }
+          ]
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "Rennsimulation",
+          "durationMin": 90,
+          "zone": "Wettkampftempo",
+          "notes": "Volle Runde Wettkampftempo. Transitions konsequent üben."
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "saturday",
+          "type": "strength",
+          "title": "Technik leicht",
+          "durationMin": 45,
+          "zone": "locker",
+          "notes": "Stationstechnik locker, Core, kein Max.",
+          "exercises": [
+            {
+              "name": "Burpee Technik",
+              "sets": 3,
+              "reps": 8,
+              "hint": "locker"
+            },
+            {
+              "name": "Sandbag Lunges Technik",
+              "sets": 3,
+              "reps": 10,
+              "hint": "10m locker"
+            },
+            {
+              "name": "Hollow Body",
+              "sets": 3,
+              "reps": 25,
+              "hint": "25s"
+            },
+            {
+              "name": "Plank",
+              "sets": 3,
+              "reps": 45,
+              "hint": "45s"
+            }
+          ]
+        },
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "Race-Pace Lauf",
+          "durationMin": 60,
+          "zone": "ETL/Max >161 bpm",
+          "notes": "8-10 km bei Wettkampfpace (>13,4 km/h). Letzte Intensität vor Taper."
+        }
+      ]
+    },
+    {
+      "week": 21,
+      "phase": "peak1",
+      "startDate": "2026-10-11",
+      "rpeTarget": {
+        "min": 800,
+        "max": 1200
+      },
+      "sessions": [
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "MDL locker",
+          "durationMin": 40,
+          "zone": "138-158 bpm",
+          "notes": "Taper – MDL locker."
+        },
+        {
+          "day": "tuesday",
+          "type": "strength",
+          "title": "Stationen leicht",
+          "durationMin": 40,
+          "zone": "leicht",
+          "notes": "Taper: 2-3 Stationen kurz, Technik.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 2,
+              "reps": 500,
+              "hint": "locker"
+            },
+            {
+              "name": "Burpee Technik",
+              "sets": 2,
+              "reps": 6,
+              "hint": "langsam"
+            },
+            {
+              "name": "Sandbag Lunges Technik",
+              "sets": 2,
+              "reps": 10,
+              "hint": "10m locker"
+            }
+          ]
+        },
+        {
+          "day": "wednesday",
+          "type": "rest",
+          "title": "Pause",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Pause / Mobilität"
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "Aktivierung",
+          "durationMin": 50,
+          "zone": "ETL 12,4-13,4 km/h",
+          "notes": "3×1 km bei ETL-Pace, locker auslaufen."
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "saturday",
+          "type": "rest",
+          "title": "Pause",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Anreise Karlsruhe / Verpflegung vorbereiten / Beine hoch"
+        },
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "LDL/MDL",
+          "durationMin": 50,
+          "zone": "<148 bpm",
+          "notes": "Taper – Beine locker halten."
+        }
+      ]
+    },
+    {
+      "week": 22,
+      "phase": "race1",
+      "startDate": "2026-10-18",
+      "rpeTarget": {
+        "min": 0,
+        "max": 0
+      },
+      "sessions": [
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "Aktive Erholung",
+          "durationMin": 30,
+          "zone": "<130 bpm",
+          "notes": "Post-Race: sehr locker, Beine ausschütteln."
+        },
+        {
+          "day": "tuesday",
+          "type": "rest",
+          "title": "Pause",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Pause / Regeneration"
+        },
+        {
+          "day": "wednesday",
+          "type": "rest",
+          "title": "Pause",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Pause"
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "Locker LDL",
+          "durationMin": 30,
+          "zone": "<137 bpm",
+          "notes": "Post-Race: kurzer LDL, nur wenn gut."
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "saturday",
+          "type": "rest",
+          "title": "Pause",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Erholung"
+        },
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "WETTKAMPF: Hyrox Karlsruhe · Ziel Sub 75 Min",
+          "durationMin": 80,
+          "zone": "Wettkampf",
+          "notes": "Sub 75 Min. Lauftaktik: Läufe 1-2 konservativ (5:20/km), Läufe 3-6 Zielpace (5:00/km), Läufe 7-8 alles geben."
+        }
+      ]
+    },
+    {
+      "week": 23,
+      "phase": "recovery",
+      "startDate": "2026-10-25",
+      "rpeTarget": {
+        "min": 300,
+        "max": 600
+      },
+      "sessions": [
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "LDL Aktive Erholung",
+          "durationMin": 35,
+          "zone": "<137 bpm",
+          "notes": "Post-Race Woche 1: sehr locker."
+        },
+        {
+          "day": "tuesday",
+          "type": "rest",
+          "title": "Pause",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Pause"
+        },
+        {
+          "day": "wednesday",
+          "type": "rest",
+          "title": "Pause",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Pause / Mobilität"
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "LDL locker",
+          "durationMin": 40,
+          "zone": "<137 bpm",
+          "notes": "Kurzer LDL."
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "saturday",
+          "type": "rest",
+          "title": "Pause",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Spaziergang optional"
+        },
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "LDL",
+          "durationMin": 45,
+          "zone": "<137 bpm",
+          "notes": "Woche 1 Recovery – LDL locker."
+        }
+      ]
+    },
+    {
+      "week": 24,
+      "phase": "recovery",
+      "startDate": "2026-11-01",
+      "rpeTarget": {
+        "min": 500,
+        "max": 800
+      },
+      "sessions": [
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "LDL locker",
+          "durationMin": 45,
+          "zone": "<137 bpm",
+          "notes": "Recovery Woche 2 – MDL darf eingebaut werden wenn HRV grün."
+        },
+        {
+          "day": "tuesday",
+          "type": "rest",
+          "title": "Pause",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Pause / Mobilität"
+        },
+        {
+          "day": "wednesday",
+          "type": "strength",
+          "title": "Grundkraft leicht",
+          "durationMin": 45,
+          "zone": "RPE max 5",
+          "notes": "Erste Kraft nach Race. Sehr leicht.",
+          "exercises": [
+            {
+              "name": "Goblet Squat",
+              "sets": 3,
+              "reps": 10,
+              "hint": "leicht"
+            },
+            {
+              "name": "Romanian Deadlift",
+              "sets": 3,
+              "reps": 10,
+              "hint": "leicht"
+            },
+            {
+              "name": "Plank",
+              "sets": 3,
+              "reps": 30,
+              "hint": "30s"
+            }
+          ]
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "MDL locker",
+          "durationMin": 50,
+          "zone": "138-158 bpm",
+          "notes": "Erster MDL post-race."
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "saturday",
+          "type": "rest",
+          "title": "Pause",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Aktive Erholung"
+        },
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "MDL",
+          "durationMin": 60,
+          "zone": "138-158 bpm",
+          "notes": "Recovery abschluss – MDL gleichmäßig."
+        }
+      ]
+    },
+    {
+      "week": 25,
+      "phase": "build2",
+      "startDate": "2026-11-08",
+      "rpeTarget": {
+        "min": 1800,
+        "max": 2400
+      },
+      "sessions": [
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "HIIT",
+          "durationMin": 60,
+          "zone": "Max >165 bpm",
+          "notes": "HIIT: 5×4 Min >165 bpm, 3 Min Pause."
+        },
+        {
+          "day": "tuesday",
+          "type": "strength",
+          "title": "Schwächen-Fokus",
+          "durationMin": 60,
+          "zone": "intensiv",
+          "notes": "Aus Karlsruhe-Analyse: schwächste Stationen gezielt angehen.",
+          "exercises": [
+            {
+              "name": "Sandbag Lunges",
+              "sets": 4,
+              "reps": 20,
+              "hint": "20m – 20kg Wettkampfgewicht"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 4,
+              "reps": 12,
+              "hint": "zügig, mit Sprung, Wettkampftempo"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 4,
+              "reps": 25,
+              "hint": "25m – Richtung 102kg"
+            },
+            {
+              "name": "Sled Pull",
+              "sets": 4,
+              "reps": 25,
+              "hint": "25m – Richtung 78kg"
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 3,
+              "reps": 40,
+              "hint": "40m – 2×24kg"
+            }
+          ]
+        },
+        {
+          "day": "wednesday",
+          "type": "strength",
+          "title": "Vollsimulation",
+          "durationMin": 75,
+          "zone": "Wettkampftempo",
+          "notes": "Alle 8 Stationen + 8×1 km. Zeit messen, Transitions.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m nach 1km Lauf"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m / 102kg nach 1km Lauf"
+            },
+            {
+              "name": "Sled Pull",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m / 78kg nach 1km Lauf"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 1,
+              "reps": 80,
+              "hint": "80m nach 1km Lauf"
+            },
+            {
+              "name": "RowErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m nach 1km Lauf"
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 1,
+              "reps": 200,
+              "hint": "200m / 2×24kg nach 1km Lauf"
+            },
+            {
+              "name": "Sandbag Lunges",
+              "sets": 1,
+              "reps": 100,
+              "hint": "100m / 20kg nach 1km Lauf"
+            },
+            {
+              "name": "Wall Balls",
+              "sets": 1,
+              "reps": 100,
+              "hint": "100 Reps / 6kg / 3m Ziel nach 1km Lauf"
+            }
+          ]
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "Intervalle schnell",
+          "durationMin": 90,
+          "zone": "ETL/Max 12,4+ km/h",
+          "notes": "7×1 km, Ziel 4:45 min/km. 90s Pause."
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "saturday",
+          "type": "strength",
+          "title": "Race Simulation",
+          "durationMin": 75,
+          "zone": "Wettkampftempo",
+          "notes": "Volle Simulation. Sub-70-Pace. Zeit messen.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m nach 1km Lauf"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m / 102kg nach 1km Lauf"
+            },
+            {
+              "name": "Sled Pull",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m / 78kg nach 1km Lauf"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 1,
+              "reps": 80,
+              "hint": "80m nach 1km Lauf"
+            },
+            {
+              "name": "RowErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m nach 1km Lauf"
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 1,
+              "reps": 200,
+              "hint": "200m / 2×24kg nach 1km Lauf"
+            },
+            {
+              "name": "Sandbag Lunges",
+              "sets": 1,
+              "reps": 100,
+              "hint": "100m / 20kg nach 1km Lauf"
+            },
+            {
+              "name": "Wall Balls",
+              "sets": 1,
+              "reps": 100,
+              "hint": "100 Reps / 6kg / 3m Ziel nach 1km Lauf"
+            }
+          ]
+        },
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "Langer Lauf TDL/ETL",
+          "durationMin": 75,
+          "zone": "159-165 bpm",
+          "notes": "TDL/ETL-Mix, gleichmäßig."
+        }
+      ]
+    },
+    {
+      "week": 26,
+      "phase": "build2",
+      "startDate": "2026-11-15",
+      "rpeTarget": {
+        "min": 2000,
+        "max": 2600
+      },
+      "sessions": [
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "HIIT",
+          "durationMin": 60,
+          "zone": "Max >165 bpm",
+          "notes": "HIIT: 5×4 Min >165 bpm, 3 Min Pause."
+        },
+        {
+          "day": "tuesday",
+          "type": "strength",
+          "title": "Schwächen-Fokus",
+          "durationMin": 60,
+          "zone": "intensiv",
+          "notes": "Aus Karlsruhe-Analyse: schwächste Stationen gezielt angehen.",
+          "exercises": [
+            {
+              "name": "Sandbag Lunges",
+              "sets": 4,
+              "reps": 20,
+              "hint": "20m – 20kg Wettkampfgewicht"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 4,
+              "reps": 12,
+              "hint": "zügig, mit Sprung, Wettkampftempo"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 4,
+              "reps": 25,
+              "hint": "25m – Richtung 102kg"
+            },
+            {
+              "name": "Sled Pull",
+              "sets": 4,
+              "reps": 25,
+              "hint": "25m – Richtung 78kg"
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 3,
+              "reps": 40,
+              "hint": "40m – 2×24kg"
+            }
+          ]
+        },
+        {
+          "day": "wednesday",
+          "type": "strength",
+          "title": "Vollsimulation",
+          "durationMin": 75,
+          "zone": "Wettkampftempo",
+          "notes": "Alle 8 Stationen + 8×1 km. Zeit messen, Transitions.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m nach 1km Lauf"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m / 102kg nach 1km Lauf"
+            },
+            {
+              "name": "Sled Pull",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m / 78kg nach 1km Lauf"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 1,
+              "reps": 80,
+              "hint": "80m nach 1km Lauf"
+            },
+            {
+              "name": "RowErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m nach 1km Lauf"
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 1,
+              "reps": 200,
+              "hint": "200m / 2×24kg nach 1km Lauf"
+            },
+            {
+              "name": "Sandbag Lunges",
+              "sets": 1,
+              "reps": 100,
+              "hint": "100m / 20kg nach 1km Lauf"
+            },
+            {
+              "name": "Wall Balls",
+              "sets": 1,
+              "reps": 100,
+              "hint": "100 Reps / 6kg / 3m Ziel nach 1km Lauf"
+            }
+          ]
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "Intervalle schnell",
+          "durationMin": 90,
+          "zone": "ETL/Max 12,4+ km/h",
+          "notes": "8×1 km, Ziel 4:45 min/km. 90s Pause."
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "saturday",
+          "type": "strength",
+          "title": "Race Simulation",
+          "durationMin": 75,
+          "zone": "Wettkampftempo",
+          "notes": "Volle Simulation. Sub-70-Pace. Zeit messen.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m nach 1km Lauf"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m / 102kg nach 1km Lauf"
+            },
+            {
+              "name": "Sled Pull",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m / 78kg nach 1km Lauf"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 1,
+              "reps": 80,
+              "hint": "80m nach 1km Lauf"
+            },
+            {
+              "name": "RowErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m nach 1km Lauf"
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 1,
+              "reps": 200,
+              "hint": "200m / 2×24kg nach 1km Lauf"
+            },
+            {
+              "name": "Sandbag Lunges",
+              "sets": 1,
+              "reps": 100,
+              "hint": "100m / 20kg nach 1km Lauf"
+            },
+            {
+              "name": "Wall Balls",
+              "sets": 1,
+              "reps": 100,
+              "hint": "100 Reps / 6kg / 3m Ziel nach 1km Lauf"
+            }
+          ]
+        },
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "Langer Lauf TDL/ETL",
+          "durationMin": 75,
+          "zone": "159-165 bpm",
+          "notes": "TDL/ETL-Mix, gleichmäßig."
+        }
+      ]
+    },
+    {
+      "week": 27,
+      "phase": "build2",
+      "startDate": "2026-11-22",
+      "rpeTarget": {
+        "min": 800,
+        "max": 1200
+      },
+      "sessions": [
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "MDL locker",
+          "durationMin": 45,
+          "zone": "138-158 bpm",
+          "notes": "Build 2 Deload – MDL locker."
+        },
+        {
+          "day": "tuesday",
+          "type": "strength",
+          "title": "Kraft leicht",
+          "durationMin": 45,
+          "zone": "RPE max 5",
+          "notes": "Deload: leicht.",
+          "exercises": [
+            {
+              "name": "Goblet Squat",
+              "sets": 2,
+              "reps": 8,
+              "hint": "leicht"
+            },
+            {
+              "name": "Romanian Deadlift",
+              "sets": 2,
+              "reps": 8,
+              "hint": "leicht"
+            },
+            {
+              "name": "Plank",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s"
+            }
+          ]
+        },
+        {
+          "day": "wednesday",
+          "type": "strength",
+          "title": "Stationen locker",
+          "durationMin": 40,
+          "zone": "locker",
+          "notes": "Deload: Technik locker.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 3,
+              "reps": 500,
+              "hint": "locker"
+            },
+            {
+              "name": "Burpee Technik",
+              "sets": 3,
+              "reps": 8,
+              "hint": "langsam"
+            }
+          ]
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "MDL Intervalle",
+          "durationMin": 60,
+          "zone": "138-158 bpm",
+          "notes": "Deload: MDL, keine vollen Intervalle."
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "saturday",
+          "type": "rest",
+          "title": "Pause",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Aktive Erholung"
+        },
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "LDL/MDL",
+          "durationMin": 60,
+          "zone": "<148 bpm",
+          "notes": "Deload – Beine locker."
+        }
+      ]
+    },
+    {
+      "week": 28,
+      "phase": "build2",
+      "startDate": "2026-11-29",
+      "rpeTarget": {
+        "min": 2000,
+        "max": 2600
+      },
+      "sessions": [
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "HIIT",
+          "durationMin": 60,
+          "zone": "Max >165 bpm",
+          "notes": "HIIT: 5×4 Min >165 bpm, 3 Min Pause."
+        },
+        {
+          "day": "tuesday",
+          "type": "strength",
+          "title": "Schwächen-Fokus",
+          "durationMin": 60,
+          "zone": "intensiv",
+          "notes": "Aus Karlsruhe-Analyse: schwächste Stationen gezielt angehen.",
+          "exercises": [
+            {
+              "name": "Sandbag Lunges",
+              "sets": 4,
+              "reps": 20,
+              "hint": "20m – 20kg Wettkampfgewicht"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 4,
+              "reps": 12,
+              "hint": "zügig, mit Sprung, Wettkampftempo"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 4,
+              "reps": 25,
+              "hint": "25m – Richtung 102kg"
+            },
+            {
+              "name": "Sled Pull",
+              "sets": 4,
+              "reps": 25,
+              "hint": "25m – Richtung 78kg"
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 3,
+              "reps": 40,
+              "hint": "40m – 2×24kg"
+            }
+          ]
+        },
+        {
+          "day": "wednesday",
+          "type": "strength",
+          "title": "Vollsimulation",
+          "durationMin": 75,
+          "zone": "Wettkampftempo",
+          "notes": "Alle 8 Stationen + 8×1 km. Zeit messen, Transitions.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m nach 1km Lauf"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m / 102kg nach 1km Lauf"
+            },
+            {
+              "name": "Sled Pull",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m / 78kg nach 1km Lauf"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 1,
+              "reps": 80,
+              "hint": "80m nach 1km Lauf"
+            },
+            {
+              "name": "RowErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m nach 1km Lauf"
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 1,
+              "reps": 200,
+              "hint": "200m / 2×24kg nach 1km Lauf"
+            },
+            {
+              "name": "Sandbag Lunges",
+              "sets": 1,
+              "reps": 100,
+              "hint": "100m / 20kg nach 1km Lauf"
+            },
+            {
+              "name": "Wall Balls",
+              "sets": 1,
+              "reps": 100,
+              "hint": "100 Reps / 6kg / 3m Ziel nach 1km Lauf"
+            }
+          ]
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "Intervalle schnell",
+          "durationMin": 90,
+          "zone": "ETL/Max 12,4+ km/h",
+          "notes": "8×1 km, Ziel 4:45 min/km. 90s Pause."
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "saturday",
+          "type": "strength",
+          "title": "Race Simulation",
+          "durationMin": 75,
+          "zone": "Wettkampftempo",
+          "notes": "Volle Simulation. Sub-70-Pace. Zeit messen.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m nach 1km Lauf"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m / 102kg nach 1km Lauf"
+            },
+            {
+              "name": "Sled Pull",
+              "sets": 1,
+              "reps": 50,
+              "hint": "50m / 78kg nach 1km Lauf"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 1,
+              "reps": 80,
+              "hint": "80m nach 1km Lauf"
+            },
+            {
+              "name": "RowErg",
+              "sets": 1,
+              "reps": 1000,
+              "hint": "1.000m nach 1km Lauf"
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 1,
+              "reps": 200,
+              "hint": "200m / 2×24kg nach 1km Lauf"
+            },
+            {
+              "name": "Sandbag Lunges",
+              "sets": 1,
+              "reps": 100,
+              "hint": "100m / 20kg nach 1km Lauf"
+            },
+            {
+              "name": "Wall Balls",
+              "sets": 1,
+              "reps": 100,
+              "hint": "100 Reps / 6kg / 3m Ziel nach 1km Lauf"
+            }
+          ]
+        },
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "Langer Lauf TDL/ETL",
+          "durationMin": 75,
+          "zone": "159-165 bpm",
+          "notes": "TDL/ETL-Mix, gleichmäßig."
+        }
+      ]
+    },
+    {
+      "week": 29,
+      "phase": "peak2",
+      "startDate": "2026-12-06",
+      "rpeTarget": {
+        "min": 600,
+        "max": 1000
+      },
+      "sessions": [
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "HIIT kurz",
+          "durationMin": 50,
+          "zone": "Max >165 bpm",
+          "notes": "Letzte Schärfung: 3×4 Min >165 bpm, 3 Min Pause."
+        },
+        {
+          "day": "tuesday",
+          "type": "strength",
+          "title": "Stationen leicht",
+          "durationMin": 40,
+          "zone": "leicht",
+          "notes": "2-3 Stationen Technik, kein Max.",
+          "exercises": [
+            {
+              "name": "SkiErg Technik",
+              "sets": 2,
+              "reps": 500,
+              "hint": "locker"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 2,
+              "reps": 8,
+              "hint": "locker"
+            },
+            {
+              "name": "Sandbag Lunges Technik",
+              "sets": 2,
+              "reps": 10,
+              "hint": "10m locker"
+            }
+          ]
+        },
+        {
+          "day": "wednesday",
+          "type": "run",
+          "title": "Aktivierungslauf",
+          "durationMin": 30,
+          "zone": "locker",
+          "notes": "20 Min einlaufen + 3×200m Strides."
+        },
+        {
+          "day": "thursday",
+          "type": "rest",
+          "title": "Pause",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Pause / Mobilität"
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "saturday",
+          "type": "strength",
+          "title": "Kurze Simulation",
+          "durationMin": 30,
+          "zone": "Wettkampftempo",
+          "notes": "2-3 Stationen, Wettkampfgefühl aktivieren.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 1,
+              "reps": 500,
+              "hint": "Wettkampftempo"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 1,
+              "reps": 20,
+              "hint": "Wettkampftempo"
+            },
+            {
+              "name": "Sandbag Lunges",
+              "sets": 1,
+              "reps": 25,
+              "hint": "25m Wettkampftempo"
+            }
+          ]
+        },
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "MDL locker",
+          "durationMin": 45,
+          "zone": "138-158 bpm",
+          "notes": "Beine frisch halten – MDL locker."
+        }
+      ]
+    },
+    {
+      "week": 30,
+      "phase": "race2",
+      "startDate": "2026-12-13",
+      "rpeTarget": {
+        "min": 0,
+        "max": 0
+      },
+      "sessions": [
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "Einlaufen + Strides",
+          "durationMin": 30,
+          "zone": "locker",
+          "notes": "20 Min einlaufen + 3×200m Strides."
+        },
+        {
+          "day": "tuesday",
+          "type": "strength",
+          "title": "Aktivierung leicht",
+          "durationMin": 25,
+          "zone": "leicht",
+          "notes": "2 Stationen sehr kurz + Core.",
+          "exercises": [
+            {
+              "name": "Burpee",
+              "sets": 2,
+              "reps": 5,
+              "hint": "locker"
+            },
+            {
+              "name": "Plank",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s"
+            }
+          ]
+        },
+        {
+          "day": "wednesday",
+          "type": "rest",
+          "title": "Pause",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Spaziergang / Beine hoch"
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "15 Min sehr locker",
+          "durationMin": 20,
+          "zone": "<137 bpm",
+          "notes": "Sehr locker, Beine locker halten."
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Pause",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Beine hoch / Schlaf maximieren"
+        },
+        {
+          "day": "saturday",
+          "type": "rest",
+          "title": "Pause",
+          "durationMin": 0,
+          "zone": null,
+          "notes": "Anreise Frankfurt / Verpflegung / Ausrüstung"
+        },
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "WETTKAMPF: Hyrox Frankfurt · Ziel Sub 70 Min",
+          "durationMin": 75,
+          "zone": "Wettkampf",
+          "notes": "Sub 70 Min. Lauftaktik: Läufe 1-2 bei 5:00 min/km. Ab Lauf 3 auf 4:45-4:50 min/km. Keine Reserve lassen."
+        }
+      ]
+    }
+  ]
+}
