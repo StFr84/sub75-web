@@ -5,10 +5,11 @@ export interface Session {
   week: number
   day: string
   original_day: string | null
-  type: 'run' | 'strength' | 'rest'
+  type: 'run' | 'strength' | 'rest' | 'mobility'
   title: string
   duration_min: number | null
   zone: string | null
+  pace: string | null
   phase: string
   notes: string | null
 }

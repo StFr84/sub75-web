@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { colors, spacing, radius } from '../theme/colors'
 import { TrainingCard } from '../components/TrainingCard'
-import { getSessionForDate, getStreak, type Session } from '../db/queries/sessions'
+import { getSessionForDate, getMobilitySessionForDate, getStreak, type Session } from '../db/queries/sessions'
 import { isSessionCompleted } from '../db/queries/logs'
 import { TRAIN_START } from '../data/constants'
 
@@ -9,15 +9,19 @@ export function TodayScreen() {
   const today = new Date().toISOString().split('T')[0]
   const [session, setSession] = useState<Session | null>(null)
   const [isCompleted, setIsCompleted] = useState(false)
+  const [mobilitySession, setMobilitySession] = useState<Session | null>(null)
+  const [mobilityCompleted, setMobilityCompleted] = useState(false)
   const [streak, setStreak] = useState(0)
   const [ready, setReady] = useState(false)
 
   useEffect(() => {
     async function load() {
-      const [s, sk] = await Promise.all([getSessionForDate(today), getStreak()])
+      const [s, m, sk] = await Promise.all([getSessionForDate(today), getMobilitySessionForDate(today), getStreak()])
       setSession(s)
+      setMobilitySession(m)
       setStreak(sk)
       if (s?.id) setIsCompleted(await isSessionCompleted(s.id, today))
+      if (m?.id) setMobilityCompleted(await isSessionCompleted(m.id, today))
       setReady(true)
     }
     load()
@@ -70,6 +74,10 @@ export function TodayScreen() {
           <div style={{ fontSize: 15, fontWeight: 700, color: colors.textPrimary }}>Ruhetag</div>
           <div style={{ fontSize: 13, color: colors.textSecondary, marginTop: 4 }}>Kein Training geplant — erhol dich gut.</div>
         </div>
+      )}
+
+      {!beforePlan && mobilitySession && (
+        <TrainingCard session={mobilitySession} isCompleted={mobilityCompleted} date={today} />
       )}
     </div>
   )

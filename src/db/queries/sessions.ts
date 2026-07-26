@@ -18,7 +18,14 @@ export function dateToWeekDay(isoDate: string): { week: number; day: string } | 
 export async function getSessionForDate(isoDate: string): Promise<Session | null> {
   const wd = dateToWeekDay(isoDate)
   if (!wd) return null
-  const result = await db.sessions.where('[week+day]').equals([wd.week, wd.day]).first()
+  const result = await db.sessions.where('[week+day]').equals([wd.week, wd.day]).filter(s => s.type !== 'mobility').first()
+  return result ?? null
+}
+
+export async function getMobilitySessionForDate(isoDate: string): Promise<Session | null> {
+  const wd = dateToWeekDay(isoDate)
+  if (!wd) return null
+  const result = await db.sessions.where('[week+day]').equals([wd.week, wd.day]).filter(s => s.type === 'mobility').first()
   return result ?? null
 }
 
@@ -65,7 +72,7 @@ export async function getStreak(): Promise<number> {
     } else {
       const wd = dateToWeekDay(d)
       if (wd) {
-        const session = await db.sessions.where('[week+day]').equals([wd.week, wd.day]).first()
+        const session = await db.sessions.where('[week+day]').equals([wd.week, wd.day]).filter(s => s.type !== 'mobility').first()
         if (session?.type === 'rest') {
           current = new Date(current.getTime() - 86400000)
           continue

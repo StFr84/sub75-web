@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { Sidebar } from './components/Sidebar'
 import { TodayScreen }          from './screens/TodayScreen'
 import { WeekScreen }           from './screens/WeekScreen'
@@ -8,8 +8,10 @@ import { PlanScreen }           from './screens/PlanScreen'
 import { ProfileScreen }        from './screens/ProfileScreen'
 import { WorkoutDetailScreen }  from './screens/WorkoutDetailScreen'
 import { RunDetailScreen }      from './screens/RunDetailScreen'
+import { MobilityDetailScreen } from './screens/MobilityDetailScreen'
 import { seedIfNeeded }         from './db/seed'
 import { colors }               from './theme/colors'
+import { getCurrentWeek }       from './data/constants'
 
 export default function App() {
   const [ready, setReady] = useState(false)
@@ -42,12 +44,14 @@ export default function App() {
           )}
           <Routes>
             <Route path="/"               element={<TodayScreen />} />
-            <Route path="/week"           element={<WeekScreen />} />
+            <Route path="/week"           element={<Navigate to={`/week/${getCurrentWeek()}`} replace />} />
+            <Route path="/week/:weekNum"  element={<WeekScreen />} />
             <Route path="/stats"          element={<StatsScreen />} />
             <Route path="/plan"           element={<PlanScreen />} />
             <Route path="/profile"        element={<ProfileScreen />} />
             <Route path="/workout/:sessionId/:date" element={<WorkoutDetailScreen />} />
             <Route path="/run/:sessionId/:date"     element={<RunDetailScreen />} />
+            <Route path="/mobility/:sessionId/:date" element={<MobilityDetailScreen />} />
           </Routes>
         </main>
       </div>

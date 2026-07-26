@@ -3,20 +3,21 @@ import { useNavigate, useParams, useLocation } from 'react-router-dom'
 import { colors, spacing, radius } from '../theme/colors'
 import { logSessionComplete } from '../db/queries/sessions'
 
-interface RouteState { title: string; duration: number; zone: string | null; notes: string | null }
+interface RouteState { title: string; duration: number; zone: string | null; pace: string | null; notes: string | null }
 
-function parseRunSteps(notes: string | null, zone: string | null, duration: number): { label: string; detail: string }[] {
+function parseRunSteps(notes: string | null, zone: string | null, pace: string | null, duration: number): { label: string; detail: string }[] {
   const steps: { label: string; detail: string }[] = []
+  const paceSuffix = pace ? ` · Pace: ${pace}` : ''
   steps.push({ label: 'Einlaufen', detail: '10 Min locker · <130 bpm' })
   if (!notes) {
-    steps.push({ label: 'Hauptblock', detail: `${Math.max(10, duration - 20)} Min${zone ? ` · ${zone}` : ''}` })
+    steps.push({ label: 'Hauptblock', detail: `${Math.max(10, duration - 20)} Min${zone ? ` · ${zone}` : ''}${paceSuffix}` })
   } else {
     const n = notes.trim()
-    if (n.match(/\dx\d/)) steps.push({ label: 'Hauptblock', detail: n })
-    else if (n.match(/HIIT/i)) steps.push({ label: 'HIIT Block', detail: n.replace(/^HIIT:?\s*/i, '') })
-    else if (n.match(/Fahrtspiel/i)) steps.push({ label: 'Fahrtspiel', detail: n.replace(/^Fahrtspiel:?\s*/i, '') })
-    else if (n.match(/DELOAD/i)) steps.push({ label: 'Deload-Lauf', detail: n.replace(/^DELOAD:?\s*/i, '') })
-    else steps.push({ label: 'Hauptblock', detail: `${Math.max(10, duration - 20)} Min · ${n}` })
+    if (n.match(/\dx\d/)) steps.push({ label: 'Hauptblock', detail: `${n}${paceSuffix}` })
+    else if (n.match(/HIIT/i)) steps.push({ label: 'HIIT Block', detail: `${n.replace(/^HIIT:?\s*/i, '')}${paceSuffix}` })
+    else if (n.match(/Fahrtspiel/i)) steps.push({ label: 'Fahrtspiel', detail: `${n.replace(/^Fahrtspiel:?\s*/i, '')}${paceSuffix}` })
+    else if (n.match(/DELOAD/i)) steps.push({ label: 'Deload-Lauf', detail: `${n.replace(/^DELOAD:?\s*/i, '')}${paceSuffix}` })
+    else steps.push({ label: 'Hauptblock', detail: `${Math.max(10, duration - 20)} Min · ${n}${paceSuffix}` })
   }
   steps.push({ label: 'Auslaufen', detail: '10 Min sehr locker · <120 bpm' })
   return steps
@@ -26,11 +27,11 @@ export function RunDetailScreen() {
   const navigate = useNavigate()
   const { sessionId, date } = useParams<{ sessionId: string; date: string }>()
   const location = useLocation()
-  const { title, duration, zone, notes } = (location.state ?? {}) as RouteState
+  const { title, duration, zone, pace, notes } = (location.state ?? {}) as RouteState
   const [rpe, setRpe] = useState<number | null>(null)
   const [done, setDone] = useState(false)
 
-  const steps = parseRunSteps(notes, zone, duration ?? 0)
+  const steps = parseRunSteps(notes, zone, pace, duration ?? 0)
 
   async function handleFinish() {
     if (!rpe) { alert('Bitte bewerte die Intensität (1–10)'); return }
@@ -45,7 +46,7 @@ export function RunDetailScreen() {
 
       <div style={{ fontSize: 26, fontWeight: 900, color: colors.textPrimary }}>{title ?? 'Laufen'}</div>
       <div style={{ display: 'flex', gap: spacing.sm, flexWrap: 'wrap' as const }}>
-        {(['🏃 Laufen', `⏱ ${duration} Min`, zone ? `❤️ ${zone}` : null] as (string | null)[]).filter(Boolean).map((b, i) => (
+        {(['🏃 Laufen', `⏱ ${duration} Min`, zone ? `❤️ ${zone}` : null, pace ? `⚡ ${pace}` : null] as (string | null)[]).filter(Boolean).map((b, i) => (
           <span key={i} style={{ background: colors.card, padding: `${spacing.xs}px ${spacing.md}px`, borderRadius: radius.full, fontSize: 13 }}>{b}</span>
         ))}
       </div>

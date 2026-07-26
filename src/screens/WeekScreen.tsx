@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { colors, spacing, radius } from '../theme/colors'
 import { getSessionsForWeek, getCompletedSessionIds, moveSession, swapSessionDays, type Session } from '../db/queries/sessions'
 import { TRAIN_START, getCurrentWeek } from '../data/constants'
@@ -35,10 +35,14 @@ function getTodayDayName(): string {
 
 export function WeekScreen() {
   const navigate = useNavigate()
+  const { weekNum } = useParams<{ weekNum: string }>()
   const today = new Date().toISOString().split('T')[0]
   const currentWeek = getCurrentWeek()
   const todayDayName = getTodayDayName()
-  const [week, setWeek] = useState(currentWeek)
+  // Woche kommt aus der URL statt aus lokalem State, damit sie beim
+  // Zurückgehen aus einem Trainingsdetail erhalten bleibt statt zur
+  // aktuellen Woche zurückzuspringen.
+  const week = Math.min(30, Math.max(1, Number(weekNum) || currentWeek))
   const [sessions, setSessions] = useState<Session[]>([])
   const [completedIds, setCompletedIds] = useState<number[]>([])
   const [dropdownFor, setDropdownFor] = useState<number | null>(null)
@@ -64,17 +68,32 @@ export function WeekScreen() {
   }, [])
 
   const phase = sessions[0]?.phase ?? ''
-  const activeSessions = sessions.filter(s => s.type !== 'rest')
+  const activeSessions = sessions.filter(s => s.type !== 'rest' && s.type !== 'mobility')
+  const completedActiveCount = completedIds.filter(id => activeSessions.some(s => s.id === id)).length
   const totalMin = activeSessions.reduce((sum, s) => sum + (s.duration_min ?? 0), 0)
   const isCurrentWeek = week === currentWeek
 
   async function handleReschedule(session: Session, targetDay: string) {
-    const targetSession = sessions.find(s => s.day === targetDay)
+    const sourceDay = session.day
+    const targetSession = sessions.find(s => s.day === targetDay && s.type !== 'mobility')
     if (targetSession) {
-      await swapSessionDays(session.id!, session.day, targetSession.id!, targetDay)
+      await swapSessionDays(session.id!, sourceDay, targetSession.id!, targetDay)
     } else {
       await moveSession(session.id!, targetDay)
     }
+
+    // Mobility-Session hängt an der Haupteinheit und zieht mit um, statt am
+    // alten Kalendertag hängen zu bleiben.
+    const sourceMobility = sessions.find(s => s.day === sourceDay && s.type === 'mobility')
+    const targetMobility = sessions.find(s => s.day === targetDay && s.type === 'mobility')
+    if (sourceMobility && targetMobility) {
+      await swapSessionDays(sourceMobility.id!, sourceDay, targetMobility.id!, targetDay)
+    } else if (sourceMobility) {
+      await moveSession(sourceMobility.id!, targetDay)
+    } else if (targetMobility) {
+      await moveSession(targetMobility.id!, sourceDay)
+    }
+
     const [s, c] = await Promise.all([getSessionsForWeek(week), getCompletedSessionIds(week)])
     setSessions(s)
     setCompletedIds(c)
@@ -84,20 +103,20 @@ export function WeekScreen() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: spacing.md }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <button onClick={() => setWeek(w => Math.max(1, w - 1))} style={{ width: 44, height: 44, fontSize: 28, color: colors.textSecondary, display: 'flex', alignItems: 'center', justifyContent: 'center', border: 'none', background: 'none', cursor: 'pointer' }}>‹</button>
+        <button onClick={() => navigate(`/week/${Math.max(1, week - 1)}`, { replace: true })} style={{ width: 44, height: 44, fontSize: 28, color: colors.textSecondary, display: 'flex', alignItems: 'center', justifyContent: 'center', border: 'none', background: 'none', cursor: 'pointer' }}>‹</button>
         <div style={{ textAlign: 'center' }}>
           <div style={{ fontSize: 22, fontWeight: 900, color: colors.textPrimary }}>Woche {week}</div>
           <div style={{ fontSize: 12, color: colors.textSecondary }}>{phase.charAt(0).toUpperCase() + phase.slice(1)}{isCurrentWeek ? ' · Aktuell' : ''}</div>
           <div style={{ fontSize: 11, color: colors.textSecondary, opacity: 0.7 }}>{getWeekDateRange(week)}</div>
         </div>
-        <button onClick={() => setWeek(w => Math.min(30, w + 1))} style={{ width: 44, height: 44, fontSize: 28, color: colors.textSecondary, display: 'flex', alignItems: 'center', justifyContent: 'center', border: 'none', background: 'none', cursor: 'pointer' }}>›</button>
+        <button onClick={() => navigate(`/week/${Math.min(30, week + 1)}`, { replace: true })} style={{ width: 44, height: 44, fontSize: 28, color: colors.textSecondary, display: 'flex', alignItems: 'center', justifyContent: 'center', border: 'none', background: 'none', cursor: 'pointer' }}>›</button>
       </div>
 
       <div style={{ background: colors.card, borderRadius: radius.lg, padding: spacing.lg, display: 'flex', alignItems: 'center' }}>
         {[
           { num: activeSessions.length, label: 'Einheiten' },
           { num: totalMin, label: 'Minuten' },
-          { num: `${completedIds.length}/${activeSessions.length}`, label: 'Erledigt' },
+          { num: `${completedActiveCount}/${activeSessions.length}`, label: 'Erledigt' },
         ].map((item, i) => (
           <div key={i} style={{ flex: 1, textAlign: 'center', borderRight: i < 2 ? `1px solid ${colors.border}` : undefined }}>
             <div style={{ fontSize: 24, fontWeight: 800, color: colors.textPrimary }}>{item.num}</div>
@@ -107,8 +126,24 @@ export function WeekScreen() {
       </div>
 
       {DAY_ORDER.map(day => {
-        const s = sessions.find(x => x.day === day)
-        if (!s || s.type === 'rest') return null
+        const s = sessions.find(x => x.day === day && x.type !== 'mobility')
+        const mobility = sessions.find(x => x.day === day && x.type === 'mobility')
+        const mobilityDone = mobility ? completedIds.includes(mobility.id!) : false
+        if (!s || s.type === 'rest') {
+          return mobility ? (
+            <div
+              key={day}
+              onClick={() => navigate(`/mobility/${mobility.id}/${getSessionDate(week, day)}`, { state: { title: mobility.title, duration: mobility.duration_min, notes: mobility.notes } })}
+              style={{ background: colors.card, borderRadius: radius.lg, display: 'flex', overflow: 'hidden', cursor: 'pointer', opacity: mobilityDone ? 0.7 : 1 }}
+            >
+              <div style={{ width: 4, background: colors.yellow, flexShrink: 0 }} />
+              <div style={{ flex: 1, padding: spacing.md, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <span style={{ fontSize: 13, color: colors.textSecondary }}>{DAY_LABELS[day]} · 🧘 {mobility.title}</span>
+                {mobilityDone ? <span style={{ fontSize: 15, color: colors.green }}>✓</span> : <span style={{ fontSize: 12, color: colors.textSecondary }}>{mobility.duration_min} Min</span>}
+              </div>
+            </div>
+          ) : null
+        }
         const isDone = completedIds.includes(s.id!)
         const accent = TYPE_COLOR[s.type]
         const isToday = isCurrentWeek && day === todayDayName
@@ -121,7 +156,7 @@ export function WeekScreen() {
               style={{ background: isToday ? '#0f2a1a' : colors.card, borderRadius: radius.lg, display: 'flex', overflow: 'hidden', border: isToday ? `1px solid ${colors.greenBorder}` : undefined, opacity: isPast && !isDone ? 0.6 : 1, cursor: 'pointer' }}
               onClick={() => {
                 if (s.type === 'strength') navigate(`/workout/${s.id}/${sessionDate}`)
-                else if (s.type === 'run') navigate(`/run/${s.id}/${sessionDate}`, { state: { title: s.title, duration: s.duration_min, zone: s.zone, notes: s.notes } })
+                else if (s.type === 'run') navigate(`/run/${s.id}/${sessionDate}`, { state: { title: s.title, duration: s.duration_min, zone: s.zone, pace: s.pace, notes: s.notes } })
               }}
             >
               <div style={{ width: 4, background: isPast ? colors.border : accent, flexShrink: 0 }} />
@@ -139,6 +174,7 @@ export function WeekScreen() {
                   <span style={{ color: colors.border }}>·</span>
                   <span style={{ fontSize: 13, color: colors.textSecondary }}>{s.duration_min} Min</span>
                   {s.zone && <><span style={{ color: colors.border }}>·</span><span style={{ fontSize: 13, color: colors.textSecondary }}>{s.zone}</span></>}
+                  {s.pace && <><span style={{ color: colors.border }}>·</span><span style={{ fontSize: 13, color: colors.textSecondary }}>🏃 {s.pace}</span></>}
                 </div>
               </div>
               <button
@@ -151,7 +187,7 @@ export function WeekScreen() {
               <div ref={dropdownRef} style={{ position: 'absolute', right: 0, top: '100%', marginTop: 4, background: '#1a1a1a', borderRadius: radius.md, border: `1px solid ${colors.border}`, zIndex: 20, minWidth: 180, overflow: 'hidden' }}>
                 <div style={{ padding: '8px 12px', fontSize: 11, color: colors.textSecondary, borderBottom: `1px solid ${colors.border}` }}>Verschieben nach:</div>
                 {DAY_ORDER.filter(d => d !== day).map(targetDay => {
-                  const existing = sessions.find(x => x.day === targetDay)
+                  const existing = sessions.find(x => x.day === targetDay && x.type !== 'mobility')
                   const label = DAY_LABELS[targetDay]
                   const desc = existing ? `(${existing.type === 'run' ? 'Laufen' : existing.type === 'strength' ? 'Kraft' : 'Pause'})` : '(frei)'
                   return (
@@ -166,6 +202,19 @@ export function WeekScreen() {
                     </button>
                   )
                 })}
+              </div>
+            )}
+
+            {mobility && (
+              <div
+                onClick={() => navigate(`/mobility/${mobility.id}/${sessionDate}`, { state: { title: mobility.title, duration: mobility.duration_min, notes: mobility.notes } })}
+                style={{ background: colors.card, borderRadius: radius.md, display: 'flex', overflow: 'hidden', cursor: 'pointer', marginTop: 4, opacity: mobilityDone ? 0.6 : 0.9 }}
+              >
+                <div style={{ width: 4, background: colors.yellow, flexShrink: 0 }} />
+                <div style={{ flex: 1, padding: `${spacing.sm}px ${spacing.md}px`, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <span style={{ fontSize: 12, color: colors.textSecondary }}>🧘 {mobility.title}</span>
+                  {mobilityDone ? <span style={{ fontSize: 13, color: colors.green }}>✓</span> : <span style={{ fontSize: 11, color: colors.textSecondary }}>{mobility.duration_min} Min</span>}
+                </div>
               </div>
             )}
           </div>
