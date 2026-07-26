@@ -68,7 +68,7 @@ export function StatsScreen() {
           ))}
         </div>
         <div style={{ fontSize: 11, color: colors.indigo, textAlign: 'center', fontWeight: 600 }}>
-          Karlsruhe 18./19. Okt · Frankfurt 13. Dez
+          Karlsruhe 3. Okt · Frankfurt 13. Dez
         </div>
       </div>
 

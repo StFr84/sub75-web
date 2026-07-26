@@ -95,7 +95,7 @@ export function ProfileScreen() {
       <div style={cardStyle}>
         <div style={{ fontSize: 11, color: colors.textSecondary, textTransform: 'uppercase', letterSpacing: 1 }}>Ziel</div>
         <div style={{ fontSize: 16, fontWeight: 600, color: colors.textPrimary }}>Hyrox Karlsruhe · &lt;75 Min</div>
-        <div style={{ fontSize: 13, color: colors.textSecondary }}>18./19. Oktober 2026</div>
+        <div style={{ fontSize: 13, color: colors.textSecondary }}>3. Oktober 2026</div>
       </div>
 
       <div style={cardStyle}>

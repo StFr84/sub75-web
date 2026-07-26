@@ -1,5 +1,5 @@
 {
-  "version": 6,
+  "version": 8,
   "weeks": [
     {
       "week": 1,
@@ -6406,21 +6406,62 @@
     },
     {
       "week": 18,
-      "phase": "build1",
+      "phase": "peak1",
       "startDate": "2026-09-20",
       "rpeTarget": {
         "min": 1800,
-        "max": 2400
+        "max": 2200
       },
       "sessions": [
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "MDL gleichmäßig",
+          "durationMin": 70,
+          "zone": "138-158 bpm",
+          "notes": "Start der letzten scharfen Woche vor dem Rennen."
+        },
+        {
+          "day": "sunday",
+          "type": "mobility",
+          "title": "Mobility & Dehnen",
+          "durationMin": 10,
+          "notes": "Nach dem Laufen, wenn Muskulatur warm ist. Fokus: Waden, Hüftbeuger, Oberschenkelrückseite.",
+          "exercises": [
+            {
+              "name": "Wadendehnung an der Wand",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite"
+            },
+            {
+              "name": "Hüftbeuger-Dehnung im Ausfallschritt",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite, Becken unterrollen"
+            },
+            {
+              "name": "Liegende Hamstring-Dehnung",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite, mit Band/Handtuch"
+            },
+            {
+              "name": "Foam Rolling Oberschenkel/IT-Band",
+              "sets": 1,
+              "reps": 60,
+              "hint": "60s je Seite, langsam rollen"
+            }
+          ]
+        },
         {
           "day": "monday",
           "type": "run",
           "title": "HIIT",
-          "durationMin": 60,
+          "durationMin": 50,
           "zone": "Max >165 bpm",
           "pace": "≈13,5–14,5 km/h (≈4:08–4:27 min/km) – HF-gesteuert",
-          "notes": "HIIT: 5×4 Min >165 bpm, 3 Min Pause."
+          "notes": "HIIT: 4×4 Min bei >165 bpm, 3 Min Trabpause. Letzte harte VO2max-Reize vor Taper."
         },
         {
           "day": "monday",
@@ -6458,60 +6499,10 @@
         {
           "day": "tuesday",
           "type": "strength",
-          "title": "Alle 8 Stationen",
-          "durationMin": 60,
-          "zone": "Wettkampftempo",
-          "notes": "Alle 8 Stationen, Wettkampfgewicht.",
-          "exercises": [
-            {
-              "name": "SkiErg",
-              "sets": 1,
-              "reps": 1000,
-              "hint": "1.000m Wettkampftempo"
-            },
-            {
-              "name": "Sled Push",
-              "sets": 1,
-              "reps": 50,
-              "hint": "50m / 102kg Wettkampftempo"
-            },
-            {
-              "name": "Sled Pull",
-              "sets": 1,
-              "reps": 50,
-              "hint": "50m / 78kg Wettkampftempo"
-            },
-            {
-              "name": "Burpee Broad Jump",
-              "sets": 1,
-              "reps": 80,
-              "hint": "80m – Prio 1 Schwäche"
-            },
-            {
-              "name": "RowErg",
-              "sets": 1,
-              "reps": 1000,
-              "hint": "1.000m Wettkampftempo"
-            },
-            {
-              "name": "Farmer's Carry",
-              "sets": 1,
-              "reps": 200,
-              "hint": "200m / 2×24kg"
-            },
-            {
-              "name": "Sandbag Lunges",
-              "sets": 1,
-              "reps": 100,
-              "hint": "100m / 20kg – Prio 1 Schwäche"
-            },
-            {
-              "name": "Wall Balls",
-              "sets": 1,
-              "reps": 100,
-              "hint": "100 Reps / 6kg"
-            }
-          ]
+          "title": "Kraftausdauer",
+          "durationMin": 50,
+          "zone": "moderat-intensiv",
+          "notes": "Sandbag Lunges, Burpee Broad Jump, Sled – letzte Station-Schärfung."
         },
         {
           "day": "tuesday",
@@ -6549,48 +6540,10 @@
         {
           "day": "wednesday",
           "type": "strength",
-          "title": "6-Stationen-Simulation",
-          "durationMin": 75,
+          "title": "Halbsimulation",
+          "durationMin": 60,
           "zone": "Wettkampftempo",
-          "notes": "6 Stationen + Läufe, Transitions ohne Pause.",
-          "exercises": [
-            {
-              "name": "SkiErg",
-              "sets": 1,
-              "reps": 1000,
-              "hint": "1.000m nach 1km Lauf"
-            },
-            {
-              "name": "Sled Push",
-              "sets": 1,
-              "reps": 50,
-              "hint": "50m nach 1km Lauf"
-            },
-            {
-              "name": "Sled Pull",
-              "sets": 1,
-              "reps": 50,
-              "hint": "50m nach 1km Lauf"
-            },
-            {
-              "name": "Burpee Broad Jump",
-              "sets": 1,
-              "reps": 80,
-              "hint": "80m nach 1km Lauf"
-            },
-            {
-              "name": "RowErg",
-              "sets": 1,
-              "reps": 1000,
-              "hint": "1.000m nach 1km Lauf"
-            },
-            {
-              "name": "Farmer's Carry",
-              "sets": 1,
-              "reps": 200,
-              "hint": "200m / 2×24kg nach 1km Lauf"
-            }
-          ]
+          "notes": "5-6 Stationen, halbe Streckenlänge, Wettkampfgewicht. Einzige volle Simulation vor Karlsruhe."
         },
         {
           "day": "wednesday",
@@ -6629,10 +6582,10 @@
           "day": "thursday",
           "type": "run",
           "title": "Intervalle",
-          "durationMin": 90,
+          "durationMin": 70,
           "zone": "ETL 12,4-13,4 km/h",
           "pace": "ETL-Pace 12,4–13,4 km/h (≈4:29–4:50 min/km)",
-          "notes": "8×1 km ETL-Pace, 90s Pause."
+          "notes": "5×1 km bei ETL-Pace, 90s Pause. Reduziertes Volumen – Taper beginnt."
         },
         {
           "day": "thursday",
@@ -6672,906 +6625,6 @@
           "type": "rest",
           "title": "Ruhetag",
           "durationMin": 0,
-          "zone": null,
-          "notes": "Ruhetag"
-        },
-        {
-          "day": "friday",
-          "type": "mobility",
-          "title": "Mobility-Flow",
-          "durationMin": 15,
-          "notes": "Am Ruhetag – längere Ganzkörper-Routine für Beweglichkeit abseits vom Training.",
-          "exercises": [
-            {
-              "name": "World's Greatest Stretch",
-              "sets": 2,
-              "reps": 5,
-              "hint": "je Seite, fließend, ohne zu hetzen"
-            },
-            {
-              "name": "90/90 Hip Switch",
-              "sets": 2,
-              "reps": 8,
-              "hint": "je Seite, kontrolliert wechseln"
-            },
-            {
-              "name": "Downward Dog zu Cobra Flow",
-              "sets": 2,
-              "reps": 8,
-              "hint": "fließende Wiederholungen, Atmung koppeln"
-            },
-            {
-              "name": "Nacken- und Schulterkreisen",
-              "sets": 1,
-              "reps": 120,
-              "hint": "2 Min, inkl. Handgelenk-Mobilisation"
-            }
-          ]
-        },
-        {
-          "day": "saturday",
-          "type": "strength",
-          "title": "Halbsimulation alle 8 Stationen",
-          "durationMin": 75,
-          "zone": "Wettkampftempo",
-          "notes": "Alle 8 Stationen, halbe Streckenlängen, Wettkampfgewicht.",
-          "exercises": [
-            {
-              "name": "SkiErg",
-              "sets": 1,
-              "reps": 1000,
-              "hint": "1.000m Wettkampftempo"
-            },
-            {
-              "name": "Sled Push",
-              "sets": 1,
-              "reps": 50,
-              "hint": "50m / 102kg Wettkampftempo"
-            },
-            {
-              "name": "Sled Pull",
-              "sets": 1,
-              "reps": 50,
-              "hint": "50m / 78kg Wettkampftempo"
-            },
-            {
-              "name": "Burpee Broad Jump",
-              "sets": 1,
-              "reps": 80,
-              "hint": "80m – Prio 1 Schwäche"
-            },
-            {
-              "name": "RowErg",
-              "sets": 1,
-              "reps": 1000,
-              "hint": "1.000m Wettkampftempo"
-            },
-            {
-              "name": "Farmer's Carry",
-              "sets": 1,
-              "reps": 200,
-              "hint": "200m / 2×24kg"
-            },
-            {
-              "name": "Sandbag Lunges",
-              "sets": 1,
-              "reps": 100,
-              "hint": "100m / 20kg – Prio 1 Schwäche"
-            },
-            {
-              "name": "Wall Balls",
-              "sets": 1,
-              "reps": 100,
-              "hint": "100 Reps / 6kg"
-            }
-          ]
-        },
-        {
-          "day": "saturday",
-          "type": "mobility",
-          "title": "Mobility & Dehnen",
-          "durationMin": 10,
-          "notes": "Nach dem Krafttraining. Fokus: Schultern, Brustwirbelsäule, Hüfte, unterer Rücken.",
-          "exercises": [
-            {
-              "name": "Brustwirbelsäulen-Rotation (Quadruped)",
-              "sets": 2,
-              "reps": 8,
-              "hint": "je Seite, langsam, aus der Wirbelsäule drehen"
-            },
-            {
-              "name": "Schulterdehnung im Türrahmen",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite"
-            },
-            {
-              "name": "Tiefe Hocke (Deep Squat Hold)",
-              "sets": 2,
-              "reps": 45,
-              "hint": "45s halten, Fersen am Boden"
-            },
-            {
-              "name": "Kindshaltung",
-              "sets": 2,
-              "reps": 45,
-              "hint": "45s halten, Arme lang nach vorne"
-            }
-          ]
-        },
-        {
-          "day": "sunday",
-          "type": "run",
-          "title": "Langer Lauf TDL",
-          "durationMin": 90,
-          "zone": "159-161 bpm",
-          "notes": "TDL, gleichmäßig."
-        },
-        {
-          "day": "sunday",
-          "type": "mobility",
-          "title": "Mobility & Dehnen",
-          "durationMin": 10,
-          "notes": "Nach dem Laufen, wenn Muskulatur warm ist. Fokus: Waden, Hüftbeuger, Oberschenkelrückseite.",
-          "exercises": [
-            {
-              "name": "Wadendehnung an der Wand",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite"
-            },
-            {
-              "name": "Hüftbeuger-Dehnung im Ausfallschritt",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite, Becken unterrollen"
-            },
-            {
-              "name": "Liegende Hamstring-Dehnung",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite, mit Band/Handtuch"
-            },
-            {
-              "name": "Foam Rolling Oberschenkel/IT-Band",
-              "sets": 1,
-              "reps": 60,
-              "hint": "60s je Seite, langsam rollen"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "week": 19,
-      "phase": "build1",
-      "startDate": "2026-09-27",
-      "rpeTarget": {
-        "min": 2000,
-        "max": 2600
-      },
-      "sessions": [
-        {
-          "day": "monday",
-          "type": "run",
-          "title": "HIIT",
-          "durationMin": 60,
-          "zone": "Max >165 bpm",
-          "pace": "≈13,5–14,5 km/h (≈4:08–4:27 min/km) – HF-gesteuert",
-          "notes": "HIIT: 5×4 Min >165 bpm, 3 Min Pause."
-        },
-        {
-          "day": "monday",
-          "type": "mobility",
-          "title": "Mobility & Dehnen",
-          "durationMin": 10,
-          "notes": "Nach dem Laufen, wenn Muskulatur warm ist. Fokus: Waden, Hüftbeuger, Oberschenkelrückseite.",
-          "exercises": [
-            {
-              "name": "Wadendehnung an der Wand",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite"
-            },
-            {
-              "name": "Hüftbeuger-Dehnung im Ausfallschritt",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite, Becken unterrollen"
-            },
-            {
-              "name": "Liegende Hamstring-Dehnung",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite, mit Band/Handtuch"
-            },
-            {
-              "name": "Foam Rolling Oberschenkel/IT-Band",
-              "sets": 1,
-              "reps": 60,
-              "hint": "60s je Seite, langsam rollen"
-            }
-          ]
-        },
-        {
-          "day": "tuesday",
-          "type": "strength",
-          "title": "Alle 8 Stationen",
-          "durationMin": 60,
-          "zone": "Wettkampftempo",
-          "notes": "Alle 8 Stationen vollständig, Wettkampfgewicht.",
-          "exercises": [
-            {
-              "name": "SkiErg",
-              "sets": 1,
-              "reps": 1000,
-              "hint": "1.000m Wettkampftempo"
-            },
-            {
-              "name": "Sled Push",
-              "sets": 1,
-              "reps": 50,
-              "hint": "50m / 102kg Wettkampftempo"
-            },
-            {
-              "name": "Sled Pull",
-              "sets": 1,
-              "reps": 50,
-              "hint": "50m / 78kg Wettkampftempo"
-            },
-            {
-              "name": "Burpee Broad Jump",
-              "sets": 1,
-              "reps": 80,
-              "hint": "80m – Prio 1 Schwäche"
-            },
-            {
-              "name": "RowErg",
-              "sets": 1,
-              "reps": 1000,
-              "hint": "1.000m Wettkampftempo"
-            },
-            {
-              "name": "Farmer's Carry",
-              "sets": 1,
-              "reps": 200,
-              "hint": "200m / 2×24kg"
-            },
-            {
-              "name": "Sandbag Lunges",
-              "sets": 1,
-              "reps": 100,
-              "hint": "100m / 20kg – Prio 1 Schwäche"
-            },
-            {
-              "name": "Wall Balls",
-              "sets": 1,
-              "reps": 100,
-              "hint": "100 Reps / 6kg"
-            }
-          ]
-        },
-        {
-          "day": "tuesday",
-          "type": "mobility",
-          "title": "Mobility & Dehnen",
-          "durationMin": 10,
-          "notes": "Nach dem Krafttraining. Fokus: Schultern, Brustwirbelsäule, Hüfte, unterer Rücken.",
-          "exercises": [
-            {
-              "name": "Brustwirbelsäulen-Rotation (Quadruped)",
-              "sets": 2,
-              "reps": 8,
-              "hint": "je Seite, langsam, aus der Wirbelsäule drehen"
-            },
-            {
-              "name": "Schulterdehnung im Türrahmen",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite"
-            },
-            {
-              "name": "Tiefe Hocke (Deep Squat Hold)",
-              "sets": 2,
-              "reps": 45,
-              "hint": "45s halten, Fersen am Boden"
-            },
-            {
-              "name": "Kindshaltung",
-              "sets": 2,
-              "reps": 45,
-              "hint": "45s halten, Arme lang nach vorne"
-            }
-          ]
-        },
-        {
-          "day": "wednesday",
-          "type": "strength",
-          "title": "Vollsimulation 7-8 Stationen",
-          "durationMin": 90,
-          "zone": "Wettkampftempo",
-          "notes": "7-8 Stationen + 8×1 km Läufe. Zeit messen. Transitions ohne Anhalten.",
-          "exercises": [
-            {
-              "name": "SkiErg",
-              "sets": 1,
-              "reps": 1000,
-              "hint": "1.000m nach 1km Lauf"
-            },
-            {
-              "name": "Sled Push",
-              "sets": 1,
-              "reps": 50,
-              "hint": "50m / 102kg nach 1km Lauf"
-            },
-            {
-              "name": "Sled Pull",
-              "sets": 1,
-              "reps": 50,
-              "hint": "50m / 78kg nach 1km Lauf"
-            },
-            {
-              "name": "Burpee Broad Jump",
-              "sets": 1,
-              "reps": 80,
-              "hint": "80m nach 1km Lauf"
-            },
-            {
-              "name": "RowErg",
-              "sets": 1,
-              "reps": 1000,
-              "hint": "1.000m nach 1km Lauf"
-            },
-            {
-              "name": "Farmer's Carry",
-              "sets": 1,
-              "reps": 200,
-              "hint": "200m / 2×24kg nach 1km Lauf"
-            },
-            {
-              "name": "Sandbag Lunges",
-              "sets": 1,
-              "reps": 100,
-              "hint": "100m / 20kg nach 1km Lauf"
-            },
-            {
-              "name": "Wall Balls",
-              "sets": 1,
-              "reps": 100,
-              "hint": "100 Reps / 6kg / 3m Ziel nach 1km Lauf"
-            }
-          ]
-        },
-        {
-          "day": "wednesday",
-          "type": "mobility",
-          "title": "Mobility & Dehnen",
-          "durationMin": 10,
-          "notes": "Nach dem Krafttraining. Fokus: Schultern, Brustwirbelsäule, Hüfte, unterer Rücken.",
-          "exercises": [
-            {
-              "name": "Brustwirbelsäulen-Rotation (Quadruped)",
-              "sets": 2,
-              "reps": 8,
-              "hint": "je Seite, langsam, aus der Wirbelsäule drehen"
-            },
-            {
-              "name": "Schulterdehnung im Türrahmen",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite"
-            },
-            {
-              "name": "Tiefe Hocke (Deep Squat Hold)",
-              "sets": 2,
-              "reps": 45,
-              "hint": "45s halten, Fersen am Boden"
-            },
-            {
-              "name": "Kindshaltung",
-              "sets": 2,
-              "reps": 45,
-              "hint": "45s halten, Arme lang nach vorne"
-            }
-          ]
-        },
-        {
-          "day": "thursday",
-          "type": "run",
-          "title": "Intervalle",
-          "durationMin": 90,
-          "zone": "ETL 12,4-13,4 km/h",
-          "pace": "ETL-Pace 12,4–13,4 km/h (≈4:29–4:50 min/km)",
-          "notes": "8×1 km ETL-Pace, 90s Pause."
-        },
-        {
-          "day": "thursday",
-          "type": "mobility",
-          "title": "Mobility & Dehnen",
-          "durationMin": 10,
-          "notes": "Nach dem Laufen, wenn Muskulatur warm ist. Fokus: Waden, Hüftbeuger, Oberschenkelrückseite.",
-          "exercises": [
-            {
-              "name": "Wadendehnung an der Wand",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite"
-            },
-            {
-              "name": "Hüftbeuger-Dehnung im Ausfallschritt",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite, Becken unterrollen"
-            },
-            {
-              "name": "Liegende Hamstring-Dehnung",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite, mit Band/Handtuch"
-            },
-            {
-              "name": "Foam Rolling Oberschenkel/IT-Band",
-              "sets": 1,
-              "reps": 60,
-              "hint": "60s je Seite, langsam rollen"
-            }
-          ]
-        },
-        {
-          "day": "friday",
-          "type": "rest",
-          "title": "Ruhetag",
-          "durationMin": 0,
-          "zone": null,
-          "notes": "Ruhetag"
-        },
-        {
-          "day": "friday",
-          "type": "mobility",
-          "title": "Mobility-Flow",
-          "durationMin": 15,
-          "notes": "Am Ruhetag – längere Ganzkörper-Routine für Beweglichkeit abseits vom Training.",
-          "exercises": [
-            {
-              "name": "World's Greatest Stretch",
-              "sets": 2,
-              "reps": 5,
-              "hint": "je Seite, fließend, ohne zu hetzen"
-            },
-            {
-              "name": "90/90 Hip Switch",
-              "sets": 2,
-              "reps": 8,
-              "hint": "je Seite, kontrolliert wechseln"
-            },
-            {
-              "name": "Downward Dog zu Cobra Flow",
-              "sets": 2,
-              "reps": 8,
-              "hint": "fließende Wiederholungen, Atmung koppeln"
-            },
-            {
-              "name": "Nacken- und Schulterkreisen",
-              "sets": 1,
-              "reps": 120,
-              "hint": "2 Min, inkl. Handgelenk-Mobilisation"
-            }
-          ]
-        },
-        {
-          "day": "saturday",
-          "type": "strength",
-          "title": "¾ Race Simulation",
-          "durationMin": 75,
-          "zone": "Wettkampftempo",
-          "notes": "Alle 8 Stationen, ¾-Streckenlänge, Wettkampfgewicht.",
-          "exercises": [
-            {
-              "name": "SkiErg",
-              "sets": 1,
-              "reps": 1000,
-              "hint": "1.000m Wettkampftempo"
-            },
-            {
-              "name": "Sled Push",
-              "sets": 1,
-              "reps": 50,
-              "hint": "50m / 102kg Wettkampftempo"
-            },
-            {
-              "name": "Sled Pull",
-              "sets": 1,
-              "reps": 50,
-              "hint": "50m / 78kg Wettkampftempo"
-            },
-            {
-              "name": "Burpee Broad Jump",
-              "sets": 1,
-              "reps": 80,
-              "hint": "80m – Prio 1 Schwäche"
-            },
-            {
-              "name": "RowErg",
-              "sets": 1,
-              "reps": 1000,
-              "hint": "1.000m Wettkampftempo"
-            },
-            {
-              "name": "Farmer's Carry",
-              "sets": 1,
-              "reps": 200,
-              "hint": "200m / 2×24kg"
-            },
-            {
-              "name": "Sandbag Lunges",
-              "sets": 1,
-              "reps": 100,
-              "hint": "100m / 20kg – Prio 1 Schwäche"
-            },
-            {
-              "name": "Wall Balls",
-              "sets": 1,
-              "reps": 100,
-              "hint": "100 Reps / 6kg"
-            }
-          ]
-        },
-        {
-          "day": "saturday",
-          "type": "mobility",
-          "title": "Mobility & Dehnen",
-          "durationMin": 10,
-          "notes": "Nach dem Krafttraining. Fokus: Schultern, Brustwirbelsäule, Hüfte, unterer Rücken.",
-          "exercises": [
-            {
-              "name": "Brustwirbelsäulen-Rotation (Quadruped)",
-              "sets": 2,
-              "reps": 8,
-              "hint": "je Seite, langsam, aus der Wirbelsäule drehen"
-            },
-            {
-              "name": "Schulterdehnung im Türrahmen",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite"
-            },
-            {
-              "name": "Tiefe Hocke (Deep Squat Hold)",
-              "sets": 2,
-              "reps": 45,
-              "hint": "45s halten, Fersen am Boden"
-            },
-            {
-              "name": "Kindshaltung",
-              "sets": 2,
-              "reps": 45,
-              "hint": "45s halten, Arme lang nach vorne"
-            }
-          ]
-        },
-        {
-          "day": "sunday",
-          "type": "run",
-          "title": "MDL/TDL Mix",
-          "durationMin": 90,
-          "zone": "138-161 bpm",
-          "notes": "MDL/TDL Mix."
-        },
-        {
-          "day": "sunday",
-          "type": "mobility",
-          "title": "Mobility & Dehnen",
-          "durationMin": 10,
-          "notes": "Nach dem Laufen, wenn Muskulatur warm ist. Fokus: Waden, Hüftbeuger, Oberschenkelrückseite.",
-          "exercises": [
-            {
-              "name": "Wadendehnung an der Wand",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite"
-            },
-            {
-              "name": "Hüftbeuger-Dehnung im Ausfallschritt",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite, Becken unterrollen"
-            },
-            {
-              "name": "Liegende Hamstring-Dehnung",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite, mit Band/Handtuch"
-            },
-            {
-              "name": "Foam Rolling Oberschenkel/IT-Band",
-              "sets": 1,
-              "reps": 60,
-              "hint": "60s je Seite, langsam rollen"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "week": 20,
-      "phase": "peak1",
-      "startDate": "2026-10-04",
-      "rpeTarget": {
-        "min": 2000,
-        "max": 2800
-      },
-      "sessions": [
-        {
-          "day": "monday",
-          "type": "run",
-          "title": "HIIT",
-          "durationMin": 60,
-          "zone": "Max >165 bpm",
-          "pace": "≈13,5–14,5 km/h (≈4:08–4:27 min/km) – HF-gesteuert",
-          "notes": "HIIT: 5×4 Min >165 bpm, 3 Min Pause."
-        },
-        {
-          "day": "monday",
-          "type": "mobility",
-          "title": "Mobility & Dehnen",
-          "durationMin": 10,
-          "notes": "Nach dem Laufen, wenn Muskulatur warm ist. Fokus: Waden, Hüftbeuger, Oberschenkelrückseite.",
-          "exercises": [
-            {
-              "name": "Wadendehnung an der Wand",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite"
-            },
-            {
-              "name": "Hüftbeuger-Dehnung im Ausfallschritt",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite, Becken unterrollen"
-            },
-            {
-              "name": "Liegende Hamstring-Dehnung",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite, mit Band/Handtuch"
-            },
-            {
-              "name": "Foam Rolling Oberschenkel/IT-Band",
-              "sets": 1,
-              "reps": 60,
-              "hint": "60s je Seite, langsam rollen"
-            }
-          ]
-        },
-        {
-          "day": "tuesday",
-          "type": "strength",
-          "title": "Alle 8 Stationen",
-          "durationMin": 60,
-          "zone": "Wettkampftempo",
-          "notes": "Alle 8 Stationen, Wettkampfgewicht.",
-          "exercises": [
-            {
-              "name": "SkiErg",
-              "sets": 1,
-              "reps": 1000,
-              "hint": "1.000m Wettkampftempo"
-            },
-            {
-              "name": "Sled Push",
-              "sets": 1,
-              "reps": 50,
-              "hint": "50m / 102kg Wettkampftempo"
-            },
-            {
-              "name": "Sled Pull",
-              "sets": 1,
-              "reps": 50,
-              "hint": "50m / 78kg Wettkampftempo"
-            },
-            {
-              "name": "Burpee Broad Jump",
-              "sets": 1,
-              "reps": 80,
-              "hint": "80m – Prio 1 Schwäche"
-            },
-            {
-              "name": "RowErg",
-              "sets": 1,
-              "reps": 1000,
-              "hint": "1.000m Wettkampftempo"
-            },
-            {
-              "name": "Farmer's Carry",
-              "sets": 1,
-              "reps": 200,
-              "hint": "200m / 2×24kg"
-            },
-            {
-              "name": "Sandbag Lunges",
-              "sets": 1,
-              "reps": 100,
-              "hint": "100m / 20kg – Prio 1 Schwäche"
-            },
-            {
-              "name": "Wall Balls",
-              "sets": 1,
-              "reps": 100,
-              "hint": "100 Reps / 6kg"
-            }
-          ]
-        },
-        {
-          "day": "tuesday",
-          "type": "mobility",
-          "title": "Mobility & Dehnen",
-          "durationMin": 10,
-          "notes": "Nach dem Krafttraining. Fokus: Schultern, Brustwirbelsäule, Hüfte, unterer Rücken.",
-          "exercises": [
-            {
-              "name": "Brustwirbelsäulen-Rotation (Quadruped)",
-              "sets": 2,
-              "reps": 8,
-              "hint": "je Seite, langsam, aus der Wirbelsäule drehen"
-            },
-            {
-              "name": "Schulterdehnung im Türrahmen",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite"
-            },
-            {
-              "name": "Tiefe Hocke (Deep Squat Hold)",
-              "sets": 2,
-              "reps": 45,
-              "hint": "45s halten, Fersen am Boden"
-            },
-            {
-              "name": "Kindshaltung",
-              "sets": 2,
-              "reps": 45,
-              "hint": "45s halten, Arme lang nach vorne"
-            }
-          ]
-        },
-        {
-          "day": "wednesday",
-          "type": "strength",
-          "title": "Vollsimulation",
-          "durationMin": 90,
-          "zone": "Wettkampftempo",
-          "notes": "Alle 8 Stationen + 8×1 km. Zeit messen. Transitions.",
-          "exercises": [
-            {
-              "name": "SkiErg",
-              "sets": 1,
-              "reps": 1000,
-              "hint": "1.000m nach 1km Lauf"
-            },
-            {
-              "name": "Sled Push",
-              "sets": 1,
-              "reps": 50,
-              "hint": "50m / 102kg nach 1km Lauf"
-            },
-            {
-              "name": "Sled Pull",
-              "sets": 1,
-              "reps": 50,
-              "hint": "50m / 78kg nach 1km Lauf"
-            },
-            {
-              "name": "Burpee Broad Jump",
-              "sets": 1,
-              "reps": 80,
-              "hint": "80m nach 1km Lauf"
-            },
-            {
-              "name": "RowErg",
-              "sets": 1,
-              "reps": 1000,
-              "hint": "1.000m nach 1km Lauf"
-            },
-            {
-              "name": "Farmer's Carry",
-              "sets": 1,
-              "reps": 200,
-              "hint": "200m / 2×24kg nach 1km Lauf"
-            },
-            {
-              "name": "Sandbag Lunges",
-              "sets": 1,
-              "reps": 100,
-              "hint": "100m / 20kg nach 1km Lauf"
-            },
-            {
-              "name": "Wall Balls",
-              "sets": 1,
-              "reps": 100,
-              "hint": "100 Reps / 6kg / 3m Ziel nach 1km Lauf"
-            }
-          ]
-        },
-        {
-          "day": "wednesday",
-          "type": "mobility",
-          "title": "Mobility & Dehnen",
-          "durationMin": 10,
-          "notes": "Nach dem Krafttraining. Fokus: Schultern, Brustwirbelsäule, Hüfte, unterer Rücken.",
-          "exercises": [
-            {
-              "name": "Brustwirbelsäulen-Rotation (Quadruped)",
-              "sets": 2,
-              "reps": 8,
-              "hint": "je Seite, langsam, aus der Wirbelsäule drehen"
-            },
-            {
-              "name": "Schulterdehnung im Türrahmen",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite"
-            },
-            {
-              "name": "Tiefe Hocke (Deep Squat Hold)",
-              "sets": 2,
-              "reps": 45,
-              "hint": "45s halten, Fersen am Boden"
-            },
-            {
-              "name": "Kindshaltung",
-              "sets": 2,
-              "reps": 45,
-              "hint": "45s halten, Arme lang nach vorne"
-            }
-          ]
-        },
-        {
-          "day": "thursday",
-          "type": "run",
-          "title": "Rennsimulation",
-          "durationMin": 90,
-          "zone": "Wettkampftempo",
-          "notes": "Volle Runde Wettkampftempo. Transitions konsequent üben."
-        },
-        {
-          "day": "thursday",
-          "type": "mobility",
-          "title": "Mobility & Dehnen",
-          "durationMin": 10,
-          "notes": "Nach dem Laufen, wenn Muskulatur warm ist. Fokus: Waden, Hüftbeuger, Oberschenkelrückseite.",
-          "exercises": [
-            {
-              "name": "Wadendehnung an der Wand",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite"
-            },
-            {
-              "name": "Hüftbeuger-Dehnung im Ausfallschritt",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite, Becken unterrollen"
-            },
-            {
-              "name": "Liegende Hamstring-Dehnung",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite, mit Band/Handtuch"
-            },
-            {
-              "name": "Foam Rolling Oberschenkel/IT-Band",
-              "sets": 1,
-              "reps": 60,
-              "hint": "60s je Seite, langsam rollen"
-            }
-          ]
-        },
-        {
-          "day": "friday",
-          "type": "rest",
-          "title": "Ruhetag",
-          "durationMin": 0,
-          "zone": null,
           "notes": "Ruhetag"
         },
         {
@@ -7611,35 +6664,9 @@
           "day": "saturday",
           "type": "strength",
           "title": "Technik leicht",
-          "durationMin": 45,
-          "zone": "locker",
-          "notes": "Stationstechnik locker, Core, kein Max.",
-          "exercises": [
-            {
-              "name": "Burpee Technik",
-              "sets": 3,
-              "reps": 8,
-              "hint": "locker"
-            },
-            {
-              "name": "Sandbag Lunges Technik",
-              "sets": 3,
-              "reps": 10,
-              "hint": "10m locker"
-            },
-            {
-              "name": "Hollow Body",
-              "sets": 3,
-              "reps": 25,
-              "hint": "25s"
-            },
-            {
-              "name": "Plank",
-              "sets": 3,
-              "reps": 45,
-              "hint": "45s"
-            }
-          ]
+          "durationMin": 40,
+          "zone": "leicht",
+          "notes": "Stationstechnik locker, Core, kein Max. Übergang in den Taper."
         },
         {
           "day": "saturday",
@@ -7673,14 +6700,25 @@
               "hint": "45s halten, Arme lang nach vorne"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "week": 19,
+      "phase": "race1",
+      "startDate": "2026-09-27",
+      "rpeTarget": {
+        "min": 800,
+        "max": 1100
+      },
+      "sessions": [
         {
           "day": "sunday",
           "type": "run",
-          "title": "Race-Pace Lauf",
-          "durationMin": 60,
-          "zone": "ETL/Max >161 bpm",
-          "notes": "8-10 km bei Wettkampfpace (>13,4 km/h). Letzte Intensität vor Taper."
+          "title": "MDL locker",
+          "durationMin": 45,
+          "zone": "138-158 bpm",
+          "notes": "Taper-Start – locker, Beine frisch halten."
         },
         {
           "day": "sunday",
@@ -7714,25 +6752,14 @@
               "hint": "60s je Seite, langsam rollen"
             }
           ]
-        }
-      ]
-    },
-    {
-      "week": 21,
-      "phase": "peak1",
-      "startDate": "2026-10-11",
-      "rpeTarget": {
-        "min": 800,
-        "max": 1200
-      },
-      "sessions": [
+        },
         {
           "day": "monday",
           "type": "run",
-          "title": "MDL locker",
-          "durationMin": 40,
-          "zone": "138-158 bpm",
-          "notes": "Taper – MDL locker."
+          "title": "Laufen leicht",
+          "durationMin": 30,
+          "zone": "locker",
+          "notes": "20 Min locker + 3×200m Strides."
         },
         {
           "day": "monday",
@@ -7770,30 +6797,10 @@
         {
           "day": "tuesday",
           "type": "strength",
-          "title": "Stationen leicht",
-          "durationMin": 40,
+          "title": "Stationen sehr leicht",
+          "durationMin": 30,
           "zone": "leicht",
-          "notes": "Taper: 2-3 Stationen kurz, Technik.",
-          "exercises": [
-            {
-              "name": "SkiErg",
-              "sets": 2,
-              "reps": 500,
-              "hint": "locker"
-            },
-            {
-              "name": "Burpee Technik",
-              "sets": 2,
-              "reps": 6,
-              "hint": "langsam"
-            },
-            {
-              "name": "Sandbag Lunges Technik",
-              "sets": 2,
-              "reps": 10,
-              "hint": "10m locker"
-            }
-          ]
+          "notes": "2 Stationen kurz, reine Technik, Core."
         },
         {
           "day": "tuesday",
@@ -7833,8 +6840,7 @@
           "type": "rest",
           "title": "Pause",
           "durationMin": 0,
-          "zone": null,
-          "notes": "Pause / Mobilität"
+          "notes": "Pause / Mobility"
         },
         {
           "day": "wednesday",
@@ -7873,8 +6879,9 @@
           "day": "thursday",
           "type": "run",
           "title": "Aktivierung",
-          "durationMin": 50,
+          "durationMin": 40,
           "zone": "ETL 12,4-13,4 km/h",
+          "pace": "ETL-Pace 12,4–13,4 km/h (≈4:29–4:50 min/km)",
           "notes": "3×1 km bei ETL-Pace, locker auslaufen."
         },
         {
@@ -7913,10 +6920,9 @@
         {
           "day": "friday",
           "type": "rest",
-          "title": "Ruhetag",
+          "title": "Anreise Karlsruhe",
           "durationMin": 0,
-          "zone": null,
-          "notes": "Ruhetag"
+          "notes": "Anreise, Verpflegung vorbereiten, Ausrüstung checken, Beine hoch."
         },
         {
           "day": "friday",
@@ -7953,353 +6959,14 @@
         },
         {
           "day": "saturday",
-          "type": "rest",
-          "title": "Pause",
-          "durationMin": 0,
-          "zone": null,
-          "notes": "Anreise Karlsruhe / Verpflegung vorbereiten / Beine hoch"
-        },
-        {
-          "day": "saturday",
-          "type": "mobility",
-          "title": "Mobility-Flow",
-          "durationMin": 15,
-          "notes": "Am Ruhetag – längere Ganzkörper-Routine für Beweglichkeit abseits vom Training.",
-          "exercises": [
-            {
-              "name": "World's Greatest Stretch",
-              "sets": 2,
-              "reps": 5,
-              "hint": "je Seite, fließend, ohne zu hetzen"
-            },
-            {
-              "name": "90/90 Hip Switch",
-              "sets": 2,
-              "reps": 8,
-              "hint": "je Seite, kontrolliert wechseln"
-            },
-            {
-              "name": "Downward Dog zu Cobra Flow",
-              "sets": 2,
-              "reps": 8,
-              "hint": "fließende Wiederholungen, Atmung koppeln"
-            },
-            {
-              "name": "Nacken- und Schulterkreisen",
-              "sets": 1,
-              "reps": 120,
-              "hint": "2 Min, inkl. Handgelenk-Mobilisation"
-            }
-          ]
-        },
-        {
-          "day": "sunday",
-          "type": "run",
-          "title": "LDL/MDL",
-          "durationMin": 50,
-          "zone": "<148 bpm",
-          "notes": "Taper – Beine locker halten."
-        },
-        {
-          "day": "sunday",
-          "type": "mobility",
-          "title": "Mobility & Dehnen",
-          "durationMin": 10,
-          "notes": "Nach dem Laufen, wenn Muskulatur warm ist. Fokus: Waden, Hüftbeuger, Oberschenkelrückseite.",
-          "exercises": [
-            {
-              "name": "Wadendehnung an der Wand",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite"
-            },
-            {
-              "name": "Hüftbeuger-Dehnung im Ausfallschritt",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite, Becken unterrollen"
-            },
-            {
-              "name": "Liegende Hamstring-Dehnung",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite, mit Band/Handtuch"
-            },
-            {
-              "name": "Foam Rolling Oberschenkel/IT-Band",
-              "sets": 1,
-              "reps": 60,
-              "hint": "60s je Seite, langsam rollen"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "week": 22,
-      "phase": "race1",
-      "startDate": "2026-10-18",
-      "rpeTarget": {
-        "min": 0,
-        "max": 0
-      },
-      "sessions": [
-        {
-          "day": "monday",
-          "type": "run",
-          "title": "Aktive Erholung",
-          "durationMin": 30,
-          "zone": "<130 bpm",
-          "notes": "Post-Race: sehr locker, Beine ausschütteln."
-        },
-        {
-          "day": "monday",
-          "type": "mobility",
-          "title": "Mobility & Dehnen",
-          "durationMin": 10,
-          "notes": "Nach dem Laufen, wenn Muskulatur warm ist. Fokus: Waden, Hüftbeuger, Oberschenkelrückseite.",
-          "exercises": [
-            {
-              "name": "Wadendehnung an der Wand",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite"
-            },
-            {
-              "name": "Hüftbeuger-Dehnung im Ausfallschritt",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite, Becken unterrollen"
-            },
-            {
-              "name": "Liegende Hamstring-Dehnung",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite, mit Band/Handtuch"
-            },
-            {
-              "name": "Foam Rolling Oberschenkel/IT-Band",
-              "sets": 1,
-              "reps": 60,
-              "hint": "60s je Seite, langsam rollen"
-            }
-          ]
-        },
-        {
-          "day": "tuesday",
-          "type": "rest",
-          "title": "Pause",
-          "durationMin": 0,
-          "zone": null,
-          "notes": "Pause / Regeneration"
-        },
-        {
-          "day": "tuesday",
-          "type": "mobility",
-          "title": "Mobility-Flow",
-          "durationMin": 15,
-          "notes": "Am Ruhetag – längere Ganzkörper-Routine für Beweglichkeit abseits vom Training.",
-          "exercises": [
-            {
-              "name": "World's Greatest Stretch",
-              "sets": 2,
-              "reps": 5,
-              "hint": "je Seite, fließend, ohne zu hetzen"
-            },
-            {
-              "name": "90/90 Hip Switch",
-              "sets": 2,
-              "reps": 8,
-              "hint": "je Seite, kontrolliert wechseln"
-            },
-            {
-              "name": "Downward Dog zu Cobra Flow",
-              "sets": 2,
-              "reps": 8,
-              "hint": "fließende Wiederholungen, Atmung koppeln"
-            },
-            {
-              "name": "Nacken- und Schulterkreisen",
-              "sets": 1,
-              "reps": 120,
-              "hint": "2 Min, inkl. Handgelenk-Mobilisation"
-            }
-          ]
-        },
-        {
-          "day": "wednesday",
-          "type": "rest",
-          "title": "Pause",
-          "durationMin": 0,
-          "zone": null,
-          "notes": "Pause"
-        },
-        {
-          "day": "wednesday",
-          "type": "mobility",
-          "title": "Mobility-Flow",
-          "durationMin": 15,
-          "notes": "Am Ruhetag – längere Ganzkörper-Routine für Beweglichkeit abseits vom Training.",
-          "exercises": [
-            {
-              "name": "World's Greatest Stretch",
-              "sets": 2,
-              "reps": 5,
-              "hint": "je Seite, fließend, ohne zu hetzen"
-            },
-            {
-              "name": "90/90 Hip Switch",
-              "sets": 2,
-              "reps": 8,
-              "hint": "je Seite, kontrolliert wechseln"
-            },
-            {
-              "name": "Downward Dog zu Cobra Flow",
-              "sets": 2,
-              "reps": 8,
-              "hint": "fließende Wiederholungen, Atmung koppeln"
-            },
-            {
-              "name": "Nacken- und Schulterkreisen",
-              "sets": 1,
-              "reps": 120,
-              "hint": "2 Min, inkl. Handgelenk-Mobilisation"
-            }
-          ]
-        },
-        {
-          "day": "thursday",
-          "type": "run",
-          "title": "Locker LDL",
-          "durationMin": 30,
-          "zone": "<137 bpm",
-          "notes": "Post-Race: kurzer LDL, nur wenn gut."
-        },
-        {
-          "day": "thursday",
-          "type": "mobility",
-          "title": "Mobility & Dehnen",
-          "durationMin": 10,
-          "notes": "Nach dem Laufen, wenn Muskulatur warm ist. Fokus: Waden, Hüftbeuger, Oberschenkelrückseite.",
-          "exercises": [
-            {
-              "name": "Wadendehnung an der Wand",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite"
-            },
-            {
-              "name": "Hüftbeuger-Dehnung im Ausfallschritt",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite, Becken unterrollen"
-            },
-            {
-              "name": "Liegende Hamstring-Dehnung",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite, mit Band/Handtuch"
-            },
-            {
-              "name": "Foam Rolling Oberschenkel/IT-Band",
-              "sets": 1,
-              "reps": 60,
-              "hint": "60s je Seite, langsam rollen"
-            }
-          ]
-        },
-        {
-          "day": "friday",
-          "type": "rest",
-          "title": "Ruhetag",
-          "durationMin": 0,
-          "zone": null,
-          "notes": "Ruhetag"
-        },
-        {
-          "day": "friday",
-          "type": "mobility",
-          "title": "Mobility-Flow",
-          "durationMin": 15,
-          "notes": "Am Ruhetag – längere Ganzkörper-Routine für Beweglichkeit abseits vom Training.",
-          "exercises": [
-            {
-              "name": "World's Greatest Stretch",
-              "sets": 2,
-              "reps": 5,
-              "hint": "je Seite, fließend, ohne zu hetzen"
-            },
-            {
-              "name": "90/90 Hip Switch",
-              "sets": 2,
-              "reps": 8,
-              "hint": "je Seite, kontrolliert wechseln"
-            },
-            {
-              "name": "Downward Dog zu Cobra Flow",
-              "sets": 2,
-              "reps": 8,
-              "hint": "fließende Wiederholungen, Atmung koppeln"
-            },
-            {
-              "name": "Nacken- und Schulterkreisen",
-              "sets": 1,
-              "reps": 120,
-              "hint": "2 Min, inkl. Handgelenk-Mobilisation"
-            }
-          ]
-        },
-        {
-          "day": "saturday",
-          "type": "rest",
-          "title": "Pause",
-          "durationMin": 0,
-          "zone": null,
-          "notes": "Erholung"
-        },
-        {
-          "day": "saturday",
-          "type": "mobility",
-          "title": "Mobility-Flow",
-          "durationMin": 15,
-          "notes": "Am Ruhetag – längere Ganzkörper-Routine für Beweglichkeit abseits vom Training.",
-          "exercises": [
-            {
-              "name": "World's Greatest Stretch",
-              "sets": 2,
-              "reps": 5,
-              "hint": "je Seite, fließend, ohne zu hetzen"
-            },
-            {
-              "name": "90/90 Hip Switch",
-              "sets": 2,
-              "reps": 8,
-              "hint": "je Seite, kontrolliert wechseln"
-            },
-            {
-              "name": "Downward Dog zu Cobra Flow",
-              "sets": 2,
-              "reps": 8,
-              "hint": "fließende Wiederholungen, Atmung koppeln"
-            },
-            {
-              "name": "Nacken- und Schulterkreisen",
-              "sets": 1,
-              "reps": 120,
-              "hint": "2 Min, inkl. Handgelenk-Mobilisation"
-            }
-          ]
-        },
-        {
-          "day": "sunday",
           "type": "run",
           "title": "WETTKAMPF: Hyrox Karlsruhe · Ziel Sub 75 Min",
           "durationMin": 80,
           "zone": "Wettkampf",
-          "notes": "Sub 75 Min. Lauftaktik: Läufe 1-2 konservativ (5:20/km), Läufe 3-6 Zielpace (5:00/km), Läufe 7-8 alles geben."
+          "notes": "Lauftaktik: Läufe 1-2 konservativ (5:20/km), Läufe 3-6 Zielpace (5:00/km), Läufe 7-8 alles geben."
         },
         {
-          "day": "sunday",
+          "day": "saturday",
           "type": "mobility",
           "title": "Mobility & Dehnen",
           "durationMin": 10,
@@ -8334,24 +7001,24 @@
       ]
     },
     {
-      "week": 23,
+      "week": 20,
       "phase": "recovery",
-      "startDate": "2026-10-25",
+      "startDate": "2026-10-04",
       "rpeTarget": {
         "min": 300,
-        "max": 600
+        "max": 500
       },
       "sessions": [
         {
-          "day": "monday",
+          "day": "sunday",
           "type": "run",
-          "title": "LDL Aktive Erholung",
-          "durationMin": 35,
-          "zone": "<137 bpm",
-          "notes": "Post-Race Woche 1: sehr locker."
+          "title": "Aktive Erholung",
+          "durationMin": 30,
+          "zone": "<130 bpm",
+          "notes": "Tag nach dem Rennen: sehr locker, Beine ausschütteln, kein Tempo."
         },
         {
-          "day": "monday",
+          "day": "sunday",
           "type": "mobility",
           "title": "Mobility & Dehnen",
           "durationMin": 10,
@@ -8384,15 +7051,14 @@
           ]
         },
         {
-          "day": "tuesday",
+          "day": "monday",
           "type": "rest",
           "title": "Pause",
           "durationMin": 0,
-          "zone": null,
-          "notes": "Pause"
+          "notes": "Regeneration, Beine hoch."
         },
         {
-          "day": "tuesday",
+          "day": "monday",
           "type": "mobility",
           "title": "Mobility-Flow",
           "durationMin": 15,
@@ -8425,15 +7091,14 @@
           ]
         },
         {
-          "day": "wednesday",
+          "day": "tuesday",
           "type": "rest",
           "title": "Pause",
           "durationMin": 0,
-          "zone": null,
           "notes": "Pause / Mobilität"
         },
         {
-          "day": "wednesday",
+          "day": "tuesday",
           "type": "mobility",
           "title": "Mobility-Flow",
           "durationMin": 15,
@@ -8466,15 +7131,15 @@
           ]
         },
         {
-          "day": "thursday",
+          "day": "wednesday",
           "type": "run",
-          "title": "LDL locker",
-          "durationMin": 40,
+          "title": "LDL sehr locker",
+          "durationMin": 35,
           "zone": "<137 bpm",
-          "notes": "Kurzer LDL."
+          "notes": "Nur wenn HRV grün, sonst Pause."
         },
         {
-          "day": "thursday",
+          "day": "wednesday",
           "type": "mobility",
           "title": "Mobility & Dehnen",
           "durationMin": 10,
@@ -8503,6 +7168,46 @@
               "sets": 1,
               "reps": 60,
               "hint": "60s je Seite, langsam rollen"
+            }
+          ]
+        },
+        {
+          "day": "thursday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "thursday",
+          "type": "mobility",
+          "title": "Mobility-Flow",
+          "durationMin": 15,
+          "notes": "Am Ruhetag – längere Ganzkörper-Routine für Beweglichkeit abseits vom Training.",
+          "exercises": [
+            {
+              "name": "World's Greatest Stretch",
+              "sets": 2,
+              "reps": 5,
+              "hint": "je Seite, fließend, ohne zu hetzen"
+            },
+            {
+              "name": "90/90 Hip Switch",
+              "sets": 2,
+              "reps": 8,
+              "hint": "je Seite, kontrolliert wechseln"
+            },
+            {
+              "name": "Downward Dog zu Cobra Flow",
+              "sets": 2,
+              "reps": 8,
+              "hint": "fließende Wiederholungen, Atmung koppeln"
+            },
+            {
+              "name": "Nacken- und Schulterkreisen",
+              "sets": 1,
+              "reps": 120,
+              "hint": "2 Min, inkl. Handgelenk-Mobilisation"
             }
           ]
         },
@@ -8511,7 +7216,6 @@
           "type": "rest",
           "title": "Ruhetag",
           "durationMin": 0,
-          "zone": null,
           "notes": "Ruhetag"
         },
         {
@@ -8552,8 +7256,7 @@
           "type": "rest",
           "title": "Pause",
           "durationMin": 0,
-          "zone": null,
-          "notes": "Spaziergang optional"
+          "notes": "Spaziergang optional."
         },
         {
           "day": "saturday",
@@ -8587,66 +7290,66 @@
               "hint": "2 Min, inkl. Handgelenk-Mobilisation"
             }
           ]
-        },
-        {
-          "day": "sunday",
-          "type": "run",
-          "title": "LDL",
-          "durationMin": 45,
-          "zone": "<137 bpm",
-          "notes": "Woche 1 Recovery – LDL locker."
-        },
-        {
-          "day": "sunday",
-          "type": "mobility",
-          "title": "Mobility & Dehnen",
-          "durationMin": 10,
-          "notes": "Nach dem Laufen, wenn Muskulatur warm ist. Fokus: Waden, Hüftbeuger, Oberschenkelrückseite.",
-          "exercises": [
-            {
-              "name": "Wadendehnung an der Wand",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite"
-            },
-            {
-              "name": "Hüftbeuger-Dehnung im Ausfallschritt",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite, Becken unterrollen"
-            },
-            {
-              "name": "Liegende Hamstring-Dehnung",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s halten, je Seite, mit Band/Handtuch"
-            },
-            {
-              "name": "Foam Rolling Oberschenkel/IT-Band",
-              "sets": 1,
-              "reps": 60,
-              "hint": "60s je Seite, langsam rollen"
-            }
-          ]
         }
       ]
     },
     {
-      "week": 24,
+      "week": 21,
       "phase": "recovery",
-      "startDate": "2026-11-01",
+      "startDate": "2026-10-11",
       "rpeTarget": {
         "min": 500,
         "max": 800
       },
       "sessions": [
         {
+          "day": "sunday",
+          "type": "run",
+          "title": "LDL",
+          "durationMin": 45,
+          "zone": "<137 bpm",
+          "notes": "Post-Race Woche 2 – weiter locker."
+        },
+        {
+          "day": "sunday",
+          "type": "mobility",
+          "title": "Mobility & Dehnen",
+          "durationMin": 10,
+          "notes": "Nach dem Laufen, wenn Muskulatur warm ist. Fokus: Waden, Hüftbeuger, Oberschenkelrückseite.",
+          "exercises": [
+            {
+              "name": "Wadendehnung an der Wand",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite"
+            },
+            {
+              "name": "Hüftbeuger-Dehnung im Ausfallschritt",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite, Becken unterrollen"
+            },
+            {
+              "name": "Liegende Hamstring-Dehnung",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite, mit Band/Handtuch"
+            },
+            {
+              "name": "Foam Rolling Oberschenkel/IT-Band",
+              "sets": 1,
+              "reps": 60,
+              "hint": "60s je Seite, langsam rollen"
+            }
+          ]
+        },
+        {
           "day": "monday",
           "type": "run",
           "title": "LDL locker",
           "durationMin": 45,
           "zone": "<137 bpm",
-          "notes": "Recovery Woche 2 – MDL darf eingebaut werden wenn HRV grün."
+          "notes": "MDL darf eingebaut werden, wenn HRV grün."
         },
         {
           "day": "monday",
@@ -8686,7 +7389,6 @@
           "type": "rest",
           "title": "Pause",
           "durationMin": 0,
-          "zone": null,
           "notes": "Pause / Mobilität"
         },
         {
@@ -8728,27 +7430,7 @@
           "title": "Grundkraft leicht",
           "durationMin": 45,
           "zone": "RPE max 5",
-          "notes": "Erste Kraft nach Race. Sehr leicht.",
-          "exercises": [
-            {
-              "name": "Goblet Squat",
-              "sets": 3,
-              "reps": 10,
-              "hint": "leicht"
-            },
-            {
-              "name": "Romanian Deadlift",
-              "sets": 3,
-              "reps": 10,
-              "hint": "leicht"
-            },
-            {
-              "name": "Plank",
-              "sets": 3,
-              "reps": 30,
-              "hint": "30s"
-            }
-          ]
+          "notes": "Erste Kraft nach dem Rennen – sehr leicht."
         },
         {
           "day": "wednesday",
@@ -8829,7 +7511,6 @@
           "type": "rest",
           "title": "Ruhetag",
           "durationMin": 0,
-          "zone": null,
           "notes": "Ruhetag"
         },
         {
@@ -8870,8 +7551,7 @@
           "type": "rest",
           "title": "Pause",
           "durationMin": 0,
-          "zone": null,
-          "notes": "Aktive Erholung"
+          "notes": "Aktive Erholung."
         },
         {
           "day": "saturday",
@@ -8905,14 +7585,25 @@
               "hint": "2 Min, inkl. Handgelenk-Mobilisation"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "week": 22,
+      "phase": "recovery",
+      "startDate": "2026-10-18",
+      "rpeTarget": {
+        "min": 900,
+        "max": 1200
+      },
+      "sessions": [
         {
           "day": "sunday",
           "type": "run",
           "title": "MDL",
           "durationMin": 60,
           "zone": "138-158 bpm",
-          "notes": "Recovery abschluss – MDL gleichmäßig."
+          "notes": "Wiederaufbau Woche 1 – Basisvolumen zurück."
         },
         {
           "day": "sunday",
@@ -8944,6 +7635,840 @@
               "sets": 1,
               "reps": 60,
               "hint": "60s je Seite, langsam rollen"
+            }
+          ]
+        },
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "MDL gleichmäßig",
+          "durationMin": 55,
+          "zone": "138-158 bpm"
+        },
+        {
+          "day": "monday",
+          "type": "mobility",
+          "title": "Mobility & Dehnen",
+          "durationMin": 10,
+          "notes": "Nach dem Laufen, wenn Muskulatur warm ist. Fokus: Waden, Hüftbeuger, Oberschenkelrückseite.",
+          "exercises": [
+            {
+              "name": "Wadendehnung an der Wand",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite"
+            },
+            {
+              "name": "Hüftbeuger-Dehnung im Ausfallschritt",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite, Becken unterrollen"
+            },
+            {
+              "name": "Liegende Hamstring-Dehnung",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite, mit Band/Handtuch"
+            },
+            {
+              "name": "Foam Rolling Oberschenkel/IT-Band",
+              "sets": 1,
+              "reps": 60,
+              "hint": "60s je Seite, langsam rollen"
+            }
+          ]
+        },
+        {
+          "day": "tuesday",
+          "type": "strength",
+          "title": "Grundkraft",
+          "durationMin": 50,
+          "zone": "RPE 6",
+          "notes": "Kraft wieder normalisieren."
+        },
+        {
+          "day": "tuesday",
+          "type": "mobility",
+          "title": "Mobility & Dehnen",
+          "durationMin": 10,
+          "notes": "Nach dem Krafttraining. Fokus: Schultern, Brustwirbelsäule, Hüfte, unterer Rücken.",
+          "exercises": [
+            {
+              "name": "Brustwirbelsäulen-Rotation (Quadruped)",
+              "sets": 2,
+              "reps": 8,
+              "hint": "je Seite, langsam, aus der Wirbelsäule drehen"
+            },
+            {
+              "name": "Schulterdehnung im Türrahmen",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite"
+            },
+            {
+              "name": "Tiefe Hocke (Deep Squat Hold)",
+              "sets": 2,
+              "reps": 45,
+              "hint": "45s halten, Fersen am Boden"
+            },
+            {
+              "name": "Kindshaltung",
+              "sets": 2,
+              "reps": 45,
+              "hint": "45s halten, Arme lang nach vorne"
+            }
+          ]
+        },
+        {
+          "day": "wednesday",
+          "type": "strength",
+          "title": "Stationstechnik",
+          "durationMin": 45,
+          "zone": "technisch",
+          "notes": "SkiErg + RowErg, Technikfokus."
+        },
+        {
+          "day": "wednesday",
+          "type": "mobility",
+          "title": "Mobility & Dehnen",
+          "durationMin": 10,
+          "notes": "Nach dem Krafttraining. Fokus: Schultern, Brustwirbelsäule, Hüfte, unterer Rücken.",
+          "exercises": [
+            {
+              "name": "Brustwirbelsäulen-Rotation (Quadruped)",
+              "sets": 2,
+              "reps": 8,
+              "hint": "je Seite, langsam, aus der Wirbelsäule drehen"
+            },
+            {
+              "name": "Schulterdehnung im Türrahmen",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite"
+            },
+            {
+              "name": "Tiefe Hocke (Deep Squat Hold)",
+              "sets": 2,
+              "reps": 45,
+              "hint": "45s halten, Fersen am Boden"
+            },
+            {
+              "name": "Kindshaltung",
+              "sets": 2,
+              "reps": 45,
+              "hint": "45s halten, Arme lang nach vorne"
+            }
+          ]
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "MDL + Fahrtspiel",
+          "durationMin": 60,
+          "zone": "138-158 bpm",
+          "notes": "Leichtes Fahrtspiel einbauen."
+        },
+        {
+          "day": "thursday",
+          "type": "mobility",
+          "title": "Mobility & Dehnen",
+          "durationMin": 10,
+          "notes": "Nach dem Laufen, wenn Muskulatur warm ist. Fokus: Waden, Hüftbeuger, Oberschenkelrückseite.",
+          "exercises": [
+            {
+              "name": "Wadendehnung an der Wand",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite"
+            },
+            {
+              "name": "Hüftbeuger-Dehnung im Ausfallschritt",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite, Becken unterrollen"
+            },
+            {
+              "name": "Liegende Hamstring-Dehnung",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite, mit Band/Handtuch"
+            },
+            {
+              "name": "Foam Rolling Oberschenkel/IT-Band",
+              "sets": 1,
+              "reps": 60,
+              "hint": "60s je Seite, langsam rollen"
+            }
+          ]
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "friday",
+          "type": "mobility",
+          "title": "Mobility-Flow",
+          "durationMin": 15,
+          "notes": "Am Ruhetag – längere Ganzkörper-Routine für Beweglichkeit abseits vom Training.",
+          "exercises": [
+            {
+              "name": "World's Greatest Stretch",
+              "sets": 2,
+              "reps": 5,
+              "hint": "je Seite, fließend, ohne zu hetzen"
+            },
+            {
+              "name": "90/90 Hip Switch",
+              "sets": 2,
+              "reps": 8,
+              "hint": "je Seite, kontrolliert wechseln"
+            },
+            {
+              "name": "Downward Dog zu Cobra Flow",
+              "sets": 2,
+              "reps": 8,
+              "hint": "fließende Wiederholungen, Atmung koppeln"
+            },
+            {
+              "name": "Nacken- und Schulterkreisen",
+              "sets": 1,
+              "reps": 120,
+              "hint": "2 Min, inkl. Handgelenk-Mobilisation"
+            }
+          ]
+        },
+        {
+          "day": "saturday",
+          "type": "strength",
+          "title": "Kraft + Core leicht",
+          "durationMin": 45,
+          "zone": "RPE 5-6"
+        },
+        {
+          "day": "saturday",
+          "type": "mobility",
+          "title": "Mobility & Dehnen",
+          "durationMin": 10,
+          "notes": "Nach dem Krafttraining. Fokus: Schultern, Brustwirbelsäule, Hüfte, unterer Rücken.",
+          "exercises": [
+            {
+              "name": "Brustwirbelsäulen-Rotation (Quadruped)",
+              "sets": 2,
+              "reps": 8,
+              "hint": "je Seite, langsam, aus der Wirbelsäule drehen"
+            },
+            {
+              "name": "Schulterdehnung im Türrahmen",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite"
+            },
+            {
+              "name": "Tiefe Hocke (Deep Squat Hold)",
+              "sets": 2,
+              "reps": 45,
+              "hint": "45s halten, Fersen am Boden"
+            },
+            {
+              "name": "Kindshaltung",
+              "sets": 2,
+              "reps": 45,
+              "hint": "45s halten, Arme lang nach vorne"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 23,
+      "phase": "recovery",
+      "startDate": "2026-10-25",
+      "rpeTarget": {
+        "min": 1100,
+        "max": 1400
+      },
+      "sessions": [
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "LDL lang",
+          "durationMin": 75,
+          "zone": "<137 bpm",
+          "notes": "Wiederaufbau Woche 2."
+        },
+        {
+          "day": "sunday",
+          "type": "mobility",
+          "title": "Mobility & Dehnen",
+          "durationMin": 10,
+          "notes": "Nach dem Laufen, wenn Muskulatur warm ist. Fokus: Waden, Hüftbeuger, Oberschenkelrückseite.",
+          "exercises": [
+            {
+              "name": "Wadendehnung an der Wand",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite"
+            },
+            {
+              "name": "Hüftbeuger-Dehnung im Ausfallschritt",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite, Becken unterrollen"
+            },
+            {
+              "name": "Liegende Hamstring-Dehnung",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite, mit Band/Handtuch"
+            },
+            {
+              "name": "Foam Rolling Oberschenkel/IT-Band",
+              "sets": 1,
+              "reps": 60,
+              "hint": "60s je Seite, langsam rollen"
+            }
+          ]
+        },
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "MDL gleichmäßig",
+          "durationMin": 65,
+          "zone": "138-158 bpm"
+        },
+        {
+          "day": "monday",
+          "type": "mobility",
+          "title": "Mobility & Dehnen",
+          "durationMin": 10,
+          "notes": "Nach dem Laufen, wenn Muskulatur warm ist. Fokus: Waden, Hüftbeuger, Oberschenkelrückseite.",
+          "exercises": [
+            {
+              "name": "Wadendehnung an der Wand",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite"
+            },
+            {
+              "name": "Hüftbeuger-Dehnung im Ausfallschritt",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite, Becken unterrollen"
+            },
+            {
+              "name": "Liegende Hamstring-Dehnung",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite, mit Band/Handtuch"
+            },
+            {
+              "name": "Foam Rolling Oberschenkel/IT-Band",
+              "sets": 1,
+              "reps": 60,
+              "hint": "60s je Seite, langsam rollen"
+            }
+          ]
+        },
+        {
+          "day": "tuesday",
+          "type": "strength",
+          "title": "Grundkraft",
+          "durationMin": 55,
+          "zone": "RPE 6-7"
+        },
+        {
+          "day": "tuesday",
+          "type": "mobility",
+          "title": "Mobility & Dehnen",
+          "durationMin": 10,
+          "notes": "Nach dem Krafttraining. Fokus: Schultern, Brustwirbelsäule, Hüfte, unterer Rücken.",
+          "exercises": [
+            {
+              "name": "Brustwirbelsäulen-Rotation (Quadruped)",
+              "sets": 2,
+              "reps": 8,
+              "hint": "je Seite, langsam, aus der Wirbelsäule drehen"
+            },
+            {
+              "name": "Schulterdehnung im Türrahmen",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite"
+            },
+            {
+              "name": "Tiefe Hocke (Deep Squat Hold)",
+              "sets": 2,
+              "reps": 45,
+              "hint": "45s halten, Fersen am Boden"
+            },
+            {
+              "name": "Kindshaltung",
+              "sets": 2,
+              "reps": 45,
+              "hint": "45s halten, Arme lang nach vorne"
+            }
+          ]
+        },
+        {
+          "day": "wednesday",
+          "type": "strength",
+          "title": "Stationskombis leicht",
+          "durationMin": 50,
+          "zone": "moderat",
+          "notes": "Erste Stationskombis, kein Tempo-Zwang."
+        },
+        {
+          "day": "wednesday",
+          "type": "mobility",
+          "title": "Mobility & Dehnen",
+          "durationMin": 10,
+          "notes": "Nach dem Krafttraining. Fokus: Schultern, Brustwirbelsäule, Hüfte, unterer Rücken.",
+          "exercises": [
+            {
+              "name": "Brustwirbelsäulen-Rotation (Quadruped)",
+              "sets": 2,
+              "reps": 8,
+              "hint": "je Seite, langsam, aus der Wirbelsäule drehen"
+            },
+            {
+              "name": "Schulterdehnung im Türrahmen",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite"
+            },
+            {
+              "name": "Tiefe Hocke (Deep Squat Hold)",
+              "sets": 2,
+              "reps": 45,
+              "hint": "45s halten, Fersen am Boden"
+            },
+            {
+              "name": "Kindshaltung",
+              "sets": 2,
+              "reps": 45,
+              "hint": "45s halten, Arme lang nach vorne"
+            }
+          ]
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "MDL + TDL-Antastung",
+          "durationMin": 70,
+          "zone": "138-161 bpm",
+          "pace": "TDL-Pace 11,9–12,6 km/h (≈4:46–5:02 min/km) für die letzten 10-15 Min",
+          "notes": "Kurzer TDL-Abschnitt gegen Ende – Gefühl für Build 2 aufbauen."
+        },
+        {
+          "day": "thursday",
+          "type": "mobility",
+          "title": "Mobility & Dehnen",
+          "durationMin": 10,
+          "notes": "Nach dem Laufen, wenn Muskulatur warm ist. Fokus: Waden, Hüftbeuger, Oberschenkelrückseite.",
+          "exercises": [
+            {
+              "name": "Wadendehnung an der Wand",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite"
+            },
+            {
+              "name": "Hüftbeuger-Dehnung im Ausfallschritt",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite, Becken unterrollen"
+            },
+            {
+              "name": "Liegende Hamstring-Dehnung",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite, mit Band/Handtuch"
+            },
+            {
+              "name": "Foam Rolling Oberschenkel/IT-Band",
+              "sets": 1,
+              "reps": 60,
+              "hint": "60s je Seite, langsam rollen"
+            }
+          ]
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "friday",
+          "type": "mobility",
+          "title": "Mobility-Flow",
+          "durationMin": 15,
+          "notes": "Am Ruhetag – längere Ganzkörper-Routine für Beweglichkeit abseits vom Training.",
+          "exercises": [
+            {
+              "name": "World's Greatest Stretch",
+              "sets": 2,
+              "reps": 5,
+              "hint": "je Seite, fließend, ohne zu hetzen"
+            },
+            {
+              "name": "90/90 Hip Switch",
+              "sets": 2,
+              "reps": 8,
+              "hint": "je Seite, kontrolliert wechseln"
+            },
+            {
+              "name": "Downward Dog zu Cobra Flow",
+              "sets": 2,
+              "reps": 8,
+              "hint": "fließende Wiederholungen, Atmung koppeln"
+            },
+            {
+              "name": "Nacken- und Schulterkreisen",
+              "sets": 1,
+              "reps": 120,
+              "hint": "2 Min, inkl. Handgelenk-Mobilisation"
+            }
+          ]
+        },
+        {
+          "day": "saturday",
+          "type": "strength",
+          "title": "Kraft + Hyrox-Stationen leicht",
+          "durationMin": 50,
+          "zone": "RPE 6"
+        },
+        {
+          "day": "saturday",
+          "type": "mobility",
+          "title": "Mobility & Dehnen",
+          "durationMin": 10,
+          "notes": "Nach dem Krafttraining. Fokus: Schultern, Brustwirbelsäule, Hüfte, unterer Rücken.",
+          "exercises": [
+            {
+              "name": "Brustwirbelsäulen-Rotation (Quadruped)",
+              "sets": 2,
+              "reps": 8,
+              "hint": "je Seite, langsam, aus der Wirbelsäule drehen"
+            },
+            {
+              "name": "Schulterdehnung im Türrahmen",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite"
+            },
+            {
+              "name": "Tiefe Hocke (Deep Squat Hold)",
+              "sets": 2,
+              "reps": 45,
+              "hint": "45s halten, Fersen am Boden"
+            },
+            {
+              "name": "Kindshaltung",
+              "sets": 2,
+              "reps": 45,
+              "hint": "45s halten, Arme lang nach vorne"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 24,
+      "phase": "recovery",
+      "startDate": "2026-11-01",
+      "rpeTarget": {
+        "min": 1300,
+        "max": 1600
+      },
+      "sessions": [
+        {
+          "day": "sunday",
+          "type": "run",
+          "title": "Langer Lauf MDL",
+          "durationMin": 80,
+          "zone": "138-158 bpm",
+          "notes": "Brücke zu Build 2 – letzte Aufbauwoche."
+        },
+        {
+          "day": "sunday",
+          "type": "mobility",
+          "title": "Mobility & Dehnen",
+          "durationMin": 10,
+          "notes": "Nach dem Laufen, wenn Muskulatur warm ist. Fokus: Waden, Hüftbeuger, Oberschenkelrückseite.",
+          "exercises": [
+            {
+              "name": "Wadendehnung an der Wand",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite"
+            },
+            {
+              "name": "Hüftbeuger-Dehnung im Ausfallschritt",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite, Becken unterrollen"
+            },
+            {
+              "name": "Liegende Hamstring-Dehnung",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite, mit Band/Handtuch"
+            },
+            {
+              "name": "Foam Rolling Oberschenkel/IT-Band",
+              "sets": 1,
+              "reps": 60,
+              "hint": "60s je Seite, langsam rollen"
+            }
+          ]
+        },
+        {
+          "day": "monday",
+          "type": "run",
+          "title": "MDL gleichmäßig",
+          "durationMin": 65,
+          "zone": "138-158 bpm"
+        },
+        {
+          "day": "monday",
+          "type": "mobility",
+          "title": "Mobility & Dehnen",
+          "durationMin": 10,
+          "notes": "Nach dem Laufen, wenn Muskulatur warm ist. Fokus: Waden, Hüftbeuger, Oberschenkelrückseite.",
+          "exercises": [
+            {
+              "name": "Wadendehnung an der Wand",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite"
+            },
+            {
+              "name": "Hüftbeuger-Dehnung im Ausfallschritt",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite, Becken unterrollen"
+            },
+            {
+              "name": "Liegende Hamstring-Dehnung",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite, mit Band/Handtuch"
+            },
+            {
+              "name": "Foam Rolling Oberschenkel/IT-Band",
+              "sets": 1,
+              "reps": 60,
+              "hint": "60s je Seite, langsam rollen"
+            }
+          ]
+        },
+        {
+          "day": "tuesday",
+          "type": "strength",
+          "title": "Grundkraft",
+          "durationMin": 60,
+          "zone": "RPE 7",
+          "notes": "Wettkampfgewichte langsam wieder heranführen."
+        },
+        {
+          "day": "tuesday",
+          "type": "mobility",
+          "title": "Mobility & Dehnen",
+          "durationMin": 10,
+          "notes": "Nach dem Krafttraining. Fokus: Schultern, Brustwirbelsäule, Hüfte, unterer Rücken.",
+          "exercises": [
+            {
+              "name": "Brustwirbelsäulen-Rotation (Quadruped)",
+              "sets": 2,
+              "reps": 8,
+              "hint": "je Seite, langsam, aus der Wirbelsäule drehen"
+            },
+            {
+              "name": "Schulterdehnung im Türrahmen",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite"
+            },
+            {
+              "name": "Tiefe Hocke (Deep Squat Hold)",
+              "sets": 2,
+              "reps": 45,
+              "hint": "45s halten, Fersen am Boden"
+            },
+            {
+              "name": "Kindshaltung",
+              "sets": 2,
+              "reps": 45,
+              "hint": "45s halten, Arme lang nach vorne"
+            }
+          ]
+        },
+        {
+          "day": "wednesday",
+          "type": "strength",
+          "title": "Stationskombis",
+          "durationMin": 55,
+          "zone": "moderat",
+          "notes": "2 Stationen + Läufe, Transitions leicht üben."
+        },
+        {
+          "day": "wednesday",
+          "type": "mobility",
+          "title": "Mobility & Dehnen",
+          "durationMin": 10,
+          "notes": "Nach dem Krafttraining. Fokus: Schultern, Brustwirbelsäule, Hüfte, unterer Rücken.",
+          "exercises": [
+            {
+              "name": "Brustwirbelsäulen-Rotation (Quadruped)",
+              "sets": 2,
+              "reps": 8,
+              "hint": "je Seite, langsam, aus der Wirbelsäule drehen"
+            },
+            {
+              "name": "Schulterdehnung im Türrahmen",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite"
+            },
+            {
+              "name": "Tiefe Hocke (Deep Squat Hold)",
+              "sets": 2,
+              "reps": 45,
+              "hint": "45s halten, Fersen am Boden"
+            },
+            {
+              "name": "Kindshaltung",
+              "sets": 2,
+              "reps": 45,
+              "hint": "45s halten, Arme lang nach vorne"
+            }
+          ]
+        },
+        {
+          "day": "thursday",
+          "type": "run",
+          "title": "MDL + TDL-Anteil",
+          "durationMin": 75,
+          "zone": "138-161 bpm",
+          "pace": "TDL-Pace 11,9–12,6 km/h (≈4:46–5:02 min/km) für die letzten 15-20 Min"
+        },
+        {
+          "day": "thursday",
+          "type": "mobility",
+          "title": "Mobility & Dehnen",
+          "durationMin": 10,
+          "notes": "Nach dem Laufen, wenn Muskulatur warm ist. Fokus: Waden, Hüftbeuger, Oberschenkelrückseite.",
+          "exercises": [
+            {
+              "name": "Wadendehnung an der Wand",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite"
+            },
+            {
+              "name": "Hüftbeuger-Dehnung im Ausfallschritt",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite, Becken unterrollen"
+            },
+            {
+              "name": "Liegende Hamstring-Dehnung",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite, mit Band/Handtuch"
+            },
+            {
+              "name": "Foam Rolling Oberschenkel/IT-Band",
+              "sets": 1,
+              "reps": 60,
+              "hint": "60s je Seite, langsam rollen"
+            }
+          ]
+        },
+        {
+          "day": "friday",
+          "type": "rest",
+          "title": "Ruhetag",
+          "durationMin": 0,
+          "notes": "Ruhetag"
+        },
+        {
+          "day": "friday",
+          "type": "mobility",
+          "title": "Mobility-Flow",
+          "durationMin": 15,
+          "notes": "Am Ruhetag – längere Ganzkörper-Routine für Beweglichkeit abseits vom Training.",
+          "exercises": [
+            {
+              "name": "World's Greatest Stretch",
+              "sets": 2,
+              "reps": 5,
+              "hint": "je Seite, fließend, ohne zu hetzen"
+            },
+            {
+              "name": "90/90 Hip Switch",
+              "sets": 2,
+              "reps": 8,
+              "hint": "je Seite, kontrolliert wechseln"
+            },
+            {
+              "name": "Downward Dog zu Cobra Flow",
+              "sets": 2,
+              "reps": 8,
+              "hint": "fließende Wiederholungen, Atmung koppeln"
+            },
+            {
+              "name": "Nacken- und Schulterkreisen",
+              "sets": 1,
+              "reps": 120,
+              "hint": "2 Min, inkl. Handgelenk-Mobilisation"
+            }
+          ]
+        },
+        {
+          "day": "saturday",
+          "type": "strength",
+          "title": "Kraft + Hyrox-Stationen",
+          "durationMin": 55,
+          "zone": "RPE 7",
+          "notes": "Rennanalyse Karlsruhe einbeziehen: echte Stationszeiten/Transition-Verluste in Build-2-Fokus übersetzen."
+        },
+        {
+          "day": "saturday",
+          "type": "mobility",
+          "title": "Mobility & Dehnen",
+          "durationMin": 10,
+          "notes": "Nach dem Krafttraining. Fokus: Schultern, Brustwirbelsäule, Hüfte, unterer Rücken.",
+          "exercises": [
+            {
+              "name": "Brustwirbelsäulen-Rotation (Quadruped)",
+              "sets": 2,
+              "reps": 8,
+              "hint": "je Seite, langsam, aus der Wirbelsäule drehen"
+            },
+            {
+              "name": "Schulterdehnung im Türrahmen",
+              "sets": 2,
+              "reps": 30,
+              "hint": "30s halten, je Seite"
+            },
+            {
+              "name": "Tiefe Hocke (Deep Squat Hold)",
+              "sets": 2,
+              "reps": 45,
+              "hint": "45s halten, Fersen am Boden"
+            },
+            {
+              "name": "Kindshaltung",
+              "sets": 2,
+              "reps": 45,
+              "hint": "45s halten, Arme lang nach vorne"
             }
           ]
         }
