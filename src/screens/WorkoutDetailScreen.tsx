@@ -2,8 +2,11 @@ import { useEffect, useState, useCallback } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { colors, spacing, radius } from '../theme/colors'
 import { ExerciseRow } from '../components/ExerciseRow'
+import { Timer } from '../components/Timer'
 import { getExercisesForSession, logSessionComplete, type Exercise } from '../db/queries/sessions'
 import { getSetsForExerciseOnDate, getLastWeightForExercise, upsertSet, type LoggedSet } from '../db/queries/sets'
+
+const REST_SECONDS = 90
 
 export function WorkoutDetailScreen() {
   const navigate = useNavigate()
@@ -13,6 +16,7 @@ export function WorkoutDetailScreen() {
   const [sets, setSets] = useState<Record<number, LoggedSet[]>>({})
   const [lastWeights, setLastWeights] = useState<Record<number, number | null>>({})
   const [rpe, setRpe] = useState<number | null>(null)
+  const [resting, setResting] = useState(false)
 
   useEffect(() => {
     async function load() {
@@ -37,6 +41,7 @@ export function WorkoutDetailScreen() {
     await upsertSet(exerciseId, date!, setNumber, reps, weight, completed)
     const updated = await getSetsForExerciseOnDate(exerciseId, date!)
     setSets(prev => ({ ...prev, [exerciseId]: updated }))
+    if (completed) setResting(true)
   }, [date])
 
   async function handleFinish() {
@@ -45,9 +50,18 @@ export function WorkoutDetailScreen() {
     navigate(-1)
   }
 
+  if (resting) {
+    return (
+      <div style={{ display: 'flex', flexDirection: 'column', gap: spacing.md, paddingTop: spacing.xl }}>
+        <button onClick={() => setResting(false)} style={{ fontSize: 16, color: colors.textSecondary, textAlign: 'left', background: 'none', border: 'none' }}>← Pause überspringen</button>
+        <Timer rounds={1} workSec={0} restSec={REST_SECONDS} label="Satzpause" onDone={() => setResting(false)} />
+      </div>
+    )
+  }
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: spacing.md }}>
-      <button onClick={() => navigate(-1)} style={{ fontSize: 16, color: colors.textSecondary, textAlign: 'left', marginBottom: spacing.xs, background: 'none', border: 'none', cursor: 'pointer' }}>← Zurück</button>
+      <button onClick={() => navigate(-1)} style={{ fontSize: 16, color: colors.textSecondary, textAlign: 'left', marginBottom: spacing.xs, background: 'none', border: 'none' }}>← Zurück</button>
 
       {exercises.map(ex => (
         <ExerciseRow
@@ -65,7 +79,7 @@ export function WorkoutDetailScreen() {
           {Array.from({ length: 10 }, (_, i) => i + 1).map(n => (
             <button
               key={n}
-              style={{ flex: 1, minWidth: 36, background: rpe === n ? colors.green : colors.card, borderRadius: radius.sm, padding: spacing.sm, fontSize: 14, color: rpe === n ? colors.black : colors.textSecondary, fontWeight: rpe === n ? 700 : 400, cursor: 'pointer', border: 'none' }}
+              style={{ flex: 1, minWidth: 36, background: rpe === n ? colors.blue : colors.card, borderRadius: radius.sm, padding: spacing.sm, fontSize: 14, color: rpe === n ? colors.black : colors.textSecondary, fontWeight: rpe === n ? 700 : 400, border: 'none' }}
               onClick={() => setRpe(n)}
             >{n}</button>
           ))}
@@ -73,7 +87,7 @@ export function WorkoutDetailScreen() {
       </div>
 
       <button
-        style={{ background: colors.green, borderRadius: radius.md, padding: spacing.md, fontSize: 15, fontWeight: 700, color: colors.black, cursor: 'pointer', border: 'none' }}
+        style={{ background: colors.blue, borderRadius: radius.md, padding: spacing.md, fontSize: 15, fontWeight: 700, color: colors.black, border: 'none' }}
         onClick={handleFinish}
       >Einheit abschließen ✓</button>
     </div>

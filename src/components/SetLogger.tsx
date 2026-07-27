@@ -1,5 +1,6 @@
-import { useRef } from 'react'
+import { useState } from 'react'
 import { colors, spacing, radius } from '../theme/colors'
+import { Stepper } from './Stepper'
 import type { LoggedSet } from '../db/queries/sets'
 
 interface Props {
@@ -12,59 +13,37 @@ interface Props {
 
 export function SetLogger({ totalSets, targetReps, sets, lastWeight, onSetChange }: Props) {
   const getSet = (num: number) => sets.find(s => s.set_number === num)
-  const liveReps = useRef<Record<number, string>>({})
-  const liveWeight = useRef<Record<number, string>>({})
+  const [draft, setDraft] = useState<Record<number, { reps: number; weight: number }>>({})
 
-  const cellStyle: React.CSSProperties = { flex: 1, fontSize: 13, color: colors.textPrimary, textAlign: 'center' }
-  const inputStyle: React.CSSProperties = { ...cellStyle, background: colors.bg, borderRadius: radius.sm, padding: spacing.xs, border: 'none', outline: 'none', width: '100%' }
+  function draftFor(num: number) {
+    const existing = getSet(num)
+    return draft[num] ?? { reps: existing?.reps_done ?? targetReps, weight: existing?.weight_kg ?? lastWeight ?? 0 }
+  }
 
   return (
-    <div style={{ borderTop: `1px solid ${colors.border}`, padding: spacing.sm, display: 'flex', flexDirection: 'column', gap: spacing.xs }}>
-      <div style={{ display: 'flex', gap: spacing.xs }}>
-        <div style={{ width: 28, fontSize: 11, color: colors.textSecondary, textAlign: 'center', textTransform: 'uppercase' }}>Satz</div>
-        <div style={{ ...cellStyle, fontSize: 11, color: colors.textSecondary, textTransform: 'uppercase' }}>Wdh</div>
-        <div style={{ ...cellStyle, fontSize: 11, color: colors.textSecondary, textTransform: 'uppercase' }}>kg</div>
-        <div style={{ width: 36, fontSize: 11, color: colors.textSecondary, textAlign: 'center', textTransform: 'uppercase' }}>✓</div>
-      </div>
+    <div style={{ borderTop: `1px solid ${colors.border}`, padding: spacing.sm, display: 'flex', flexDirection: 'column', gap: spacing.sm }}>
       {Array.from({ length: totalSets }, (_, i) => i + 1).map(num => {
         const set = getSet(num)
         const isChecked = set?.completed === 1
+        const d = draftFor(num)
         return (
-          <div key={num} style={{ display: 'flex', gap: spacing.xs, alignItems: 'center' }}>
-            <div style={{ width: 28, fontSize: 12, color: colors.textSecondary, textAlign: 'center' }}>{num}</div>
-            <input
-              style={inputStyle}
-              type="number"
-              inputMode="numeric"
-              defaultValue={set?.reps_done ?? targetReps}
-              onChange={e => { liveReps.current[num] = e.target.value }}
-              onBlur={() => {
-                const reps = Number(liveReps.current[num] ?? set?.reps_done) || null
-                const weight = parseFloat(liveWeight.current[num] ?? set?.weight_kg?.toString() ?? '') || null
-                onSetChange(num, reps, weight, isChecked)
-              }}
-            />
-            <input
-              style={{ ...inputStyle, color: set?.weight_kg ? colors.green : colors.textSecondary }}
-              type="number"
-              inputMode="decimal"
-              placeholder={lastWeight?.toString() ?? '—'}
-              defaultValue={set?.weight_kg?.toString() ?? ''}
-              onChange={e => { liveWeight.current[num] = e.target.value }}
-              onBlur={() => {
-                const reps = Number(liveReps.current[num] ?? set?.reps_done) || null
-                const weight = parseFloat(liveWeight.current[num] ?? set?.weight_kg?.toString() ?? '') || null
-                onSetChange(num, reps, weight, isChecked)
-              }}
-            />
+          <div key={num} style={{ display: 'flex', flexDirection: 'column', gap: 6, background: isChecked ? colors.greenDim : 'transparent', borderRadius: radius.sm, padding: isChecked ? spacing.xs : 0 }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 11, color: colors.textSecondary }}>
+              <span>Satz {num}</span>
+              {isChecked && <span style={{ color: colors.green }}>✓ erledigt</span>}
+            </div>
+            <div style={{ display: 'flex', gap: spacing.xs }}>
+              <div style={{ flex: 1 }}>
+                <Stepper value={d.reps} unit="Wdh" step={1} onChange={v => setDraft(p => ({ ...p, [num]: { ...d, reps: v } }))} />
+              </div>
+              <div style={{ flex: 1 }}>
+                <Stepper value={d.weight} unit="kg" step={2.5} onChange={v => setDraft(p => ({ ...p, [num]: { ...d, weight: v } }))} />
+              </div>
+            </div>
             <button
-              style={{ width: 36, height: 28, borderRadius: radius.sm, background: isChecked ? colors.green : colors.bg, color: isChecked ? colors.black : colors.textSecondary, fontSize: 13, display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', border: 'none' }}
-              onClick={() => {
-                const reps = Number(liveReps.current[num] ?? set?.reps_done) || null
-                const weight = parseFloat(liveWeight.current[num] ?? set?.weight_kg?.toString() ?? '') || null
-                onSetChange(num, reps, weight, !isChecked)
-              }}
-            >✓</button>
+              style={{ background: isChecked ? colors.green : colors.cardAlt, color: isChecked ? colors.black : colors.textPrimary, borderRadius: radius.sm, padding: spacing.sm, fontWeight: 700, fontSize: 12 }}
+              onClick={() => onSetChange(num, d.reps, d.weight, !isChecked)}
+            >{isChecked ? '✓ Satz abgeschlossen' : 'Satz abschließen'}</button>
           </div>
         )
       })}
