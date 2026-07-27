@@ -45,7 +45,7 @@ export function PlanScreen() {
         return (
           <div
             key={phase.id}
-            style={{ background: isCurrent ? '#0f2a1a' : colors.card, borderRadius: radius.md, padding: spacing.md, border: isCurrent ? `1px solid ${colors.greenBorder}` : undefined, cursor: 'pointer', display: 'flex', flexDirection: 'column', gap: spacing.sm }}
+            style={{ background: isCurrent ? colors.blueDim : colors.card, borderRadius: radius.md, padding: spacing.md, border: isCurrent ? `1px solid ${colors.blueBorder}` : undefined, cursor: 'pointer', display: 'flex', flexDirection: 'column', gap: spacing.sm }}
             onClick={() => setExpanded(isOpen ? null : phase.id)}
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: spacing.sm }}>

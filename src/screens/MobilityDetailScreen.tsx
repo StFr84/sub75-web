@@ -66,7 +66,7 @@ export function MobilityDetailScreen() {
                 {instructions && (
                   <div style={{ marginTop: 6 }}>
                     {instructions.map((step, i) => (
-                      <div key={i} style={{ fontSize: 11, color: '#aaaaaa', lineHeight: 1.5 }}>· {step}</div>
+                      <div key={i} style={{ fontSize: 11, color: colors.textSecondary, lineHeight: 1.5 }}>· {step}</div>
                     ))}
                   </div>
                 )}

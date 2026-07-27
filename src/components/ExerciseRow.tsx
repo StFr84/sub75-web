@@ -33,7 +33,7 @@ export function ExerciseRow({ exercise, sets, lastWeight, onSetChange }: Props) 
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           {instructions && (
             <button
-              style={{ fontSize: 10, color: colors.indigo, background: '#1a1a2e', border: `1px solid ${colors.indigo}`, borderRadius: 20, padding: '3px 8px', fontWeight: 600, cursor: 'pointer' }}
+              style={{ fontSize: 10, color: colors.indigo, background: colors.indigoDim, border: `1px solid ${colors.indigo}`, borderRadius: 20, padding: '3px 8px', fontWeight: 600, cursor: 'pointer' }}
               onClick={e => { e.stopPropagation(); setShowInfo(v => !v) }}
             >
               ⓘ Anleitung
@@ -44,11 +44,11 @@ export function ExerciseRow({ exercise, sets, lastWeight, onSetChange }: Props) 
       </div>
 
       {showInfo && instructions && (
-        <div style={{ background: '#0f0f2a', borderTop: `1px solid #1e1e6e`, padding: `${spacing.sm}px ${spacing.md}px` }}>
+        <div style={{ background: colors.indigoDim, borderTop: `1px solid ${colors.indigo}`, padding: `${spacing.sm}px ${spacing.md}px` }}>
           <div style={{ fontSize: 10, color: colors.indigo, textTransform: 'uppercase', letterSpacing: 1, marginBottom: 6 }}>Ausführung</div>
           <ol style={{ paddingLeft: 16, margin: 0 }}>
             {instructions.map((step, i) => (
-              <li key={i} style={{ fontSize: 12, color: '#aaaaaa', lineHeight: 1.6, marginBottom: 2 }}>{step}</li>
+              <li key={i} style={{ fontSize: 12, color: colors.textSecondary, lineHeight: 1.6, marginBottom: 2 }}>{step}</li>
             ))}
           </ol>
           {exercise.hint && (

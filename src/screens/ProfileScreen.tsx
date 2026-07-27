@@ -11,15 +11,16 @@ const ZONES = [
 ]
 
 async function exportData() {
-  const [sessions, exercises, logged_sets, session_logs, user_meta] = await Promise.all([
+  const [sessions, exercises, logged_sets, session_logs, hrv_logs, user_meta] = await Promise.all([
     db.sessions.toArray(),
     db.exercises.toArray(),
     db.logged_sets.toArray(),
     db.session_logs.toArray(),
+    db.hrv_logs.toArray(),
     db.user_meta.toArray(),
   ])
   const blob = new Blob(
-    [JSON.stringify({ sessions, exercises, logged_sets, session_logs, user_meta, exportedAt: new Date().toISOString() }, null, 2)],
+    [JSON.stringify({ sessions, exercises, logged_sets, session_logs, hrv_logs, user_meta, exportedAt: new Date().toISOString() }, null, 2)],
     { type: 'application/json' }
   )
   const url = URL.createObjectURL(blob)
@@ -33,9 +34,10 @@ async function exportData() {
 async function importData(file: File): Promise<string> {
   const text = await file.text()
   const data = JSON.parse(text)
-  await db.transaction('rw', [db.sessions, db.exercises, db.logged_sets, db.session_logs, db.user_meta], async () => {
+  await db.transaction('rw', [db.sessions, db.exercises, db.logged_sets, db.session_logs, db.hrv_logs, db.user_meta], async () => {
     if (data.logged_sets?.length)  { await db.logged_sets.clear();  await db.logged_sets.bulkAdd(data.logged_sets.map((r: any) => { const { id: _id, ...rest } = r; return rest })) }
     if (data.session_logs?.length) { await db.session_logs.clear(); await db.session_logs.bulkAdd(data.session_logs.map((r: any) => { const { id: _id, ...rest } = r; return rest })) }
+    if (data.hrv_logs?.length)     { await db.hrv_logs.clear();     await db.hrv_logs.bulkAdd(data.hrv_logs.map((r: any) => { const { id: _id, ...rest } = r; return rest })) }
   })
   return `Importiert: ${data.session_logs?.length ?? 0} Einheiten, ${data.logged_sets?.length ?? 0} Sätze`
 }
@@ -107,11 +109,18 @@ export function ProfileScreen() {
             onClick={exportData}
           >⬇ Exportieren</button>
           <button
-            style={{ flex: 1, background: '#1a1a2e', border: `1px solid ${colors.indigo}`, borderRadius: radius.md, padding: spacing.sm, fontSize: 13, fontWeight: 600, color: colors.indigo, cursor: 'pointer' }}
+            style={{ flex: 1, background: colors.indigoDim, border: `1px solid ${colors.indigo}`, borderRadius: radius.md, padding: spacing.sm, fontSize: 13, fontWeight: 600, color: colors.indigo, cursor: 'pointer' }}
             onClick={() => fileRef.current?.click()}
           >⬆ Importieren</button>
         </div>
         <input ref={fileRef} type="file" accept=".json" style={{ display: 'none' }} onChange={handleImport} />
+      </div>
+
+      <div style={cardStyle}>
+        <div style={{ fontSize: 11, color: colors.textSecondary, textTransform: 'uppercase', letterSpacing: 1 }}>App installieren</div>
+        <div style={{ fontSize: 12, color: colors.textSecondary, lineHeight: 1.6 }}>
+          In Safari: Teilen-Symbol (□↑) antippen → „Zum Home-Bildschirm" → „Hinzufügen". Danach startet Sub75 als eigenes App-Icon, ohne Browserleiste, weiterhin komplett offline.
+        </div>
       </div>
     </div>
   )

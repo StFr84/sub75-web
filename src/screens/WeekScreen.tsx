@@ -10,7 +10,7 @@ const DAY_LABELS: Record<string, string> = {
 }
 const DAY_ORDER = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday']
 const DAY_OFFSET: Record<string, number> = { sunday:0,monday:1,tuesday:2,wednesday:3,thursday:4,friday:5,saturday:6 }
-const TYPE_COLOR: Record<string, string> = { run: colors.green, strength: colors.indigo, rest: colors.border }
+const TYPE_COLOR: Record<string, string> = { run: colors.blue, strength: colors.indigo, rest: colors.border }
 const TYPE_ICON: Record<string, string> = { run: '🏃', strength: '💪', rest: '—' }
 
 function getSessionDate(weekNum: number, dayName: string): string {
@@ -178,7 +178,7 @@ export function WeekScreen() {
                 </div>
               </div>
               <button
-                style={{ padding: '0 12px', color: colors.indigo, fontSize: 11, fontWeight: 600, background: 'transparent', borderLeft: `1px solid ${colors.border}`, border: 'none', cursor: 'pointer' }}
+                style={{ padding: '0 12px', color: colors.blue, fontSize: 11, fontWeight: 600, background: 'transparent', borderLeft: `1px solid ${colors.border}`, border: 'none', cursor: 'pointer' }}
                 onClick={e => { e.stopPropagation(); setDropdownFor(dropdownFor === s.id ? null : s.id!) }}
               >⇄</button>
             </div>
