@@ -156,7 +156,7 @@ export function WeekScreen() {
               style={{ background: isToday ? '#0f2a1a' : colors.card, borderRadius: radius.lg, display: 'flex', overflow: 'hidden', border: isToday ? `1px solid ${colors.greenBorder}` : undefined, opacity: isPast && !isDone ? 0.6 : 1, cursor: 'pointer' }}
               onClick={() => {
                 if (s.type === 'strength') navigate(`/workout/${s.id}/${sessionDate}`)
-                else if (s.type === 'run') navigate(`/run/${s.id}/${sessionDate}`, { state: { title: s.title, duration: s.duration_min, zone: s.zone, pace: s.pace, notes: s.notes } })
+                else if (s.type === 'run') navigate(`/run/${s.id}/${sessionDate}`, { state: { title: s.title, duration: s.duration_min, zone: s.zone, pace: s.pace, notes: s.notes, intervals: s.intervals } })
               }}
             >
               <div style={{ width: 4, background: isPast ? colors.border : accent, flexShrink: 0 }} />

@@ -9,7 +9,7 @@ interface Props {
 }
 
 const TYPE_COLOR: Record<string, string> = {
-  run: colors.green, strength: colors.indigo, rest: colors.textSecondary, mobility: colors.yellow,
+  run: colors.blue, strength: colors.indigo, rest: colors.textSecondary, mobility: colors.yellow,
 }
 const TYPE_LABEL: Record<string, string> = {
   run: 'Laufen', strength: 'Kraft', rest: 'Ruhe', mobility: 'Mobility',
@@ -24,7 +24,7 @@ export function TrainingCard({ session, isCompleted, date }: Props) {
       navigate(`/workout/${session.id}/${date}`)
     } else if (session.type === 'run') {
       navigate(`/run/${session.id}/${date}`, {
-        state: { title: session.title, duration: session.duration_min, zone: session.zone, pace: session.pace, notes: session.notes }
+        state: { title: session.title, duration: session.duration_min, zone: session.zone, pace: session.pace, notes: session.notes, intervals: session.intervals }
       })
     } else if (session.type === 'mobility') {
       navigate(`/mobility/${session.id}/${date}`, {
@@ -53,7 +53,7 @@ export function TrainingCard({ session, isCompleted, date }: Props) {
       {!isCompleted && session.type !== 'rest' && (
         <button
           onClick={handleStart}
-          style={{ marginTop: spacing.sm, background: session.type === 'mobility' ? colors.yellow : colors.green, color: colors.black, borderRadius: radius.sm, padding: spacing.sm, fontWeight: 700, fontSize: 14, cursor: 'pointer', border: 'none' }}
+          style={{ marginTop: spacing.sm, background: session.type === 'mobility' ? colors.yellow : colors.blue, color: colors.black, borderRadius: radius.sm, padding: spacing.sm, fontWeight: 700, fontSize: 14, cursor: 'pointer', border: 'none' }}
         >
           {session.type === 'mobility' ? 'Mobility starten →' : 'Training starten →'}
         </button>
