@@ -1,5 +1,5 @@
 {
-  "version": 9,
+  "version": 10,
   "weeks": [
     {
       "week": 1,
@@ -3526,31 +3526,31 @@
           "title": "Transitions + Circuit",
           "durationMin": 60,
           "zone": "moderat",
-          "notes": "2-3 Stationen + Läufe. Transitions üben – kein Anhalten.",
+          "notes": "Zirkel ohne Stopp: SkiErg 500m → sofort Lauf 400m → sofort Burpee Broad Jump 20 Reps → Lauf 200m. Erst danach 3 Min Pause, dann kompletten Zirkel erneut (3 Runden gesamt).",
           "exercises": [
             {
               "name": "SkiErg",
               "sets": 3,
               "reps": 500,
-              "hint": "500m, sofort weiter"
+              "hint": "500m, sofort weiter zu Lauf 400m (kein Stopp)"
             },
             {
               "name": "Lauf",
               "sets": 3,
               "reps": 400,
-              "hint": "400m"
+              "hint": "400m, sofort weiter zu Burpee Broad Jump (kein Stopp)"
             },
             {
               "name": "Burpee Broad Jump",
               "sets": 3,
               "reps": 20,
-              "hint": "20 Reps"
+              "hint": "20 Reps, sofort weiter zu Lauf kurz (kein Stopp)"
             },
             {
               "name": "Lauf kurz",
               "sets": 3,
               "reps": 200,
-              "hint": "200m, dann 3 Min Pause"
+              "hint": "200m, danach 3 Min Pause – dann Zirkel erneut (Runde beendet)"
             }
           ]
         },
@@ -3910,31 +3910,31 @@
           "title": "Transitions + Circuit",
           "durationMin": 60,
           "zone": "moderat",
-          "notes": "2-3 Stationen + Läufe. Transitions üben – kein Anhalten.",
+          "notes": "Zirkel ohne Stopp: SkiErg 500m → sofort Lauf 400m → sofort Burpee Broad Jump 20 Reps → Lauf 200m. Erst danach 3 Min Pause, dann kompletten Zirkel erneut (3 Runden gesamt).",
           "exercises": [
             {
               "name": "SkiErg",
               "sets": 3,
               "reps": 500,
-              "hint": "500m, sofort weiter"
+              "hint": "500m, sofort weiter zu Lauf 400m (kein Stopp)"
             },
             {
               "name": "Lauf",
               "sets": 3,
               "reps": 400,
-              "hint": "400m"
+              "hint": "400m, sofort weiter zu Burpee Broad Jump (kein Stopp)"
             },
             {
               "name": "Burpee Broad Jump",
               "sets": 3,
               "reps": 20,
-              "hint": "20 Reps"
+              "hint": "20 Reps, sofort weiter zu Lauf kurz (kein Stopp)"
             },
             {
               "name": "Lauf kurz",
               "sets": 3,
               "reps": 200,
-              "hint": "200m, dann 3 Min Pause"
+              "hint": "200m, danach 3 Min Pause – dann Zirkel erneut (Runde beendet)"
             }
           ]
         },
@@ -4294,31 +4294,31 @@
           "title": "Transitions + Circuit",
           "durationMin": 60,
           "zone": "moderat",
-          "notes": "2-3 Stationen + Läufe. Transitions üben – kein Anhalten.",
+          "notes": "Zirkel ohne Stopp: SkiErg 500m → sofort Lauf 400m → sofort Burpee Broad Jump 20 Reps → Lauf 200m. Erst danach 3 Min Pause, dann kompletten Zirkel erneut (3 Runden gesamt).",
           "exercises": [
             {
               "name": "SkiErg",
               "sets": 3,
               "reps": 500,
-              "hint": "500m, sofort weiter"
+              "hint": "500m, sofort weiter zu Lauf 400m (kein Stopp)"
             },
             {
               "name": "Lauf",
               "sets": 3,
               "reps": 400,
-              "hint": "400m"
+              "hint": "400m, sofort weiter zu Burpee Broad Jump (kein Stopp)"
             },
             {
               "name": "Burpee Broad Jump",
               "sets": 3,
               "reps": 20,
-              "hint": "20 Reps"
+              "hint": "20 Reps, sofort weiter zu Lauf kurz (kein Stopp)"
             },
             {
               "name": "Lauf kurz",
               "sets": 3,
               "reps": 200,
-              "hint": "200m, dann 3 Min Pause"
+              "hint": "200m, danach 3 Min Pause – dann Zirkel erneut (Runde beendet)"
             }
           ]
         },
@@ -5042,31 +5042,31 @@
           "title": "Transitions Circuit",
           "durationMin": 60,
           "zone": "moderat",
-          "notes": "3-Stationen-Circuit mit Transitions. Übergänge ohne Pause.",
+          "notes": "Zirkel ohne Stopp: SkiErg 500m → sofort Lauf 400m → sofort Burpee Broad Jump 20 Reps → Lauf 200m. Erst danach 3 Min Pause, dann kompletten Zirkel erneut (3 Runden gesamt).",
           "exercises": [
             {
               "name": "SkiErg",
               "sets": 3,
               "reps": 500,
-              "hint": "500m, sofort weiter"
+              "hint": "500m, sofort weiter zu Lauf 400m (kein Stopp)"
             },
             {
               "name": "Lauf",
               "sets": 3,
               "reps": 400,
-              "hint": "400m"
+              "hint": "400m, sofort weiter zu Burpee Broad Jump (kein Stopp)"
             },
             {
               "name": "Burpee Broad Jump",
               "sets": 3,
               "reps": 20,
-              "hint": "20 Reps"
+              "hint": "20 Reps, sofort weiter zu Lauf kurz (kein Stopp)"
             },
             {
               "name": "Lauf kurz",
               "sets": 3,
               "reps": 200,
-              "hint": "200m, dann 3 Min Pause"
+              "hint": "200m, danach 3 Min Pause – dann Zirkel erneut (Runde beendet)"
             }
           ]
         },
@@ -5425,31 +5425,31 @@
           "title": "Transitions Circuit",
           "durationMin": 60,
           "zone": "moderat",
-          "notes": "3-Stationen-Circuit mit Transitions. Übergänge ohne Pause.",
+          "notes": "Zirkel ohne Stopp: SkiErg 500m → sofort Lauf 400m → sofort Burpee Broad Jump 20 Reps → Lauf 200m. Erst danach 3 Min Pause, dann kompletten Zirkel erneut (3 Runden gesamt).",
           "exercises": [
             {
               "name": "SkiErg",
               "sets": 3,
               "reps": 500,
-              "hint": "500m, sofort weiter"
+              "hint": "500m, sofort weiter zu Lauf 400m (kein Stopp)"
             },
             {
               "name": "Lauf",
               "sets": 3,
               "reps": 400,
-              "hint": "400m"
+              "hint": "400m, sofort weiter zu Burpee Broad Jump (kein Stopp)"
             },
             {
               "name": "Burpee Broad Jump",
               "sets": 3,
               "reps": 20,
-              "hint": "20 Reps"
+              "hint": "20 Reps, sofort weiter zu Lauf kurz (kein Stopp)"
             },
             {
               "name": "Lauf kurz",
               "sets": 3,
               "reps": 200,
-              "hint": "200m, dann 3 Min Pause"
+              "hint": "200m, danach 3 Min Pause – dann Zirkel erneut (Runde beendet)"
             }
           ]
         },

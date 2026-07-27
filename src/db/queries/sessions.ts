@@ -33,6 +33,11 @@ export async function getSessionsForWeek(week: number): Promise<Session[]> {
   return db.sessions.where('week').equals(week).toArray()
 }
 
+export async function getSessionById(sessionId: number): Promise<Session | null> {
+  const row = await db.sessions.get(sessionId)
+  return row ?? null
+}
+
 export async function getExercisesForSession(sessionId: number): Promise<Exercise[]> {
   return db.exercises.where('session_id').equals(sessionId).sortBy('id')
 }

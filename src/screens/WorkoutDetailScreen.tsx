@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { colors, spacing, radius } from '../theme/colors'
 import { ExerciseRow } from '../components/ExerciseRow'
 import { Timer } from '../components/Timer'
-import { getExercisesForSession, logSessionComplete, type Exercise } from '../db/queries/sessions'
+import { getExercisesForSession, getSessionById, logSessionComplete, type Exercise, type Session } from '../db/queries/sessions'
 import { getSetsForExerciseOnDate, getLastWeightForExercise, upsertSet, type LoggedSet } from '../db/queries/sets'
 
 const REST_SECONDS = 90
@@ -12,6 +12,7 @@ export function WorkoutDetailScreen() {
   const navigate = useNavigate()
   const { sessionId, date } = useParams<{ sessionId: string; date: string }>()
   const sessionIdNum = Number(sessionId)
+  const [session, setSession] = useState<Session | null>(null)
   const [exercises, setExercises] = useState<Exercise[]>([])
   const [sets, setSets] = useState<Record<number, LoggedSet[]>>({})
   const [lastWeights, setLastWeights] = useState<Record<number, number | null>>({})
@@ -20,7 +21,8 @@ export function WorkoutDetailScreen() {
 
   useEffect(() => {
     async function load() {
-      const exs = await getExercisesForSession(sessionIdNum)
+      const [sess, exs] = await Promise.all([getSessionById(sessionIdNum), getExercisesForSession(sessionIdNum)])
+      setSession(sess)
       setExercises(exs)
       const setsMap: Record<number, LoggedSet[]> = {}
       const weightsMap: Record<number, number | null> = {}
@@ -62,6 +64,15 @@ export function WorkoutDetailScreen() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: spacing.md }}>
       <button onClick={() => navigate(-1)} style={{ fontSize: 16, color: colors.textSecondary, textAlign: 'left', marginBottom: spacing.xs, background: 'none', border: 'none' }}>← Zurück</button>
+
+      {session && <div style={{ fontSize: 22, fontWeight: 900, color: colors.textPrimary }}>{session.title}</div>}
+
+      {session?.notes && (
+        <div style={{ background: colors.card, borderRadius: radius.lg, padding: spacing.lg, borderLeft: `3px solid ${colors.indigo}` }}>
+          <div style={{ fontSize: 11, color: colors.textSecondary, textTransform: 'uppercase', letterSpacing: 1, marginBottom: spacing.xs }}>Ablauf</div>
+          <div style={{ fontSize: 14, color: colors.textPrimary, lineHeight: 1.6 }}>{session.notes}</div>
+        </div>
+      )}
 
       {exercises.map(ex => (
         <ExerciseRow
