@@ -1,5 +1,5 @@
 {
-  "version": 8,
+  "version": 9,
   "weeks": [
     {
       "week": 1,
@@ -2436,7 +2436,12 @@
           "durationMin": 90,
           "zone": "138-161 bpm",
           "pace": "TDL-Pace 11,9–12,6 km/h (≈4:46–5:02 min/km)",
-          "notes": "MDL + 3×3 Min bei TDL-Pace (159-161 bpm), je 3 Min Trabpause."
+          "notes": "MDL + 3×3 Min bei TDL-Pace (159-161 bpm), je 3 Min Trabpause.",
+          "intervals": {
+            "rounds": 3,
+            "workSec": 180,
+            "restSec": 180
+          }
         },
         {
           "day": "thursday",
@@ -2831,7 +2836,12 @@
           "durationMin": 90,
           "zone": "138-161 bpm",
           "pace": "TDL-Pace 11,9–12,6 km/h (≈4:46–5:02 min/km)",
-          "notes": "MDL + 4×3 Min bei TDL-Pace (159-161 bpm), 3 Min Trabpause."
+          "notes": "MDL + 4×3 Min bei TDL-Pace (159-161 bpm), 3 Min Trabpause.",
+          "intervals": {
+            "rounds": 4,
+            "workSec": 180,
+            "restSec": 180
+          }
         },
         {
           "day": "thursday",
@@ -3397,7 +3407,12 @@
           "durationMin": 60,
           "zone": "Max >165 bpm",
           "pace": "≈13,5–14,5 km/h (≈4:08–4:27 min/km) – HF-gesteuert, 1. Intervall etwas schneller anlaufen",
-          "notes": "HIIT: 4×4 Min bei >165 bpm, 3 Min Trabpause. Build-Einstieg."
+          "notes": "HIIT: 4×4 Min bei >165 bpm, 3 Min Trabpause. Build-Einstieg.",
+          "intervals": {
+            "rounds": 4,
+            "workSec": 240,
+            "restSec": 180
+          }
         },
         {
           "day": "monday",
@@ -3776,7 +3791,12 @@
           "durationMin": 60,
           "zone": "Max >165 bpm",
           "pace": "≈13,5–14,5 km/h (≈4:08–4:27 min/km) – HF-gesteuert",
-          "notes": "HIIT: 4×4 Min bei >165 bpm, 3 Min Trabpause."
+          "notes": "HIIT: 4×4 Min bei >165 bpm, 3 Min Trabpause.",
+          "intervals": {
+            "rounds": 4,
+            "workSec": 240,
+            "restSec": 180
+          }
         },
         {
           "day": "monday",
@@ -4155,7 +4175,12 @@
           "durationMin": 60,
           "zone": "Max >165 bpm",
           "pace": "≈13,5–14,5 km/h (≈4:08–4:27 min/km) – HF-gesteuert",
-          "notes": "HIIT: 4×4 Min bei >165 bpm, 3 Min Trabpause."
+          "notes": "HIIT: 4×4 Min bei >165 bpm, 3 Min Trabpause.",
+          "intervals": {
+            "rounds": 4,
+            "workSec": 240,
+            "restSec": 180
+          }
         },
         {
           "day": "monday",
@@ -4898,7 +4923,12 @@
           "durationMin": 60,
           "zone": "Max >165 bpm",
           "pace": "≈13,5–14,5 km/h (≈4:08–4:27 min/km) – HF-gesteuert",
-          "notes": "HIIT: 5×4 Min bei >165 bpm, 3 Min Pause."
+          "notes": "HIIT: 5×4 Min bei >165 bpm, 3 Min Pause.",
+          "intervals": {
+            "rounds": 5,
+            "workSec": 240,
+            "restSec": 180
+          }
         },
         {
           "day": "monday",
@@ -5276,7 +5306,12 @@
           "durationMin": 60,
           "zone": "Max >165 bpm",
           "pace": "≈13,5–14,5 km/h (≈4:08–4:27 min/km) – HF-gesteuert",
-          "notes": "HIIT: 5×4 Min bei >165 bpm, 3 Min Pause."
+          "notes": "HIIT: 5×4 Min bei >165 bpm, 3 Min Pause.",
+          "intervals": {
+            "rounds": 5,
+            "workSec": 240,
+            "restSec": 180
+          }
         },
         {
           "day": "monday",
@@ -5666,7 +5701,12 @@
           "durationMin": 60,
           "zone": "Max >165 bpm",
           "pace": "≈13,5–14,5 km/h (≈4:08–4:27 min/km) – HF-gesteuert",
-          "notes": "HIIT: 5×4 Min >165 bpm, 3 Min Pause."
+          "notes": "HIIT: 5×4 Min >165 bpm, 3 Min Pause.",
+          "intervals": {
+            "rounds": 5,
+            "workSec": 240,
+            "restSec": 180
+          }
         },
         {
           "day": "monday",
@@ -6461,7 +6501,12 @@
           "durationMin": 50,
           "zone": "Max >165 bpm",
           "pace": "≈13,5–14,5 km/h (≈4:08–4:27 min/km) – HF-gesteuert",
-          "notes": "HIIT: 4×4 Min bei >165 bpm, 3 Min Trabpause. Letzte harte VO2max-Reize vor Taper."
+          "notes": "HIIT: 4×4 Min bei >165 bpm, 3 Min Trabpause. Letzte harte VO2max-Reize vor Taper.",
+          "intervals": {
+            "rounds": 4,
+            "workSec": 240,
+            "restSec": 180
+          }
         },
         {
           "day": "monday",
@@ -8490,7 +8535,12 @@
           "durationMin": 60,
           "zone": "Max >165 bpm",
           "pace": "≈13,5–14,5 km/h (≈4:08–4:27 min/km) – HF-gesteuert",
-          "notes": "HIIT: 5×4 Min >165 bpm, 3 Min Pause."
+          "notes": "HIIT: 5×4 Min >165 bpm, 3 Min Pause.",
+          "intervals": {
+            "rounds": 5,
+            "workSec": 240,
+            "restSec": 180
+          }
         },
         {
           "day": "monday",
@@ -8922,7 +8972,12 @@
           "durationMin": 60,
           "zone": "Max >165 bpm",
           "pace": "≈13,5–14,5 km/h (≈4:08–4:27 min/km) – HF-gesteuert",
-          "notes": "HIIT: 5×4 Min >165 bpm, 3 Min Pause."
+          "notes": "HIIT: 5×4 Min >165 bpm, 3 Min Pause.",
+          "intervals": {
+            "rounds": 5,
+            "workSec": 240,
+            "restSec": 180
+          }
         },
         {
           "day": "monday",
@@ -9687,7 +9742,12 @@
           "durationMin": 60,
           "zone": "Max >165 bpm",
           "pace": "≈13,5–14,5 km/h (≈4:08–4:27 min/km) – HF-gesteuert",
-          "notes": "HIIT: 5×4 Min >165 bpm, 3 Min Pause."
+          "notes": "HIIT: 5×4 Min >165 bpm, 3 Min Pause.",
+          "intervals": {
+            "rounds": 5,
+            "workSec": 240,
+            "restSec": 180
+          }
         },
         {
           "day": "monday",
@@ -10119,7 +10179,12 @@
           "durationMin": 50,
           "zone": "Max >165 bpm",
           "pace": "≈13,5–14,5 km/h (≈4:08–4:27 min/km) – HF-gesteuert",
-          "notes": "Letzte Schärfung: 3×4 Min >165 bpm, 3 Min Pause."
+          "notes": "Letzte Schärfung: 3×4 Min >165 bpm, 3 Min Pause.",
+          "intervals": {
+            "rounds": 3,
+            "workSec": 240,
+            "restSec": 180
+          }
         },
         {
           "day": "monday",
