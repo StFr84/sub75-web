@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { BottomNav } from './components/BottomNav'
 import { TodayScreen }          from './screens/TodayScreen'
 import { WeekScreen }           from './screens/WeekScreen'
-import { StatsScreen }          from './screens/StatsScreen'
+import { TrendsScreen }         from './screens/TrendsScreen'
 import { PlanScreen }           from './screens/PlanScreen'
 import { ProfileScreen }        from './screens/ProfileScreen'
 import { WorkoutDetailScreen }  from './screens/WorkoutDetailScreen'
@@ -46,7 +46,7 @@ export default function App() {
             <Route path="/"               element={<TodayScreen />} />
             <Route path="/week"           element={<Navigate to={`/week/${getCurrentWeek()}`} replace />} />
             <Route path="/week/:weekNum"  element={<WeekScreen />} />
-            <Route path="/stats"          element={<StatsScreen />} />
+            <Route path="/trends"         element={<TrendsScreen />} />
             <Route path="/plan"           element={<PlanScreen />} />
             <Route path="/profile"        element={<ProfileScreen />} />
             <Route path="/workout/:sessionId/:date" element={<WorkoutDetailScreen />} />
