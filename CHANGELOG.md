@@ -6,6 +6,21 @@ Format: `[Datum] Commit · Bereich · Beschreibung · Betroffene Dateien`
 
 ---
 
+## v2.0.0 — 2026-07-27 · Redesign: Data-Dense Pro, PWA, Trends, Timer
+
+Kompletter Rebuild von Design und Bedienung (Spec: `docs/superpowers/specs/2026-07-27-sub75-redesign-design.md`, Plan: `docs/superpowers/plans/2026-07-27-sub75-redesign.md`). Alle bestehenden Trainingsdaten (Sessions, Logs, Sets) blieben beim Rebuild erhalten — additive Dexie-Migration (v2).
+
+- **Design:** neue Data-Dense-Pro-Farbpalette (kühles Blau-Grau, `theme/colors.ts`), mobile-only Shell ohne Desktop-Sidebar (`BottomNav.tsx` ersetzt `Sidebar.tsx`)
+- **PWA:** installierbar auf dem Homescreen (`vite-plugin-pwa`, Manifest, Service Worker, App-Icons), läuft offline im Vollbild
+- **Trends-Screen** (ersetzt Stats): echte Diagramme für Trainingsbelastung, Pace-Trend, HRV-Verlauf, Gewichtsverlauf je Übung (`TrendsScreen.tsx`, `db/queries/trends.ts`)
+- **HRV-Ampel:** tägliche manuelle Eingabe, Ampel-Berechnung ggü. 7-Tage-Mittel (`HrvAmpelCard.tsx`, `db/queries/hrv.ts`, neue Tabelle `hrv_logs`)
+- **Stepper-Set-Logging:** Tap-Steuerung statt Zahlenfelder (`Stepper.tsx`, `SetLogger.tsx`)
+- **Timer:** Ring-Timer für HIIT-/TDL-Intervalle und automatische Satzpausen (`Timer.tsx`), gespeist aus neuem `intervals`-Feld in `plan.json` (13 Sessions getaggt)
+- **Pace-Logging:** echte Distanz/Pace-Eingabe nach jedem Lauf (`RunDetailScreen.tsx`, neues Feld `distance_km` auf `session_logs`)
+- Dashboard (`TodayScreen.tsx`) neu als dichtes Karten-Layout: HRV-Ampel, Streak, heutige Einheit, Mobility, Mini-Trends
+
+---
+
 ## v1.0.0 — 2026-06-07 · Erstveröffentlichung
 
 ### 20:39 · `e482cb2` · Deployment
