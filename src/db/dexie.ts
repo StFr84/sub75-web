@@ -10,6 +10,7 @@ export interface Session {
   duration_min: number | null
   zone: string | null
   pace: string | null
+  intervals: { rounds: number; workSec: number; restSec: number } | null
   phase: string
   notes: string | null
 }
@@ -39,7 +40,14 @@ export interface SessionLog {
   log_date: string
   rpe: number | null
   duration_actual_min: number | null
+  distance_km: number | null
   notes: string | null
+}
+
+export interface HrvLog {
+  id?: number
+  log_date: string
+  hrv_ms: number
 }
 
 export interface UserMeta {
@@ -52,6 +60,7 @@ class Sub75DB extends Dexie {
   exercises!: Table<Exercise>
   logged_sets!: Table<LoggedSet>
   session_logs!: Table<SessionLog>
+  hrv_logs!: Table<HrvLog>
   user_meta!: Table<UserMeta>
 
   constructor() {
@@ -61,6 +70,14 @@ class Sub75DB extends Dexie {
       exercises: '++id, session_id',
       logged_sets: '++id, [exercise_id+log_date+set_number], exercise_id, log_date',
       session_logs: '++id, session_id, log_date, [session_id+log_date]',
+      user_meta: 'key',
+    })
+    this.version(2).stores({
+      sessions: '++id, week, day, [week+day]',
+      exercises: '++id, session_id',
+      logged_sets: '++id, [exercise_id+log_date+set_number], exercise_id, log_date',
+      session_logs: '++id, session_id, log_date, [session_id+log_date]',
+      hrv_logs: '++id, log_date',
       user_meta: 'key',
     })
   }

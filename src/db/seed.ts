@@ -6,7 +6,8 @@ const PLAN_VERSION = String((plan as { version?: number }).version ?? 1)
 interface PlanExercise { name: string; sets: number; reps: number; hint?: string }
 interface PlanSession {
   day: string; type: string; title: string; durationMin: number
-  zone?: string; pace?: string; notes?: string; exercises?: PlanExercise[]
+  zone?: string; pace?: string; intervals?: { rounds: number; workSec: number; restSec: number }
+  notes?: string; exercises?: PlanExercise[]
 }
 interface PlanWeek { week: number; phase: string; sessions: PlanSession[] }
 
@@ -35,6 +36,7 @@ export async function seedIfNeeded(): Promise<void> {
           duration_min: session.durationMin,
           zone: session.zone ?? null,
           pace: session.pace ?? null,
+          intervals: session.intervals ?? null,
           phase: week.phase,
           notes: session.notes ?? null,
         }
