@@ -2,8 +2,8 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  background: #0d0d0d;
-  color: #f0f0f0;
+  background: #0a0f16;
+  color: #f5f8fb;
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
@@ -12,61 +12,22 @@ a { color: inherit; text-decoration: none; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; color: inherit; }
 input { font-family: inherit; color: inherit; }
 
-/* ── App shell ── */
-.app-shell { display: flex; min-height: 100vh; }
+.app-shell { display: flex; flex-direction: column; min-height: 100vh; }
 
-/* ── Sidebar (desktop) ── */
-.sidebar {
-  width: 200px;
-  background: #111;
-  border-right: 1px solid #1e1e1e;
-  padding: 20px 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  position: fixed;
-  top: 0; left: 0;
-  height: 100vh;
-  z-index: 10;
-}
-.sidebar-logo {
-  font-size: 18px;
-  font-weight: 900;
-  color: #4ade80;
-  padding: 0 8px 20px;
-  letter-spacing: 2px;
-}
-.sidebar-link {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 12px;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #555;
-  transition: color 0.12s, background 0.12s;
-}
-.sidebar-link:hover { color: #f0f0f0; background: #141414; }
-.sidebar-link.active { background: #141414; color: #4ade80; }
-.sidebar-link-icon { font-size: 18px; width: 22px; text-align: center; }
-
-/* ── Main content ── */
 .main-content {
-  margin-left: 200px;
   flex: 1;
-  padding: 24px;
-  max-width: 720px;
-  min-height: 100vh;
+  padding: max(16px, env(safe-area-inset-top)) 16px 96px;
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-/* ── Bottom tabs (mobile only) ── */
 .bottom-tabs {
-  display: none;
+  display: flex;
   position: fixed;
   bottom: 0; left: 0; right: 0;
-  background: #111;
-  border-top: 1px solid #1e1e1e;
+  background: #12181f;
+  border-top: 1px solid #22303f;
   justify-content: space-around;
   padding: 6px 0 env(safe-area-inset-bottom, 6px);
   z-index: 10;
@@ -79,15 +40,8 @@ input { font-family: inherit; color: inherit; }
   padding: 4px 12px;
   font-size: 10px;
   font-weight: 600;
-  color: #555;
+  color: #7d8ea1;
   min-width: 48px;
 }
-.bottom-tab.active { color: #4ade80; }
+.bottom-tab.active { color: #4fb2ff; }
 .bottom-tab-icon { font-size: 20px; }
-
-/* ── Responsive ── */
-@media (max-width: 768px) {
-  .sidebar { display: none; }
-  .main-content { margin-left: 0; padding: 16px 16px 88px; max-width: 100%; }
-  .bottom-tabs { display: flex; }
-}

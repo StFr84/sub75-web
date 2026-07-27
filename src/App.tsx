@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import { Sidebar } from './components/Sidebar'
+import { BottomNav } from './components/BottomNav'
 import { TodayScreen }          from './screens/TodayScreen'
 import { WeekScreen }           from './screens/WeekScreen'
 import { StatsScreen }          from './screens/StatsScreen'
@@ -35,7 +35,7 @@ export default function App() {
   return (
     <BrowserRouter basename="/sub75-web">
       <div className="app-shell">
-        <Sidebar />
+        <BottomNav />
         <main className="main-content">
           {error && (
             <div style={{ color: colors.red, marginBottom: 16, padding: 12, background: colors.card, borderRadius: 8 }}>
