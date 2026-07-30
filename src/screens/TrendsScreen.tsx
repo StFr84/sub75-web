@@ -3,7 +3,7 @@ import { colors, spacing, radius } from '../theme/colors'
 import { LineChart } from '../components/LineChart'
 import { daysUntilRace1, daysUntilRace2 } from '../data/constants'
 import { getRecentHrv } from '../db/queries/hrv'
-import { getWeeklyLoad, getPaceTrend, getLoggedExerciseNames, getExerciseWeightTrend, type TrendPoint } from '../db/queries/trends'
+import { getWeeklyLoad, getPaceTrend, getLoggedExerciseNames, getExerciseWeightTrend, getSplitConsistencyTrend, type TrendPoint } from '../db/queries/trends'
 
 const cardStyle: React.CSSProperties = { background: colors.card, borderRadius: radius.lg, padding: spacing.lg, display: 'flex', flexDirection: 'column', gap: spacing.sm }
 
@@ -14,16 +14,18 @@ export function TrendsScreen() {
   const [exerciseNames, setExerciseNames] = useState<string[]>([])
   const [selectedExercise, setSelectedExercise] = useState<string>('')
   const [exerciseTrend, setExerciseTrend] = useState<TrendPoint[]>([])
+  const [splitConsistency, setSplitConsistency] = useState<TrendPoint[]>([])
 
   useEffect(() => {
     async function load_() {
-      const [l, p, h, names] = await Promise.all([
-        getWeeklyLoad(), getPaceTrend(), getRecentHrv(30), getLoggedExerciseNames(),
+      const [l, p, h, names, sc] = await Promise.all([
+        getWeeklyLoad(), getPaceTrend(), getRecentHrv(30), getLoggedExerciseNames(), getSplitConsistencyTrend(),
       ])
       setLoad(l)
       setPace(p)
       setHrv(h.map(r => ({ label: new Date(r.log_date).toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit' }), value: r.hrv_ms })))
       setExerciseNames(names)
+      setSplitConsistency(sc)
       if (names.length > 0) setSelectedExercise(names[0])
     }
     load_()
@@ -50,6 +52,11 @@ export function TrendsScreen() {
       <div style={cardStyle}>
         <div style={{ fontSize: 11, color: colors.textSecondary, textTransform: 'uppercase', letterSpacing: 1 }}>Pace-Trend (Läufe)</div>
         <LineChart data={pace} color={colors.green} unit="min/km" formatValue={n => `${Math.floor(n)}:${Math.round((n % 1) * 60).toString().padStart(2, '0')}`} />
+      </div>
+
+      <div style={cardStyle}>
+        <div style={{ fontSize: 11, color: colors.textSecondary, textTransform: 'uppercase', letterSpacing: 1 }}>Ø Rundenzeit (Intervalle)</div>
+        <LineChart data={splitConsistency} color={colors.indigo} unit="min/Runde" formatValue={n => `${Math.floor(n)}:${Math.round((n % 1) * 60).toString().padStart(2, '0')}`} />
       </div>
 
       <div style={cardStyle}>

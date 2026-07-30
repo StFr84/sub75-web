@@ -48,3 +48,20 @@ export async function getExerciseWeightTrend(exerciseName: string, limit = 15): 
   const dates = [...byDate.keys()].sort().slice(-limit)
   return dates.map(d => ({ label: new Date(d).toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit' }), value: byDate.get(d)! }))
 }
+
+export async function getSplitConsistencyTrend(limit = 10): Promise<TrendPoint[]> {
+  const logs = await db.session_logs.orderBy('log_date').toArray()
+  const points: TrendPoint[] = []
+  for (const log of logs) {
+    if (!log.id) continue
+    const splits = await db.interval_splits.where('session_log_id').equals(log.id).toArray()
+    const times = splits.map(s => s.time_sec).filter((t): t is number => t != null && t > 0)
+    if (times.length === 0) continue
+    const avgSec = times.reduce((a, b) => a + b, 0) / times.length
+    points.push({
+      label: new Date(log.log_date).toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit' }),
+      value: avgSec / 60,
+    })
+  }
+  return points.slice(-limit)
+}
