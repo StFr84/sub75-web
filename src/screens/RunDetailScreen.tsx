@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { useNavigate, useParams, useLocation } from 'react-router-dom'
 import { colors, spacing, radius } from '../theme/colors'
 import { Timer } from '../components/Timer'
 import { logSessionComplete } from '../db/queries/sessions'
+import { saveIntervalSplits, type SplitInput } from '../db/queries/splits'
 
 interface RouteState {
   title: string; duration: number; zone: string | null; pace: string | null; notes: string | null
@@ -27,6 +28,34 @@ function parseRunSteps(notes: string | null, zone: string | null, pace: string |
   return steps
 }
 
+type RoundInputType = 'time' | 'distance' | null
+
+function getRoundInputType(intervals: RouteState['intervals'], notes: string | null): RoundInputType {
+  if (intervals && intervals.workSec > 0) return 'distance'
+  if (intervals && intervals.rounds > 0) return 'time'
+  if (notes && /\d+\s*[x×]\s*\d/i.test(notes)) return 'time'
+  return null
+}
+
+function getSuggestedRoundCount(intervals: RouteState['intervals'], notes: string | null): number {
+  if (intervals?.rounds) return intervals.rounds
+  const match = notes?.match(/(\d+)\s*[x×]/i)
+  return match ? Number(match[1]) : 0
+}
+
+function parseRoundValue(raw: string, type: 'time' | 'distance'): { timeSec: number | null; distanceKm: number | null } {
+  const trimmed = raw.trim()
+  if (!trimmed) return { timeSec: null, distanceKm: null }
+  if (type === 'time') {
+    const m = trimmed.match(/^(\d{1,3}):([0-5]?\d)$/)
+    if (m) return { timeSec: Number(m[1]) * 60 + Number(m[2]), distanceKm: null }
+    const n = parseFloat(trimmed.replace(',', '.'))
+    return { timeSec: Number.isFinite(n) ? n : null, distanceKm: null }
+  }
+  const n = parseFloat(trimmed.replace(',', '.'))
+  return { timeSec: null, distanceKm: Number.isFinite(n) ? n : null }
+}
+
 export function RunDetailScreen() {
   const navigate = useNavigate()
   const { sessionId, date } = useParams<{ sessionId: string; date: string }>()
@@ -38,6 +67,22 @@ export function RunDetailScreen() {
   const [done, setDone] = useState(false)
   const [showTimer, setShowTimer] = useState(false)
 
+  const roundInputType = getRoundInputType(intervals, notes)
+  const roundIdCounter = useRef(0)
+  const [rounds, setRounds] = useState(() =>
+    Array.from({ length: getSuggestedRoundCount(intervals, notes) }, () => ({ id: roundIdCounter.current++, value: '' })),
+  )
+
+  function addRound() {
+    setRounds(rs => [...rs, { id: roundIdCounter.current++, value: '' }])
+  }
+  function removeRound(id: number) {
+    setRounds(rs => rs.filter(r => r.id !== id))
+  }
+  function updateRound(id: number, value: string) {
+    setRounds(rs => rs.map(r => (r.id === id ? { ...r, value } : r)))
+  }
+
   const steps = parseRunSteps(notes, zone, pace, duration ?? 0)
   const distanceNum = parseFloat(distance)
   const actualDurationNum = parseFloat(actualDuration)
@@ -45,11 +90,17 @@ export function RunDetailScreen() {
 
   async function handleFinish() {
     if (!rpe) { alert('Bitte bewerte die Intensität (1–10)'); return }
-    await logSessionComplete(
+    const sessionLogId = await logSessionComplete(
       Number(sessionId), date!, rpe,
       actualDurationNum > 0 ? actualDurationNum : duration,
       distanceNum > 0 ? distanceNum : undefined,
     )
+    if (roundInputType) {
+      const splits: SplitInput[] = rounds
+        .map((r, i) => ({ roundNumber: i + 1, ...parseRoundValue(r.value, roundInputType) }))
+        .filter(s => s.timeSec !== null || s.distanceKm !== null)
+      if (splits.length) await saveIntervalSplits(sessionLogId, splits)
+    }
     setDone(true)
     setTimeout(() => navigate(-1), 800)
   }
@@ -113,6 +164,34 @@ export function RunDetailScreen() {
         />
         <div style={{ fontSize: 11, color: colors.textSecondary }}>Geplant: {duration} Min · bei Bedarf anpassen</div>
       </div>
+
+      {roundInputType && (
+        <div style={{ background: colors.card, borderRadius: radius.lg, padding: spacing.lg, display: 'flex', flexDirection: 'column', gap: spacing.sm }}>
+          <div style={{ fontSize: 11, color: colors.textSecondary, textTransform: 'uppercase', letterSpacing: 1 }}>
+            Runden {roundInputType === 'time' ? '(Zeit mm:ss)' : '(Distanz km)'}
+          </div>
+          {rounds.map((r, i) => (
+            <div key={r.id} style={{ display: 'flex', gap: spacing.xs, alignItems: 'center' }}>
+              <div style={{ width: 56, fontSize: 13, color: colors.textSecondary }}>Runde {i + 1}</div>
+              <input
+                type="text" inputMode={roundInputType === 'time' ? 'text' : 'decimal'}
+                placeholder={roundInputType === 'time' ? 'z.B. 4:35' : 'z.B. 1.0'}
+                value={r.value}
+                onChange={e => updateRound(r.id, e.target.value)}
+                style={{ flex: 1, background: colors.bg, border: `1px solid ${colors.border}`, borderRadius: radius.sm, padding: spacing.sm, color: colors.textPrimary, fontSize: 15 }}
+              />
+              <button
+                onClick={() => removeRound(r.id)}
+                style={{ width: 28, height: 28, borderRadius: radius.sm, background: colors.cardAlt, color: colors.textSecondary, fontSize: 14, border: 'none' }}
+              >×</button>
+            </div>
+          ))}
+          <button
+            onClick={addRound}
+            style={{ background: colors.cardAlt, color: colors.textPrimary, borderRadius: radius.sm, padding: spacing.sm, fontSize: 13, fontWeight: 600, border: 'none' }}
+          >+ Runde hinzufügen</button>
+        </div>
+      )}
 
       <div style={{ background: colors.card, borderRadius: radius.lg, padding: spacing.lg, display: 'flex', flexDirection: 'column', gap: spacing.sm }}>
         <div style={{ fontSize: 11, color: colors.textSecondary, textTransform: 'uppercase', letterSpacing: 1 }}>Distanz gelaufen (km)</div>
