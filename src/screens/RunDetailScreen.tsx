@@ -4,6 +4,7 @@ import { colors, spacing, radius } from '../theme/colors'
 import { Timer } from '../components/Timer'
 import { logSessionComplete } from '../db/queries/sessions'
 import { saveIntervalSplits, type SplitInput } from '../db/queries/splits'
+import { formatMinSec } from '../utils/format'
 
 interface RouteState {
   title: string; duration: number; zone: string | null; pace: string | null; notes: string | null
@@ -30,10 +31,12 @@ function parseRunSteps(notes: string | null, zone: string | null, pace: string |
 
 type RoundInputType = 'time' | 'distance' | null
 
+const TIME_MMSS_RE = /^(\d{1,3}):([0-5]?\d)$/
+
 function getRoundInputType(intervals: RouteState['intervals'], notes: string | null): RoundInputType {
   if (intervals && intervals.workSec > 0) return 'distance'
   if (intervals && intervals.rounds > 0) return 'time'
-  if (notes && /\d+\s*[x×]\s*\d/i.test(notes)) return 'time'
+  if (notes && /\d+\s*[x×]\s*\d+(?:[.,]\d+)?\s*km/i.test(notes)) return 'time'
   return null
 }
 
@@ -47,7 +50,7 @@ function parseRoundValue(raw: string, type: 'time' | 'distance'): { timeSec: num
   const trimmed = raw.trim()
   if (!trimmed) return { timeSec: null, distanceKm: null }
   if (type === 'time') {
-    const m = trimmed.match(/^(\d{1,3}):([0-5]?\d)$/)
+    const m = trimmed.match(TIME_MMSS_RE)
     if (m) return { timeSec: Number(m[1]) * 60 + Number(m[2]), distanceKm: null }
     return { timeSec: null, distanceKm: null }
   }
@@ -89,6 +92,10 @@ export function RunDetailScreen() {
 
   async function handleFinish() {
     if (!rpe) { alert('Bitte bewerte die Intensität (1–10)'); return }
+    if (roundInputType === 'time' && rounds.some(r => r.value.trim() !== '' && !TIME_MMSS_RE.test(r.value.trim()))) {
+      alert('Bitte alle Rundenzeiten als mm:ss angeben (z.B. 4:35)')
+      return
+    }
     const sessionLogId = await logSessionComplete(
       Number(sessionId), date!, rpe,
       actualDurationNum > 0 ? actualDurationNum : duration,
@@ -170,7 +177,7 @@ export function RunDetailScreen() {
             Runden {roundInputType === 'time' ? '(Zeit mm:ss)' : '(Distanz km)'}
           </div>
           {rounds.map((r, i) => {
-            const isTimeInvalid = roundInputType === 'time' && r.value.trim() !== '' && !/^(\d{1,3}):([0-5]?\d)$/.test(r.value.trim())
+            const isTimeInvalid = roundInputType === 'time' && r.value.trim() !== '' && !TIME_MMSS_RE.test(r.value.trim())
             return (
               <div key={r.id} style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                 <div style={{ display: 'flex', gap: spacing.xs, alignItems: 'center' }}>
@@ -208,7 +215,7 @@ export function RunDetailScreen() {
           style={{ background: colors.bg, border: `1px solid ${colors.border}`, borderRadius: radius.sm, padding: spacing.sm, color: colors.textPrimary, fontSize: 16 }}
         />
         {livePace !== null && livePace > 0 && (
-          <div style={{ fontSize: 12, color: colors.green }}>≈ {Math.floor(livePace)}:{Math.round((livePace % 1) * 60).toString().padStart(2, '0')} min/km</div>
+          <div style={{ fontSize: 12, color: colors.green }}>≈ {formatMinSec(livePace)} min/km</div>
         )}
       </div>
 
