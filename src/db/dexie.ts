@@ -55,6 +55,14 @@ export interface UserMeta {
   value: string
 }
 
+export interface IntervalSplit {
+  id?: number
+  session_log_id: number
+  round_number: number
+  time_sec: number | null
+  distance_km: number | null
+}
+
 class Sub75DB extends Dexie {
   sessions!: Table<Session>
   exercises!: Table<Exercise>
@@ -62,6 +70,7 @@ class Sub75DB extends Dexie {
   session_logs!: Table<SessionLog>
   hrv_logs!: Table<HrvLog>
   user_meta!: Table<UserMeta>
+  interval_splits!: Table<IntervalSplit>
 
   constructor() {
     super('sub75')
@@ -79,6 +88,15 @@ class Sub75DB extends Dexie {
       session_logs: '++id, session_id, log_date, [session_id+log_date]',
       hrv_logs: '++id, log_date',
       user_meta: 'key',
+    })
+    this.version(3).stores({
+      sessions: '++id, week, day, [week+day]',
+      exercises: '++id, session_id',
+      logged_sets: '++id, [exercise_id+log_date+set_number], exercise_id, log_date',
+      session_logs: '++id, session_id, log_date, [session_id+log_date]',
+      hrv_logs: '++id, log_date',
+      user_meta: 'key',
+      interval_splits: '++id, session_log_id, [session_log_id+round_number]',
     })
   }
 }

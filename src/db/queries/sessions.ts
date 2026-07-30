@@ -48,8 +48,8 @@ export async function logSessionComplete(
   rpe: number,
   durationActualMin?: number,
   distanceKm?: number,
-): Promise<void> {
-  await db.session_logs.put({ session_id: sessionId, log_date: logDate, rpe, duration_actual_min: durationActualMin ?? null, distance_km: distanceKm ?? null, notes: null })
+): Promise<number> {
+  return db.session_logs.put({ session_id: sessionId, log_date: logDate, rpe, duration_actual_min: durationActualMin ?? null, distance_km: distanceKm ?? null, notes: null })
 }
 
 export async function getCompletedSessionIds(week: number): Promise<number[]> {
