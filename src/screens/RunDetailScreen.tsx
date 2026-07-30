@@ -49,8 +49,7 @@ function parseRoundValue(raw: string, type: 'time' | 'distance'): { timeSec: num
   if (type === 'time') {
     const m = trimmed.match(/^(\d{1,3}):([0-5]?\d)$/)
     if (m) return { timeSec: Number(m[1]) * 60 + Number(m[2]), distanceKm: null }
-    const n = parseFloat(trimmed.replace(',', '.'))
-    return { timeSec: Number.isFinite(n) ? n : null, distanceKm: null }
+    return { timeSec: null, distanceKm: null }
   }
   const n = parseFloat(trimmed.replace(',', '.'))
   return { timeSec: null, distanceKm: Number.isFinite(n) ? n : null }
@@ -170,22 +169,30 @@ export function RunDetailScreen() {
           <div style={{ fontSize: 11, color: colors.textSecondary, textTransform: 'uppercase', letterSpacing: 1 }}>
             Runden {roundInputType === 'time' ? '(Zeit mm:ss)' : '(Distanz km)'}
           </div>
-          {rounds.map((r, i) => (
-            <div key={r.id} style={{ display: 'flex', gap: spacing.xs, alignItems: 'center' }}>
-              <div style={{ width: 56, fontSize: 13, color: colors.textSecondary }}>Runde {i + 1}</div>
-              <input
-                type="text" inputMode={roundInputType === 'time' ? 'text' : 'decimal'}
-                placeholder={roundInputType === 'time' ? 'z.B. 4:35' : 'z.B. 1.0'}
-                value={r.value}
-                onChange={e => updateRound(r.id, e.target.value)}
-                style={{ flex: 1, background: colors.bg, border: `1px solid ${colors.border}`, borderRadius: radius.sm, padding: spacing.sm, color: colors.textPrimary, fontSize: 15 }}
-              />
-              <button
-                onClick={() => removeRound(r.id)}
-                style={{ width: 28, height: 28, borderRadius: radius.sm, background: colors.cardAlt, color: colors.textSecondary, fontSize: 14, border: 'none' }}
-              >×</button>
-            </div>
-          ))}
+          {rounds.map((r, i) => {
+            const isTimeInvalid = roundInputType === 'time' && r.value.trim() !== '' && !/^(\d{1,3}):([0-5]?\d)$/.test(r.value.trim())
+            return (
+              <div key={r.id} style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                <div style={{ display: 'flex', gap: spacing.xs, alignItems: 'center' }}>
+                  <div style={{ width: 56, fontSize: 13, color: colors.textSecondary }}>Runde {i + 1}</div>
+                  <input
+                    type="text" inputMode={roundInputType === 'time' ? 'text' : 'decimal'}
+                    placeholder={roundInputType === 'time' ? 'z.B. 4:35' : 'z.B. 1.0'}
+                    value={r.value}
+                    onChange={e => updateRound(r.id, e.target.value)}
+                    style={{ flex: 1, background: colors.bg, border: `1px solid ${isTimeInvalid ? colors.red : colors.border}`, borderRadius: radius.sm, padding: spacing.sm, color: colors.textPrimary, fontSize: 15 }}
+                  />
+                  <button
+                    onClick={() => removeRound(r.id)}
+                    style={{ width: 28, height: 28, borderRadius: radius.sm, background: colors.cardAlt, color: colors.textSecondary, fontSize: 14, border: 'none' }}
+                  >×</button>
+                </div>
+                {isTimeInvalid && (
+                  <div style={{ fontSize: 11, color: colors.red, marginLeft: 56 + spacing.xs }}>Bitte als mm:ss, z.B. 4:35</div>
+                )}
+              </div>
+            )
+          })}
           <button
             onClick={addRound}
             style={{ background: colors.cardAlt, color: colors.textPrimary, borderRadius: radius.sm, padding: spacing.sm, fontSize: 13, fontWeight: 600, border: 'none' }}
