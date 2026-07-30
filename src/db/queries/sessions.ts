@@ -49,7 +49,13 @@ export async function logSessionComplete(
   durationActualMin?: number,
   distanceKm?: number,
 ): Promise<number> {
-  return db.session_logs.put({ session_id: sessionId, log_date: logDate, rpe, duration_actual_min: durationActualMin ?? null, distance_km: distanceKm ?? null, notes: null })
+  const existing = await db.session_logs.where('[session_id+log_date]').equals([sessionId, logDate]).first()
+  const row = { session_id: sessionId, log_date: logDate, rpe, duration_actual_min: durationActualMin ?? null, distance_km: distanceKm ?? null, notes: null }
+  if (existing?.id) {
+    await db.session_logs.update(existing.id, row)
+    return existing.id
+  }
+  return db.session_logs.put(row)
 }
 
 export async function getCompletedSessionIds(week: number): Promise<number[]> {
