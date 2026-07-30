@@ -4,6 +4,7 @@ import { BottomNav } from './components/BottomNav'
 import { TodayScreen }          from './screens/TodayScreen'
 import { WeekScreen }           from './screens/WeekScreen'
 import { TrendsScreen }         from './screens/TrendsScreen'
+import { CoachScreen }          from './screens/CoachScreen'
 import { PlanScreen }           from './screens/PlanScreen'
 import { ProfileScreen }        from './screens/ProfileScreen'
 import { WorkoutDetailScreen }  from './screens/WorkoutDetailScreen'
@@ -47,6 +48,7 @@ export default function App() {
             <Route path="/week"           element={<Navigate to={`/week/${getCurrentWeek()}`} replace />} />
             <Route path="/week/:weekNum"  element={<WeekScreen />} />
             <Route path="/trends"         element={<TrendsScreen />} />
+            <Route path="/coach"          element={<CoachScreen />} />
             <Route path="/plan"           element={<PlanScreen />} />
             <Route path="/profile"        element={<ProfileScreen />} />
             <Route path="/workout/:sessionId/:date" element={<WorkoutDetailScreen />} />

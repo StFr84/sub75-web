@@ -45,6 +45,14 @@ input { font-family: inherit; color: inherit; }
 }
 .bottom-tab.active { color: #4fb2ff; }
 .bottom-tab-icon { font-size: 20px; }
+.bottom-tab-badge {
+  position: absolute;
+  top: -2px; right: -6px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #facc15;
+  box-shadow: 0 0 0 2px #12181f;
+}
 
 .no-spinner::-webkit-outer-spin-button,
 .no-spinner::-webkit-inner-spin-button {

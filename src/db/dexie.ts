@@ -63,6 +63,12 @@ export interface IntervalSplit {
   distance_km: number | null
 }
 
+export interface InsightState {
+  id: string
+  seen: number
+  dismissed: number
+}
+
 class Sub75DB extends Dexie {
   sessions!: Table<Session>
   exercises!: Table<Exercise>
@@ -71,6 +77,7 @@ class Sub75DB extends Dexie {
   hrv_logs!: Table<HrvLog>
   user_meta!: Table<UserMeta>
   interval_splits!: Table<IntervalSplit>
+  insight_state!: Table<InsightState>
 
   constructor() {
     super('sub75')
@@ -97,6 +104,16 @@ class Sub75DB extends Dexie {
       hrv_logs: '++id, log_date',
       user_meta: 'key',
       interval_splits: '++id, session_log_id, [session_log_id+round_number]',
+    })
+    this.version(4).stores({
+      sessions: '++id, week, day, [week+day]',
+      exercises: '++id, session_id',
+      logged_sets: '++id, [exercise_id+log_date+set_number], exercise_id, log_date',
+      session_logs: '++id, session_id, log_date, [session_id+log_date]',
+      hrv_logs: '++id, log_date',
+      user_meta: 'key',
+      interval_splits: '++id, session_log_id, [session_log_id+round_number]',
+      insight_state: 'id',
     })
   }
 }
