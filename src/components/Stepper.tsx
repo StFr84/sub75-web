@@ -11,8 +11,9 @@ interface Props {
 
 export function Stepper({ value, unit, step, min = 0, onChange }: Props) {
   const [text, setText] = useState(String(value))
+  const [isFocused, setIsFocused] = useState(false)
 
-  useEffect(() => { setText(String(value)) }, [value])
+  useEffect(() => { if (!isFocused) setText(String(value)) }, [value, isFocused])
 
   function commit(raw: string) {
     const n = parseFloat(raw.replace(',', '.'))
@@ -34,7 +35,8 @@ export function Stepper({ value, unit, step, min = 0, onChange }: Props) {
           inputMode="decimal"
           value={text}
           onChange={e => setText(e.target.value)}
-          onBlur={e => commit(e.target.value)}
+          onFocus={() => setIsFocused(true)}
+          onBlur={e => { commit(e.target.value); setIsFocused(false) }}
           style={{
             width: 64, textAlign: 'center', fontSize: 20, fontWeight: 800, color: colors.textPrimary,
             background: 'transparent', border: 'none', outline: 'none',
