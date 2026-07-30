@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { colors, radius } from '../theme/colors'
 
 interface Props {
@@ -9,15 +10,36 @@ interface Props {
 }
 
 export function Stepper({ value, unit, step, min = 0, onChange }: Props) {
+  const [text, setText] = useState(String(value))
+
+  useEffect(() => { setText(String(value)) }, [value])
+
+  function commit(raw: string) {
+    const n = parseFloat(raw.replace(',', '.'))
+    if (Number.isFinite(n)) onChange(Math.max(min, n))
+    else setText(String(value))
+  }
+
   const btnStyle: React.CSSProperties = {
     width: 36, height: 36, borderRadius: radius.sm, background: colors.cardAlt, color: colors.blue,
-    display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18, fontWeight: 700,
+    display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18, fontWeight: 700, border: 'none',
   }
   return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: colors.bg, borderRadius: radius.md, padding: '8px 12px' }}>
       <button style={btnStyle} onClick={() => onChange(Math.max(min, value - step))}>−</button>
       <div style={{ textAlign: 'center' }}>
-        <div style={{ fontSize: 20, fontWeight: 800, color: colors.textPrimary }}>{value}</div>
+        <input
+          className="no-spinner"
+          type="number"
+          inputMode="decimal"
+          value={text}
+          onChange={e => setText(e.target.value)}
+          onBlur={e => commit(e.target.value)}
+          style={{
+            width: 64, textAlign: 'center', fontSize: 20, fontWeight: 800, color: colors.textPrimary,
+            background: 'transparent', border: 'none', outline: 'none',
+          }}
+        />
         <div style={{ fontSize: 9, color: colors.textSecondary, textTransform: 'uppercase' }}>{unit}</div>
       </div>
       <button style={btnStyle} onClick={() => onChange(value + step)}>+</button>
