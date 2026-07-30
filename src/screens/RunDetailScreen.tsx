@@ -34,16 +34,22 @@ export function RunDetailScreen() {
   const { title, duration, zone, pace, notes, intervals } = (location.state ?? {}) as RouteState
   const [rpe, setRpe] = useState<number | null>(null)
   const [distance, setDistance] = useState('')
+  const [actualDuration, setActualDuration] = useState(duration != null ? String(duration) : '')
   const [done, setDone] = useState(false)
   const [showTimer, setShowTimer] = useState(false)
 
   const steps = parseRunSteps(notes, zone, pace, duration ?? 0)
   const distanceNum = parseFloat(distance)
-  const livePace = distanceNum > 0 ? (duration ?? 0) / distanceNum : null
+  const actualDurationNum = parseFloat(actualDuration)
+  const livePace = distanceNum > 0 && actualDurationNum > 0 ? actualDurationNum / distanceNum : null
 
   async function handleFinish() {
     if (!rpe) { alert('Bitte bewerte die Intensität (1–10)'); return }
-    await logSessionComplete(Number(sessionId), date!, rpe, duration, distanceNum > 0 ? distanceNum : undefined)
+    await logSessionComplete(
+      Number(sessionId), date!, rpe,
+      actualDurationNum > 0 ? actualDurationNum : duration,
+      distanceNum > 0 ? distanceNum : undefined,
+    )
     setDone(true)
     setTimeout(() => navigate(-1), 800)
   }
@@ -97,6 +103,16 @@ export function RunDetailScreen() {
           <div style={{ fontSize: 14, color: colors.textPrimary, lineHeight: 1.6 }}>{notes}</div>
         </div>
       )}
+
+      <div style={{ background: colors.card, borderRadius: radius.lg, padding: spacing.lg, display: 'flex', flexDirection: 'column', gap: spacing.sm }}>
+        <div style={{ fontSize: 11, color: colors.textSecondary, textTransform: 'uppercase', letterSpacing: 1 }}>Tatsächliche Dauer (Min)</div>
+        <input
+          type="number" inputMode="decimal" placeholder="z.B. 50" value={actualDuration}
+          onChange={e => setActualDuration(e.target.value)}
+          style={{ background: colors.bg, border: `1px solid ${colors.border}`, borderRadius: radius.sm, padding: spacing.sm, color: colors.textPrimary, fontSize: 16 }}
+        />
+        <div style={{ fontSize: 11, color: colors.textSecondary }}>Geplant: {duration} Min · bei Bedarf anpassen</div>
+      </div>
 
       <div style={{ background: colors.card, borderRadius: radius.lg, padding: spacing.lg, display: 'flex', flexDirection: 'column', gap: spacing.sm }}>
         <div style={{ fontSize: 11, color: colors.textSecondary, textTransform: 'uppercase', letterSpacing: 1 }}>Distanz gelaufen (km)</div>
