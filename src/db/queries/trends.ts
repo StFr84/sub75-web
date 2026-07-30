@@ -50,11 +50,20 @@ export async function getExerciseWeightTrend(exerciseName: string, limit = 15): 
 }
 
 export async function getSplitConsistencyTrend(limit = 10): Promise<TrendPoint[]> {
-  const logs = await db.session_logs.orderBy('log_date').toArray()
+  const [logs, allSplits] = await Promise.all([
+    db.session_logs.orderBy('log_date').toArray(),
+    db.interval_splits.toArray(),
+  ])
+  const splitsByLog = new Map<number, typeof allSplits>()
+  for (const split of allSplits) {
+    const list = splitsByLog.get(split.session_log_id)
+    if (list) list.push(split)
+    else splitsByLog.set(split.session_log_id, [split])
+  }
   const points: TrendPoint[] = []
   for (const log of logs) {
     if (!log.id) continue
-    const splits = await db.interval_splits.where('session_log_id').equals(log.id).toArray()
+    const splits = splitsByLog.get(log.id) ?? []
     const times = splits.map(s => s.time_sec).filter((t): t is number => t != null && t > 0)
     if (times.length === 0) continue
     const avgSec = times.reduce((a, b) => a + b, 0) / times.length

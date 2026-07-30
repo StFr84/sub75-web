@@ -4,6 +4,7 @@ import { LineChart } from '../components/LineChart'
 import { daysUntilRace1, daysUntilRace2 } from '../data/constants'
 import { getRecentHrv } from '../db/queries/hrv'
 import { getWeeklyLoad, getPaceTrend, getLoggedExerciseNames, getExerciseWeightTrend, getSplitConsistencyTrend, type TrendPoint } from '../db/queries/trends'
+import { formatMinSec } from '../utils/format'
 
 const cardStyle: React.CSSProperties = { background: colors.card, borderRadius: radius.lg, padding: spacing.lg, display: 'flex', flexDirection: 'column', gap: spacing.sm }
 
@@ -51,12 +52,12 @@ export function TrendsScreen() {
 
       <div style={cardStyle}>
         <div style={{ fontSize: 11, color: colors.textSecondary, textTransform: 'uppercase', letterSpacing: 1 }}>Pace-Trend (Läufe)</div>
-        <LineChart data={pace} color={colors.green} unit="min/km" formatValue={n => `${Math.floor(n)}:${Math.round((n % 1) * 60).toString().padStart(2, '0')}`} />
+        <LineChart data={pace} color={colors.green} unit="min/km" formatValue={formatMinSec} />
       </div>
 
       <div style={cardStyle}>
         <div style={{ fontSize: 11, color: colors.textSecondary, textTransform: 'uppercase', letterSpacing: 1 }}>Ø Rundenzeit (Intervalle)</div>
-        <LineChart data={splitConsistency} color={colors.indigo} unit="min/Runde" formatValue={n => `${Math.floor(n)}:${Math.round((n % 1) * 60).toString().padStart(2, '0')}`} />
+        <LineChart data={splitConsistency} color={colors.indigo} unit="min/Runde" formatValue={formatMinSec} />
       </div>
 
       <div style={cardStyle}>
