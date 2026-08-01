@@ -3538,7 +3538,7 @@
               "name": "Lauf",
               "sets": 3,
               "reps": 400,
-              "hint": "400m, sofort weiter zu Burpee Broad Jump (kein Stopp)"
+              "hint": "400m, sofort weiter zu Burpee Broad Jump (kein Stopp) — Ziel: 8,4–11,9 km/h / 138–158 bpm, kontrolliert (nicht Schwellentempo)"
             },
             {
               "name": "Burpee Broad Jump",
@@ -3550,7 +3550,7 @@
               "name": "Lauf kurz",
               "sets": 3,
               "reps": 200,
-              "hint": "200m, danach 3 Min Pause – dann Zirkel erneut (Runde beendet)"
+              "hint": "200m, danach 3 Min Pause – dann Zirkel erneut (Runde beendet) — Ziel: 8,4–11,9 km/h / 138–158 bpm, kontrolliert (nicht Schwellentempo)"
             }
           ]
         },
@@ -3922,7 +3922,7 @@
               "name": "Lauf",
               "sets": 3,
               "reps": 400,
-              "hint": "400m, sofort weiter zu Burpee Broad Jump (kein Stopp)"
+              "hint": "400m, sofort weiter zu Burpee Broad Jump (kein Stopp) — Ziel: 8,4–11,9 km/h / 138–158 bpm, kontrolliert (nicht Schwellentempo)"
             },
             {
               "name": "Burpee Broad Jump",
@@ -3934,7 +3934,7 @@
               "name": "Lauf kurz",
               "sets": 3,
               "reps": 200,
-              "hint": "200m, danach 3 Min Pause – dann Zirkel erneut (Runde beendet)"
+              "hint": "200m, danach 3 Min Pause – dann Zirkel erneut (Runde beendet) — Ziel: 8,4–11,9 km/h / 138–158 bpm, kontrolliert (nicht Schwellentempo)"
             }
           ]
         },
@@ -4118,11 +4118,11 @@
         {
           "day": "sunday",
           "type": "run",
-          "title": "Langer Lauf MDL/TDL",
+          "title": "Langer Lauf LDL (Erholung)",
           "durationMin": 90,
-          "zone": "138-161 bpm",
-          "pace": "TDL-Pace 11,9–12,6 km/h (≈4:46–5:02 min/km) für die letzten 15-20 Min",
-          "notes": "MDL, letzte 15-20 Min TDL-Anteil gegen Ende."
+          "zone": "<137 bpm",
+          "pace": null,
+          "notes": "Erholungslauf nach intensiver Build1-Woche – komplett LDL, kein Tempoanteil. Baut aerobe Basis für IAS-Verschiebung."
         },
         {
           "day": "sunday",
@@ -4306,7 +4306,7 @@
               "name": "Lauf",
               "sets": 3,
               "reps": 400,
-              "hint": "400m, sofort weiter zu Burpee Broad Jump (kein Stopp)"
+              "hint": "400m, sofort weiter zu Burpee Broad Jump (kein Stopp) — Ziel: 8,4–11,9 km/h / 138–158 bpm, kontrolliert (nicht Schwellentempo)"
             },
             {
               "name": "Burpee Broad Jump",
@@ -4318,7 +4318,7 @@
               "name": "Lauf kurz",
               "sets": 3,
               "reps": 200,
-              "hint": "200m, danach 3 Min Pause – dann Zirkel erneut (Runde beendet)"
+              "hint": "200m, danach 3 Min Pause – dann Zirkel erneut (Runde beendet) — Ziel: 8,4–11,9 km/h / 138–158 bpm, kontrolliert (nicht Schwellentempo)"
             }
           ]
         },
@@ -4502,11 +4502,11 @@
         {
           "day": "sunday",
           "type": "run",
-          "title": "Langer Lauf MDL/TDL",
+          "title": "Langer Lauf LDL (Erholung)",
           "durationMin": 90,
-          "zone": "138-161 bpm",
-          "pace": "TDL-Pace 11,9–12,6 km/h (≈4:46–5:02 min/km) für die letzten 15-20 Min",
-          "notes": "MDL, letzte 15-20 Min TDL-Anteil gegen Ende."
+          "zone": "<137 bpm",
+          "pace": null,
+          "notes": "Erholungslauf nach intensiver Build1-Woche – komplett LDL, kein Tempoanteil. Baut aerobe Basis für IAS-Verschiebung."
         },
         {
           "day": "sunday",
@@ -5054,7 +5054,7 @@
               "name": "Lauf",
               "sets": 3,
               "reps": 400,
-              "hint": "400m, sofort weiter zu Burpee Broad Jump (kein Stopp)"
+              "hint": "400m, sofort weiter zu Burpee Broad Jump (kein Stopp) — Ziel: 8,4–11,9 km/h / 138–158 bpm, kontrolliert (nicht Schwellentempo)"
             },
             {
               "name": "Burpee Broad Jump",
@@ -5066,7 +5066,7 @@
               "name": "Lauf kurz",
               "sets": 3,
               "reps": 200,
-              "hint": "200m, danach 3 Min Pause – dann Zirkel erneut (Runde beendet)"
+              "hint": "200m, danach 3 Min Pause – dann Zirkel erneut (Runde beendet) — Ziel: 8,4–11,9 km/h / 138–158 bpm, kontrolliert (nicht Schwellentempo)"
             }
           ]
         },
@@ -5250,10 +5250,11 @@
         {
           "day": "sunday",
           "type": "run",
-          "title": "Langer Lauf MDL/TDL",
+          "title": "Langer Lauf LDL (Erholung)",
           "durationMin": 90,
-          "zone": "138-161 bpm",
-          "notes": "MDL bis TDL-Anteil gegen Ende."
+          "zone": "<137 bpm",
+          "notes": "Erholungslauf nach intensiver Build1-Woche – komplett LDL, kein Tempoanteil. Baut aerobe Basis für IAS-Verschiebung.",
+          "pace": null
         },
         {
           "day": "sunday",
@@ -5437,7 +5438,7 @@
               "name": "Lauf",
               "sets": 3,
               "reps": 400,
-              "hint": "400m, sofort weiter zu Burpee Broad Jump (kein Stopp)"
+              "hint": "400m, sofort weiter zu Burpee Broad Jump (kein Stopp) — Ziel: 8,4–11,9 km/h / 138–158 bpm, kontrolliert (nicht Schwellentempo)"
             },
             {
               "name": "Burpee Broad Jump",
@@ -5449,7 +5450,7 @@
               "name": "Lauf kurz",
               "sets": 3,
               "reps": 200,
-              "hint": "200m, danach 3 Min Pause – dann Zirkel erneut (Runde beendet)"
+              "hint": "200m, danach 3 Min Pause – dann Zirkel erneut (Runde beendet) — Ziel: 8,4–11,9 km/h / 138–158 bpm, kontrolliert (nicht Schwellentempo)"
             }
           ]
         },
@@ -5645,10 +5646,11 @@
         {
           "day": "sunday",
           "type": "run",
-          "title": "Langer Lauf MDL/TDL",
+          "title": "Langer Lauf LDL (Erholung)",
           "durationMin": 90,
-          "zone": "138-161 bpm",
-          "notes": "MDL bis TDL-Anteil gegen Ende."
+          "zone": "<137 bpm",
+          "notes": "Erholungslauf nach intensiver Build1-Woche – komplett LDL, kein Tempoanteil. Baut aerobe Basis für IAS-Verschiebung.",
+          "pace": null
         },
         {
           "day": "sunday",
@@ -6040,10 +6042,11 @@
         {
           "day": "sunday",
           "type": "run",
-          "title": "Langer Lauf TDL/MDL",
+          "title": "Langer Lauf LDL (Erholung)",
           "durationMin": 90,
-          "zone": "158-161 bpm",
-          "notes": "TDL/MDL-Mix, gleichmäßig."
+          "zone": "<137 bpm",
+          "notes": "Erholungslauf nach intensiver Build1-Woche – komplett LDL, kein Tempoanteil. Baut aerobe Basis für IAS-Verschiebung.",
+          "pace": null
         },
         {
           "day": "sunday",
