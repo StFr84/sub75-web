@@ -6,6 +6,24 @@ Format: `[Datum] Commit · Bereich · Beschreibung · Betroffene Dateien`
 
 ---
 
+## 2026-08-01 · Build1-Trainingskorrektur + Seed-Incident (behoben)
+
+### `bfcefc3` · Trainingsplan
+**Sonntags-LDL-Erholung Wochen 11–16, Pace-Ziel für Circuit-Läufe Wochen 10–15**
+- Wochen 11–16 hatten keinen echten Erholungstag mehr (Sonntag lief bei 138–161 bpm statt <137 bpm)
+- Eingebaute Kurzläufe (400m/200m) im Mittwoch-Circuit bekamen explizite Pace-Vorgabe (8,4–11,9 km/h statt ungebremst ~12,6 km/h)
+- Betroffen: `src/data/plan.json`
+
+### `1de1fc2` → `be91ecf` · Datenverlust-Incident, Seed
+**Reseed löschte reale Trainingshistorie auf echtem Gerät**
+- Ein `plan_version`-Bump löste einen Reseed aus, bei dem das Session-Matching für praktisch die gesamte Datenbank fehlschlug — alle 420 Sessions bekamen neue IDs, Nutzer verlor sichtbar seine Logs für diese Woche (0/6 Erledigt trotz durchgeführter Einheiten)
+- Root Cause des Matching-Fehlschlags nicht abschließend geklärt (Verdacht: `original_day`-Drift aus früherer Plan-Restrukturierung)
+- Daten wiederhergestellt via Export/Import-Vergleich (Vorher/Nachher) + manuellem ID-Remapping
+- **Fix:** Reseed löscht ab sofort grundsätzlich nichts mehr — unmatched alte Rows bleiben als Datenmüll liegen statt entfernt zu werden. Kann nur noch hinzufügen/aktualisieren.
+- Betroffen: `src/db/seed.ts`
+
+---
+
 ## v2.0.0 — 2026-07-27 · Redesign: Data-Dense Pro, PWA, Trends, Timer
 
 Kompletter Rebuild von Design und Bedienung (Spec: `docs/superpowers/specs/2026-07-27-sub75-redesign-design.md`, Plan: `docs/superpowers/plans/2026-07-27-sub75-redesign.md`). Alle bestehenden Trainingsdaten (Sessions, Logs, Sets) blieben beim Rebuild erhalten — additive Dexie-Migration (v2).
