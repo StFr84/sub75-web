@@ -13,10 +13,21 @@ interface PlanWeek { week: number; phase: string; sessions: PlanSession[] }
 
 // Upserts by (week, original_day, type) instead of clearing the tables, so
 // existing session ids survive a plan_version bump and session_logs/logged_sets
-// (real logged training history) are never touched here. Old rows whose
-// (week, day, type) slot no longer exists in the new plan (e.g. a day's type
-// changed from strength to rest) are removed only if nothing was ever logged
-// against them — otherwise they're left in place so history isn't lost.
+// (real logged training history) are never touched here.
+//
+// IMPORTANT (incident 2026-08-01): this matching previously also DELETED
+// sessions/exercises it considered "stale" (unmatched + no logged history).
+// On a real device the match silently failed for effectively the whole plan
+// (root cause not fully pinned down — suspected original_day drift from an
+// earlier plan restructure), which caused a full rebuild with fresh ids and
+// deleted a week's worth of real session_logs/logged_sets before the "has
+// logs" check ever got a chance to protect them, because the *new* rows created
+// during the same reseed don't carry the old logs and the count check ran
+// against the (now-diverged) old rows. Given matching has proven unreliable in
+// practice, deletion is no longer attempted at all — an unmatched old row is
+// just left in place (inert clutter, never data loss) instead of being
+// removed. Never reintroduce a delete path here without a much stronger
+// matching guarantee than week+day+type.
 export async function seedIfNeeded(): Promise<void> {
   const meta = await db.user_meta.get('plan_version')
   if (meta?.value === PLAN_VERSION) return
@@ -26,7 +37,6 @@ export async function seedIfNeeded(): Promise<void> {
     // type ist Teil des Schlüssels, weil ein Tag jetzt zwei Sessions haben kann
     // (Haupteinheit + Mobility).
     const byKey = new Map(existing.map(s => [`${s.week}-${s.original_day ?? s.day}-${s.type}`, s]))
-    const matchedIds = new Set<number>()
 
     for (const week of (plan as { weeks: PlanWeek[] }).weeks) {
       for (const session of week.sessions) {
@@ -42,7 +52,6 @@ export async function seedIfNeeded(): Promise<void> {
         }
         const match = byKey.get(`${week.week}-${session.day}-${session.type}`)
         if (match) {
-          matchedIds.add(match.id!)
           await db.sessions.update(match.id!, fields)
 
           const existingExercises = await db.exercises.where('session_id').equals(match.id!).toArray()
@@ -50,15 +59,10 @@ export async function seedIfNeeded(): Promise<void> {
           for (const ex of session.exercises ?? []) {
             const existingEx = existingByName.get(ex.name)
             if (existingEx) {
-              existingByName.delete(ex.name)
               await db.exercises.update(existingEx.id!, { sets: ex.sets, reps: ex.reps, hint: ex.hint ?? null })
             } else {
               await db.exercises.add({ session_id: match.id!, name: ex.name, sets: ex.sets, reps: ex.reps, hint: ex.hint ?? null })
             }
-          }
-          for (const stale of existingByName.values()) {
-            const hasLog = await db.logged_sets.where('exercise_id').equals(stale.id!).count()
-            if (hasLog === 0) await db.exercises.delete(stale.id!)
           }
           continue
         }
@@ -78,14 +82,6 @@ export async function seedIfNeeded(): Promise<void> {
           })
         }
       }
-    }
-
-    for (const old of existing) {
-      if (matchedIds.has(old.id!)) continue
-      const hasLog = await db.session_logs.where('session_id').equals(old.id!).count()
-      if (hasLog > 0) continue
-      await db.exercises.where('session_id').equals(old.id!).delete()
-      await db.sessions.delete(old.id!)
     }
 
     await db.user_meta.put({ key: 'plan_version', value: PLAN_VERSION })
