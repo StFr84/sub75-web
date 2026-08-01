@@ -21,7 +21,7 @@ export async function seedIfNeeded(): Promise<void> {
   const meta = await db.user_meta.get('plan_version')
   if (meta?.value === PLAN_VERSION) return
 
-  await db.transaction('rw', [db.sessions, db.exercises, db.session_logs, db.user_meta], async () => {
+  await db.transaction('rw', [db.sessions, db.exercises, db.session_logs, db.logged_sets, db.user_meta], async () => {
     const existing = await db.sessions.toArray()
     // type ist Teil des Schlüssels, weil ein Tag jetzt zwei Sessions haben kann
     // (Haupteinheit + Mobility).
@@ -44,6 +44,22 @@ export async function seedIfNeeded(): Promise<void> {
         if (match) {
           matchedIds.add(match.id!)
           await db.sessions.update(match.id!, fields)
+
+          const existingExercises = await db.exercises.where('session_id').equals(match.id!).toArray()
+          const existingByName = new Map(existingExercises.map(ex => [ex.name, ex]))
+          for (const ex of session.exercises ?? []) {
+            const existingEx = existingByName.get(ex.name)
+            if (existingEx) {
+              existingByName.delete(ex.name)
+              await db.exercises.update(existingEx.id!, { sets: ex.sets, reps: ex.reps, hint: ex.hint ?? null })
+            } else {
+              await db.exercises.add({ session_id: match.id!, name: ex.name, sets: ex.sets, reps: ex.reps, hint: ex.hint ?? null })
+            }
+          }
+          for (const stale of existingByName.values()) {
+            const hasLog = await db.logged_sets.where('exercise_id').equals(stale.id!).count()
+            if (hasLog === 0) await db.exercises.delete(stale.id!)
+          }
           continue
         }
         const sessionId = await db.sessions.add({
