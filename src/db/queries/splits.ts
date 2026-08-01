@@ -1,9 +1,13 @@
-import { db } from '../dexie'
+import { db, type IntervalSplit } from '../dexie'
 
 export interface SplitInput {
   roundNumber: number
   timeSec: number | null
   distanceKm: number | null
+}
+
+export async function getIntervalSplits(sessionLogId: number): Promise<IntervalSplit[]> {
+  return db.interval_splits.where('session_log_id').equals(sessionLogId).sortBy('round_number')
 }
 
 export async function saveIntervalSplits(sessionLogId: number, splits: SplitInput[]): Promise<void> {

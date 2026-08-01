@@ -1,4 +1,4 @@
-import { db, type Session, type Exercise } from '../dexie'
+import { db, type Session, type Exercise, type SessionLog } from '../dexie'
 import { TRAIN_START } from '../../data/constants'
 
 export type { Session, Exercise }
@@ -40,6 +40,11 @@ export async function getSessionById(sessionId: number): Promise<Session | null>
 
 export async function getExercisesForSession(sessionId: number): Promise<Exercise[]> {
   return db.exercises.where('session_id').equals(sessionId).sortBy('id')
+}
+
+export async function getSessionLog(sessionId: number, logDate: string): Promise<SessionLog | null> {
+  const row = await db.session_logs.where('[session_id+log_date]').equals([sessionId, logDate]).first()
+  return row ?? null
 }
 
 export async function logSessionComplete(

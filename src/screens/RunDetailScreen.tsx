@@ -1,9 +1,9 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { useNavigate, useParams, useLocation } from 'react-router-dom'
 import { colors, spacing, radius } from '../theme/colors'
 import { Timer } from '../components/Timer'
-import { logSessionComplete } from '../db/queries/sessions'
-import { saveIntervalSplits, type SplitInput } from '../db/queries/splits'
+import { logSessionComplete, getSessionLog } from '../db/queries/sessions'
+import { saveIntervalSplits, getIntervalSplits, type SplitInput } from '../db/queries/splits'
 import { formatMinSec } from '../utils/format'
 
 interface RouteState {
@@ -74,6 +74,31 @@ export function RunDetailScreen() {
   const [rounds, setRounds] = useState(() =>
     Array.from({ length: getSuggestedRoundCount(intervals, notes) }, () => ({ id: roundIdCounter.current++, value: '' })),
   )
+
+  useEffect(() => {
+    if (!sessionId || !date) return
+    let cancelled = false
+    ;(async () => {
+      const log = await getSessionLog(Number(sessionId), date)
+      if (!log || cancelled) return
+      setRpe(log.rpe)
+      setDistance(log.distance_km != null ? String(log.distance_km) : '')
+      setActualDuration(log.duration_actual_min != null ? String(log.duration_actual_min) : String(duration ?? ''))
+      if (roundInputType && log.id != null) {
+        const splits = await getIntervalSplits(log.id)
+        if (splits.length && !cancelled) {
+          setRounds(splits.map(s => ({
+            id: roundIdCounter.current++,
+            value: roundInputType === 'time'
+              ? (s.time_sec != null ? formatMinSec(s.time_sec / 60) : '')
+              : (s.distance_km != null ? String(s.distance_km) : ''),
+          })))
+        }
+      }
+    })()
+    return () => { cancelled = true }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [sessionId, date])
 
   function addRound() {
     setRounds(rs => [...rs, { id: roundIdCounter.current++, value: '' }])
