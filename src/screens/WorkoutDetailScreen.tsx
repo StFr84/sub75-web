@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { colors, spacing, radius } from '../theme/colors'
 import { ExerciseRow } from '../components/ExerciseRow'
 import { Timer } from '../components/Timer'
-import { getExercisesForSession, getSessionById, logSessionComplete, type Exercise, type Session } from '../db/queries/sessions'
+import { getExercisesForSession, getSessionById, getSessionLog, logSessionComplete, type Exercise, type Session } from '../db/queries/sessions'
 import { getSetsForExerciseOnDate, getLastWeightForExercise, upsertSet, type LoggedSet } from '../db/queries/sets'
 
 const REST_SECONDS = 90
@@ -21,9 +21,14 @@ export function WorkoutDetailScreen() {
 
   useEffect(() => {
     async function load() {
-      const [sess, exs] = await Promise.all([getSessionById(sessionIdNum), getExercisesForSession(sessionIdNum)])
+      const [sess, exs, log] = await Promise.all([
+        getSessionById(sessionIdNum),
+        getExercisesForSession(sessionIdNum),
+        getSessionLog(sessionIdNum, date!),
+      ])
       setSession(sess)
       setExercises(exs)
+      if (log) setRpe(log.rpe)
       const setsMap: Record<number, LoggedSet[]> = {}
       const weightsMap: Record<number, number | null> = {}
       for (const ex of exs) {
@@ -40,11 +45,12 @@ export function WorkoutDetailScreen() {
     exerciseId: number, setNumber: number,
     reps: number | null, weight: number | null, completed: boolean,
   ) => {
+    const wasCompleted = sets[exerciseId]?.find(s => s.set_number === setNumber)?.completed === 1
     await upsertSet(exerciseId, date!, setNumber, reps, weight, completed)
     const updated = await getSetsForExerciseOnDate(exerciseId, date!)
     setSets(prev => ({ ...prev, [exerciseId]: updated }))
-    if (completed) setResting(true)
-  }, [date])
+    if (completed && !wasCompleted) setResting(true)
+  }, [date, sets])
 
   async function handleFinish() {
     if (rpe === null) { alert('Bitte gib deinen RPE-Wert (1–10) ein.'); return }

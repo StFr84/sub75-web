@@ -34,10 +34,16 @@ export function SetLogger({ totalSets, targetReps, sets, lastWeight, onSetChange
             </div>
             <div style={{ display: 'flex', gap: spacing.xs }}>
               <div style={{ flex: 1 }}>
-                <Stepper value={d.reps} unit="Wdh" step={1} onChange={v => setDraft(p => ({ ...p, [num]: { ...d, reps: v } }))} />
+                <Stepper value={d.reps} unit="Wdh" step={1} onChange={v => {
+                  setDraft(p => ({ ...p, [num]: { ...d, reps: v } }))
+                  onSetChange(num, v, d.weight, isChecked)
+                }} />
               </div>
               <div style={{ flex: 1 }}>
-                <Stepper value={d.weight} unit="kg" step={2.5} onChange={v => setDraft(p => ({ ...p, [num]: { ...d, weight: v } }))} />
+                <Stepper value={d.weight} unit="kg" step={2.5} onChange={v => {
+                  setDraft(p => ({ ...p, [num]: { ...d, weight: v } }))
+                  onSetChange(num, d.reps, v, isChecked)
+                }} />
               </div>
             </div>
             <button
