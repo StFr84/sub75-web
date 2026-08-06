@@ -56,12 +56,24 @@ export async function seedIfNeeded(): Promise<void> {
 
           const existingExercises = await db.exercises.where('session_id').equals(match.id!).toArray()
           const existingByName = new Map(existingExercises.map(ex => [ex.name, ex]))
+          const planNames = new Set((session.exercises ?? []).map(ex => ex.name))
           for (const ex of session.exercises ?? []) {
             const existingEx = existingByName.get(ex.name)
             if (existingEx) {
               await db.exercises.update(existingEx.id!, { sets: ex.sets, reps: ex.reps, hint: ex.hint ?? null })
             } else {
               await db.exercises.add({ session_id: match.id!, name: ex.name, sets: ex.sets, reps: ex.reps, hint: ex.hint ?? null })
+            }
+          }
+          // Drop exercises the plan no longer lists for this session — but only
+          // when nothing was ever logged against them. Same rule as the session
+          // match above: never remove anything with real history, per the
+          // 2026-08-01 incident.
+          for (const ex of existingExercises) {
+            if (planNames.has(ex.name)) continue
+            const hasLogs = await db.logged_sets.where('exercise_id').equals(ex.id!).count()
+            if (hasLogs === 0) {
+              await db.exercises.delete(ex.id!)
             }
           }
           continue

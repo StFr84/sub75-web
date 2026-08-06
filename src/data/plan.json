@@ -1,5 +1,5 @@
 {
-  "version": 11,
+  "version": 12,
   "weeks": [
     {
       "week": 1,
@@ -3974,11 +3974,11 @@
         {
           "day": "thursday",
           "type": "run",
-          "title": "Intervalle",
-          "durationMin": 90,
-          "zone": "ETL 12,4-13,4 km/h",
-          "pace": "ETL-Pace 12,4–13,4 km/h (≈4:29–4:50 min/km)",
-          "notes": "6×1 km bei ETL-Pace (12,4-13,4 km/h), 90s Pause."
+          "title": "Armergometer/SkiErg Arms-only (Reha-Ersatz)",
+          "durationMin": 35,
+          "zone": "aerob, HF <150 bpm, beinfrei",
+          "pace": null,
+          "notes": "Ersetzt Laufintervalle wegen Oberschenkelzerrung (Stand 06.08.) - 25 Min Armergometer/SkiErg Arms-only submaximal, danach 6x25s Farmer's Hold (statisch, kein Gehen). Distanz-/Pace-Feld beim Loggen einfach leer lassen. Nur wenn schmerzfrei, Rücksprache mit Physio."
         },
         {
           "day": "thursday",
@@ -4003,7 +4003,7 @@
               "name": "Liegende Hamstring-Dehnung",
               "sets": 2,
               "reps": 30,
-              "hint": "30s halten, je Seite, mit Band/Handtuch"
+              "hint": "NUR wenn schmerzfrei, 30s halten, je Seite – bei Zug sofort abbrechen (Zerrung, Stand 06.08.)"
             },
             {
               "name": "Foam Rolling Oberschenkel/IT-Band",
@@ -4057,28 +4057,28 @@
         {
           "day": "saturday",
           "type": "strength",
-          "title": "Hyrox-Simulation",
-          "durationMin": 60,
-          "zone": "intensiv",
-          "notes": "3-Stationen-Simulation. Wettkampftempo, max 30s Pause zwischen Stationen.",
+          "title": "Oberkörper-Zirkel (Reha-Ersatz)",
+          "durationMin": 45,
+          "zone": "moderat-intensiv",
+          "notes": "Ersetzt Hyrox-Simulation wegen Oberschenkelzerrung (Stand 06.08.) - kein Laufen, kein Sled Push, keine Lunges. 3 Runden im Zirkel, kurze Pausen.",
           "exercises": [
             {
               "name": "SkiErg",
-              "sets": 1,
-              "reps": 1000,
-              "hint": "1.000m nach 1km Lauf"
+              "sets": 3,
+              "reps": 500,
+              "hint": "500m zügig"
             },
             {
-              "name": "Sled Push",
-              "sets": 1,
-              "reps": 50,
-              "hint": "50m nach 1km Lauf"
+              "name": "Landmine Press",
+              "sets": 3,
+              "reps": 15,
+              "hint": "je Seite"
             },
             {
-              "name": "Sandbag Lunges",
-              "sets": 1,
-              "reps": 50,
-              "hint": "50m nach 1km Lauf"
+              "name": "Farmer's Hold (statisch)",
+              "sets": 3,
+              "reps": 30,
+              "hint": "30s halten, kein Gehen"
             }
           ]
         },
@@ -4171,11 +4171,11 @@
         {
           "day": "monday",
           "type": "run",
-          "title": "HIIT",
-          "durationMin": 60,
-          "zone": "Max >165 bpm",
-          "pace": "≈13,5–14,5 km/h (≈4:08–4:27 min/km) – HF-gesteuert",
-          "notes": "HIIT: 4×4 Min bei >165 bpm, 3 Min Trabpause.",
+          "title": "Armergometer-Intervalle (Reha-Ersatz)",
+          "durationMin": 40,
+          "zone": "moderat-intensiv, beinfrei",
+          "pace": null,
+          "notes": "Ersetzt Lauf-HIIT wegen Oberschenkelzerrung (Stand 06.08.) - 4x4 Min zügiges Armergometer/SkiErg Arms-only, 3 Min locker dazwischen. Danach Liegestütz 4x15, Trizeps Dips 3x15, Unterarmstütz 3x30s. Distanz-/Pace-Feld leer lassen.",
           "intervals": {
             "rounds": 4,
             "workSec": 240,
@@ -4205,7 +4205,7 @@
               "name": "Liegende Hamstring-Dehnung",
               "sets": 2,
               "reps": 30,
-              "hint": "30s halten, je Seite, mit Band/Handtuch"
+              "hint": "NUR wenn schmerzfrei, 30s halten, je Seite – bei Zug sofort abbrechen (Zerrung, Stand 06.08.)"
             },
             {
               "name": "Foam Rolling Oberschenkel/IT-Band",
@@ -4218,40 +4218,34 @@
         {
           "day": "tuesday",
           "type": "strength",
-          "title": "Kraftausdauer",
-          "durationMin": 60,
+          "title": "Kraftausdauer (Reha-Ersatz)",
+          "durationMin": 45,
           "zone": "moderat-intensiv",
-          "notes": "Kraftausdauer: Sandbag, Burpee, Sled. Prio-1-Schwächen.",
+          "notes": "Ersetzt Sandbag Lunges/Burpee/Sled wegen Oberschenkelzerrung (Stand 06.08.) - Zug/Druck/Grip statt Beinübungen.",
           "exercises": [
             {
-              "name": "Sandbag Lunges",
+              "name": "SkiErg-Zug / Kabelzug",
               "sets": 4,
-              "reps": 20,
-              "hint": "20m, Gewicht progressiv Richtung 20kg"
+              "reps": 30,
+              "hint": "90s Pause - Børve-Protokoll"
             },
             {
-              "name": "Burpee Broad Jump",
+              "name": "Landmine Press",
               "sets": 4,
-              "reps": 10,
-              "hint": "zügig, mit Sprung"
+              "reps": 15,
+              "hint": "je Seite"
             },
             {
-              "name": "Sled Push",
-              "sets": 4,
-              "reps": 20,
-              "hint": "20m"
+              "name": "Face Pull",
+              "sets": 3,
+              "reps": 15,
+              "hint": "leicht"
             },
             {
-              "name": "Sled Pull",
-              "sets": 4,
-              "reps": 20,
-              "hint": "20m"
-            },
-            {
-              "name": "Farmer's Carry",
+              "name": "Farmer's Hold (statisch)",
               "sets": 3,
               "reps": 40,
-              "hint": "40m schwer"
+              "hint": "40s halten, kein Gehen, schwer"
             }
           ]
         },
@@ -4291,34 +4285,28 @@
         {
           "day": "wednesday",
           "type": "strength",
-          "title": "Transitions + Circuit",
-          "durationMin": 60,
+          "title": "Transitions + Circuit (Reha-Ersatz)",
+          "durationMin": 45,
           "zone": "moderat",
-          "notes": "Zirkel ohne Stopp: SkiErg 500m → sofort Lauf 400m → sofort Burpee Broad Jump 20 Reps → Lauf 200m. Erst danach 3 Min Pause, dann kompletten Zirkel erneut (3 Runden gesamt).",
+          "notes": "Zirkel ohne Lauf-/Sprunganteil wegen Oberschenkelzerrung (Stand 06.08.): SkiErg -> Landmine Press -> Plank, 3 Runden, kurze Pause zwischen den Runden.",
           "exercises": [
             {
               "name": "SkiErg",
               "sets": 3,
               "reps": 500,
-              "hint": "500m, sofort weiter zu Lauf 400m (kein Stopp)"
+              "hint": "500m, sofort weiter zu Landmine Press (kein Stopp)"
             },
             {
-              "name": "Lauf",
+              "name": "Landmine Press",
               "sets": 3,
-              "reps": 400,
-              "hint": "400m, sofort weiter zu Burpee Broad Jump (kein Stopp) — Ziel: 8,4–11,9 km/h / 138–158 bpm, kontrolliert (nicht Schwellentempo)"
+              "reps": 15,
+              "hint": "je Seite, sofort weiter zu Unterarmstütz (kein Stopp)"
             },
             {
-              "name": "Burpee Broad Jump",
+              "name": "Unterarmstütz (Plank)",
               "sets": 3,
-              "reps": 20,
-              "hint": "20 Reps, sofort weiter zu Lauf kurz (kein Stopp)"
-            },
-            {
-              "name": "Lauf kurz",
-              "sets": 3,
-              "reps": 200,
-              "hint": "200m, danach 3 Min Pause – dann Zirkel erneut (Runde beendet) — Ziel: 8,4–11,9 km/h / 138–158 bpm, kontrolliert (nicht Schwellentempo)"
+              "reps": 30,
+              "hint": "30s halten, danach 3 Min Pause - dann Zirkel erneut"
             }
           ]
         },
@@ -4502,11 +4490,11 @@
         {
           "day": "sunday",
           "type": "run",
-          "title": "Langer Lauf LDL (Erholung)",
-          "durationMin": 90,
-          "zone": "<137 bpm",
+          "title": "Oberkörper Zug + lockeres Armergometer (Reha-Ersatz)",
+          "durationMin": 40,
+          "zone": "locker-moderat, beinfrei",
           "pace": null,
-          "notes": "Erholungslauf nach intensiver Build1-Woche – komplett LDL, kein Tempoanteil. Baut aerobe Basis für IAS-Verschiebung."
+          "notes": "Ersetzt langen Erholungslauf wegen Oberschenkelzerrung (Stand 06.08.) - SkiErg-Zug/Kabelzug 4x30 Wdh. (90s Pause, Børve-Protokoll), Face Pull 3x15, danach 15 Min lockeres Armergometer <140 bpm. Distanz-/Pace-Feld leer lassen."
         },
         {
           "day": "sunday",
@@ -4531,7 +4519,7 @@
               "name": "Liegende Hamstring-Dehnung",
               "sets": 2,
               "reps": 30,
-              "hint": "30s halten, je Seite, mit Band/Handtuch"
+              "hint": "NUR wenn schmerzfrei, 30s halten, je Seite – bei Zug sofort abbrechen (Zerrung, Stand 06.08.)"
             },
             {
               "name": "Foam Rolling Oberschenkel/IT-Band",
