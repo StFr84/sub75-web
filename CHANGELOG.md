@@ -6,6 +6,19 @@ Format: `[Datum] Commit · Bereich · Beschreibung · Betroffene Dateien`
 
 ---
 
+## 2026-08-06 · Reha-Anpassung Oberschenkelzerrung
+
+### `5d75a3d` · Trainingsplan + Seed
+**Woche 11 Do–Sa, Woche 12 So–Mi auf beidseitige Oberschenkelzerrung angepasst**
+- Laufsessions (06.–10.08.) durch Armergometer/SkiErg Arms-only ersetzt — Typ `run` bewusst beibehalten, damit der Reseed auf die bestehende Session matched statt eine verwaiste zusätzliche Karte anzulegen
+- Kraftsessions (08., 11., 12.08.) von Bein-Übungen (Sled Push, Sandbag Lunges, Burpee Broad Jump) auf Oberkörper-Kraftausdauer umgestellt (SkiErg-Zug/Børve-Protokoll, Landmine Press, Farmer's Hold statisch)
+- Ab Do 13.08. läuft der reguläre Build1-Plan unverändert weiter
+- **Seed-Fix:** Übungen, die im Plan nicht mehr auftauchen, werden bei einer gematchten Session jetzt entfernt — aber nur wenn nie ein Satz dafür geloggt wurde (gleiches Schutzprinzip wie beim Session-Matching seit dem Incident vom 01.08.). Ohne den Fix wären ersetzte Übungen wie „Sled Push" als Karteileichen stehen geblieben.
+- Grundlage: Recherche zu Reha/Alternativtraining/Oberkörper-Kraftausdauer, siehe Artifact-Link in Projekt-Memory
+- Betroffen: `src/data/plan.json` (Version 11→12), `src/db/seed.ts`
+
+---
+
 ## 2026-08-01 · Build1-Trainingskorrektur + Seed-Incident (behoben)
 
 ### `bfcefc3` · Trainingsplan
