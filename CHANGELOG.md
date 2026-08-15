@@ -6,6 +6,18 @@ Format: `[Datum] Commit · Bereich · Beschreibung · Betroffene Dateien`
 
 ---
 
+## 2026-08-15 · Kurzfristige Session-Anpassung (kein Fitnessstudio)
+
+### `f6f44e0` · Trainingsplan
+**Woche 12 Samstag: Hyrox-Simulation durch leichte Bodyweight-Session ersetzt**
+- Nutzer hatte an dem Tag keinen Zugang zum Fitnessstudio (SkiErg/Sled/Sandbag nicht verfügbar)
+- Inhalt vom 22.08. (Woche 13, planmäßige Deload-Woche) vorgezogen: Burpee Broad Jump 3×8, Hollow Body 3×20s, Side Plank 3×20s statt SkiErg 1000m/Sled Push 50m/Sandbag Lunges 50m
+- Passt zusätzlich zum kriteriengestützten Wiedereinstieg nach der Oberschenkelzerrung (Physio-Freigabe + HRV grün am 15.08., aber noch kein Vollgas-Wettkampftempo)
+- Woche 13 Samstag bleibt unverändert (gleiche leichte Session als zweiter Belastungstest vor Woche 14/Build1 in voller Intensität)
+- Betroffen: `src/data/plan.json` (Version 12→13)
+
+---
+
 ## 2026-08-06 · Reha-Anpassung Oberschenkelzerrung
 
 ### `5d75a3d` · Trainingsplan + Seed
