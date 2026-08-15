@@ -1,5 +1,5 @@
 {
-  "version": 12,
+  "version": 13,
   "weeks": [
     {
       "week": 1,
@@ -4429,28 +4429,28 @@
         {
           "day": "saturday",
           "type": "strength",
-          "title": "Hyrox-Simulation",
-          "durationMin": 60,
-          "zone": "intensiv",
-          "notes": "3-Stationen-Simulation. Wettkampftempo, max 30s Pause zwischen Stationen.",
+          "title": "Leichte Stationen + Core",
+          "durationMin": 45,
+          "zone": "locker",
+          "notes": "Vorgezogen vom 22.08. (kein Fitnessstudio verfügbar): Bodyweight, kein Equipment nötig. Broad Jumps bewusst weich/kontrolliert landen (hinterer Oberschenkel).",
           "exercises": [
             {
-              "name": "SkiErg",
-              "sets": 1,
-              "reps": 1000,
-              "hint": "1.000m nach 1km Lauf"
+              "name": "Burpee Broad Jump",
+              "sets": 3,
+              "reps": 8,
+              "hint": "locker"
             },
             {
-              "name": "Sled Push",
-              "sets": 1,
-              "reps": 50,
-              "hint": "50m nach 1km Lauf"
+              "name": "Hollow Body",
+              "sets": 3,
+              "reps": 20,
+              "hint": "20s"
             },
             {
-              "name": "Sandbag Lunges",
-              "sets": 1,
-              "reps": 50,
-              "hint": "50m nach 1km Lauf"
+              "name": "Side Plank",
+              "sets": 3,
+              "reps": 20,
+              "hint": "20s"
             }
           ]
         },
