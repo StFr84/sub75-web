@@ -1,5 +1,5 @@
 {
-  "version": 13,
+  "version": 14,
   "weeks": [
     {
       "week": 1,
@@ -5810,7 +5810,7 @@
           "title": "Vollsimulation Segments",
           "durationMin": 60,
           "zone": "Wettkampftempo",
-          "notes": "4-5 Stationen + Läufe, Transitions ohne Pause.",
+          "notes": "4-5 Stationen + Läufe, Transitions ohne Pause. Bei HRV Gelb: Läufe im unteren ETL-Bereich (12,4–12,8 km/h) statt volles Wettkampftempo fahren, 3-Min-Pause nach dem 2. Lauf nicht verkürzen; bei spürbarem Nachlassen Runde 3 im MDL-Tempo (8,4–11,9 km/h) laufen.",
           "exercises": [
             {
               "name": "SkiErg",
