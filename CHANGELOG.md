@@ -6,6 +6,19 @@ Format: `[Datum] Commit · Bereich · Beschreibung · Betroffene Dateien`
 
 ---
 
+## 2026-09-19 · Wiedereinstieg nach Erkältung + Frankfurt-Zielkorrektur
+
+### `d73afd0` · Trainingsplan
+**Woche 18/19 auf evidenzbasierten Wiedereinstieg umgestellt, Frankfurt-Ziel Sub 70 → Sub 1:21**
+- ~2 Wochen Trainingsausfall durch milde Erkältung (kein Fieber, seit 19.09. symptomfrei, HRV grün); Recherche zu Return-to-Training/Detraining/Taper-Kombination ergab: kein hartes Stufenschema für banale Erkältung validiert, 2 Wochen Pause = kein echtes Detraining (VO2max −4 bis −9%, Kraft nahezu erhalten)
+- Woche 18 (So 20.09.–Sa 26.09.): Zone1-2-Reentry mit HRV-Ampel-Hinweis in den Notes (So–Mi), moderate Kraft/Technik ohne PR (Di/Mi), erster gezielter intensiver Reiz (Do), locker (Fr/Sa)
+- Woche 19 (So 27.09.–Sa 03.10.): zweiter intensiver Reiz (So, ≥48h Abstand zu Woche 18 Do), locker (Mo), Priming-Reiz 3–4×3 Min Renntempo (Di), sehr leicht (Mi/Do), Anreise/Ruhe (Fr), Karlsruhe-Rennen (Sa) — Notes jetzt mit realistischer Erwartung (78–85 Min als Formtest/Datenpunkt statt starr Sub 75)
+- rpeTarget beider Wochen von Peak-Niveau (1800–2200 bzw. 800–1100) auf 700–1000 gesenkt
+- Frankfurt-Zielzeit korrigiert (Sub 70 → Sub 1:21, vom Nutzer bestätigt): Race-Simulation-Notes Wochen 25/26/28, Wettkampf-Eintrag Woche 30, `constants.ts`, `PlanScreen.tsx`
+- Betroffen: `src/data/plan.json` (Version 14→15), `src/data/constants.ts`, `src/screens/PlanScreen.tsx`
+
+---
+
 ## 2026-08-15 · Kurzfristige Session-Anpassung (kein Fitnessstudio)
 
 ### `f6f44e0` · Trainingsplan
