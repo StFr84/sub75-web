@@ -1,5 +1,5 @@
 {
-  "version": 14,
+  "version": 15,
   "weeks": [
     {
       "week": 1,
@@ -6440,17 +6440,17 @@
       "phase": "peak1",
       "startDate": "2026-09-20",
       "rpeTarget": {
-        "min": 1800,
-        "max": 2200
+        "min": 700,
+        "max": 1000
       },
       "sessions": [
         {
           "day": "sunday",
           "type": "run",
-          "title": "MDL gleichmäßig",
-          "durationMin": 70,
-          "zone": "138-158 bpm",
-          "notes": "Start der letzten scharfen Woche vor dem Rennen."
+          "title": "Wiedereinstieg Lauf locker",
+          "durationMin": 30,
+          "zone": "Z1-2 ≤136 bpm",
+          "notes": "Tag 1 nach Erkältung – vor dem Laufen HRV-Ampel checken: bei Grün wie geplant, bei Gelb/Rot Tempo/Dauer weiter reduzieren, nicht aussetzen."
         },
         {
           "day": "sunday",
@@ -6488,16 +6488,10 @@
         {
           "day": "monday",
           "type": "run",
-          "title": "HIIT",
-          "durationMin": 50,
-          "zone": "Max >165 bpm",
-          "pace": "≈13,5–14,5 km/h (≈4:08–4:27 min/km) – HF-gesteuert",
-          "notes": "HIIT: 4×4 Min bei >165 bpm, 3 Min Trabpause. Letzte harte VO2max-Reize vor Taper.",
-          "intervals": {
-            "rounds": 4,
-            "workSec": 240,
-            "restSec": 180
-          }
+          "title": "Lauf Zone 1-2",
+          "durationMin": 30,
+          "zone": "Z1-2 ≤136 bpm",
+          "notes": "HRV-Ampel vor der Einheit checken. Lockeres Tempo, kein Renntempo."
         },
         {
           "day": "monday",
@@ -6535,10 +6529,10 @@
         {
           "day": "tuesday",
           "type": "strength",
-          "title": "Kraftausdauer",
-          "durationMin": 50,
-          "zone": "moderat-intensiv",
-          "notes": "Sandbag Lunges, Burpee Broad Jump, Sled – letzte Station-Schärfung."
+          "title": "Kraft moderat",
+          "durationMin": 40,
+          "zone": "RPE max 5, kein PR",
+          "notes": "Moderate Kraft ohne PR-Versuch – Grundübungen, sauber und kontrolliert."
         },
         {
           "day": "tuesday",
@@ -6576,10 +6570,10 @@
         {
           "day": "wednesday",
           "type": "strength",
-          "title": "Halbsimulation",
-          "durationMin": 60,
-          "zone": "Wettkampftempo",
-          "notes": "5-6 Stationen, halbe Streckenlänge, Wettkampfgewicht. Einzige volle Simulation vor Karlsruhe."
+          "title": "Stationstechnik locker",
+          "durationMin": 40,
+          "zone": "leicht-moderat",
+          "notes": "Letzter Tag der reinen Zone1-2/Technik-Phase. Saubere Bewegungsausführung, kein Renntempo, kein Max."
         },
         {
           "day": "wednesday",
@@ -6617,11 +6611,16 @@
         {
           "day": "thursday",
           "type": "run",
-          "title": "Intervalle",
-          "durationMin": 70,
-          "zone": "ETL 12,4-13,4 km/h",
-          "pace": "ETL-Pace 12,4–13,4 km/h (≈4:29–4:50 min/km)",
-          "notes": "5×1 km bei ETL-Pace, 90s Pause. Reduziertes Volumen – Taper beginnt."
+          "title": "Hyrox-Teilsimulation kurz (Reiz 1)",
+          "durationMin": 45,
+          "zone": "Renntempo-Abschnitte",
+          "pace": "Karlsruhe-Zielpace (5:00–5:20 min/km)",
+          "notes": "Erster von zwei gezielten intensiven Reizen vor Karlsruhe: kurze Abschnitte im Renntempo, dazwischen volle Erholung. Gesamtvolumen ca. 50–60% von normal.",
+          "intervals": {
+            "rounds": 4,
+            "workSec": 180,
+            "restSec": 120
+          }
         },
         {
           "day": "thursday",
@@ -6659,9 +6658,9 @@
         {
           "day": "friday",
           "type": "rest",
-          "title": "Ruhetag",
+          "title": "Locker / Pause",
           "durationMin": 0,
-          "notes": "Ruhetag"
+          "notes": "Frei bzw. locker – Erholung zwischen den beiden intensiven Reizen (mind. 48h Abstand)."
         },
         {
           "day": "friday",
@@ -6700,9 +6699,9 @@
           "day": "saturday",
           "type": "strength",
           "title": "Technik leicht",
-          "durationMin": 40,
+          "durationMin": 30,
           "zone": "leicht",
-          "notes": "Stationstechnik locker, Core, kein Max. Übergang in den Taper."
+          "notes": "Stationstechnik locker, kein Renntempo – zweiter intensiver Reiz folgt erst Sonntag (>48h Abstand zu Donnerstag)."
         },
         {
           "day": "saturday",
@@ -6744,17 +6743,23 @@
       "phase": "race1",
       "startDate": "2026-09-27",
       "rpeTarget": {
-        "min": 800,
-        "max": 1100
+        "min": 700,
+        "max": 1000
       },
       "sessions": [
         {
           "day": "sunday",
           "type": "run",
-          "title": "MDL locker",
+          "title": "Hyrox-Teilsimulation kurz (Reiz 2)",
           "durationMin": 45,
-          "zone": "138-158 bpm",
-          "notes": "Taper-Start – locker, Beine frisch halten."
+          "zone": "Renntempo-Abschnitte",
+          "notes": "Zweiter der beiden intensiven Reize vor Karlsruhe, ca. 3 Tage nach dem ersten. Danach Taper.",
+          "pace": "Karlsruhe-Zielpace (5:00–5:20 min/km)",
+          "intervals": {
+            "rounds": 4,
+            "workSec": 180,
+            "restSec": 120
+          }
         },
         {
           "day": "sunday",
@@ -6792,10 +6797,10 @@
         {
           "day": "monday",
           "type": "run",
-          "title": "Laufen leicht",
-          "durationMin": 30,
+          "title": "Laufen locker",
+          "durationMin": 25,
           "zone": "locker",
-          "notes": "20 Min locker + 3×200m Strides."
+          "notes": "Ausklang des intensiven Blocks – ganz locker, kein Tempo."
         },
         {
           "day": "monday",
@@ -6833,10 +6838,15 @@
         {
           "day": "tuesday",
           "type": "strength",
-          "title": "Stationen sehr leicht",
+          "title": "Priming-Reiz",
           "durationMin": 30,
-          "zone": "leicht",
-          "notes": "2 Stationen kurz, reine Technik, Core."
+          "zone": "Renntempo, volle Pausen",
+          "notes": "3–4×3 Min im Renntempo mit vollen Pausen – kurzer scharfer Reiz, danach nur noch sehr leicht bis Karlsruhe.",
+          "intervals": {
+            "rounds": 4,
+            "workSec": 180,
+            "restSec": 180
+          }
         },
         {
           "day": "tuesday",
@@ -6876,7 +6886,7 @@
           "type": "rest",
           "title": "Pause",
           "durationMin": 0,
-          "notes": "Pause / Mobility"
+          "notes": "Sehr leicht/Mobility – Regeneration nach dem Priming-Reiz."
         },
         {
           "day": "wednesday",
@@ -6914,11 +6924,10 @@
         {
           "day": "thursday",
           "type": "run",
-          "title": "Aktivierung",
-          "durationMin": 40,
-          "zone": "ETL 12,4-13,4 km/h",
-          "pace": "ETL-Pace 12,4–13,4 km/h (≈4:29–4:50 min/km)",
-          "notes": "3×1 km bei ETL-Pace, locker auslaufen."
+          "title": "Sehr leicht auslaufen",
+          "durationMin": 20,
+          "zone": "sehr locker",
+          "notes": "Nur lockeres Einlaufen + 2–3×100m Steigerungen, kein Tempo mehr bis Karlsruhe."
         },
         {
           "day": "thursday",
@@ -6958,7 +6967,7 @@
           "type": "rest",
           "title": "Anreise Karlsruhe",
           "durationMin": 0,
-          "notes": "Anreise, Verpflegung vorbereiten, Ausrüstung checken, Beine hoch."
+          "notes": "Komplette Ruhe bzw. max. 15 Min. lockeres Shakeout. Fokus: Schlaf, Kohlenhydrate, Ausrüstung, Pacing-Plan."
         },
         {
           "day": "friday",
@@ -6999,7 +7008,7 @@
           "title": "WETTKAMPF: Hyrox Karlsruhe · Ziel Sub 75 Min",
           "durationMin": 80,
           "zone": "Wettkampf",
-          "notes": "Lauftaktik: Läufe 1-2 konservativ (5:20/km), Läufe 3-6 Zielpace (5:00/km), Läufe 7-8 alles geben."
+          "notes": "Nach Erkältungspause als Formtest behandeln – nach Effort/Puls fahren statt stur aufs Ziel zu pushen. Realistisch eher 78–85 Min je nach Tagesform; Ergebnis fließt als Datenpunkt in die Frankfurt-Planung ein. Lauftaktik: Läufe 1-2 konservativ (5:20/km), Läufe 3-6 Zielpace (5:00/km), Läufe 7-8 alles geben."
         },
         {
           "day": "saturday",
@@ -8819,7 +8828,7 @@
           "title": "Race Simulation",
           "durationMin": 75,
           "zone": "Wettkampftempo",
-          "notes": "Volle Simulation. Sub-70-Pace. Zeit messen.",
+          "notes": "Volle Simulation. Frankfurt-Zielpace (Sub 1:21). Zeit messen.",
           "exercises": [
             {
               "name": "SkiErg",
@@ -9256,7 +9265,7 @@
           "title": "Race Simulation",
           "durationMin": 75,
           "zone": "Wettkampftempo",
-          "notes": "Volle Simulation. Sub-70-Pace. Zeit messen.",
+          "notes": "Volle Simulation. Frankfurt-Zielpace (Sub 1:21). Zeit messen.",
           "exercises": [
             {
               "name": "SkiErg",
@@ -10026,7 +10035,7 @@
           "title": "Race Simulation",
           "durationMin": 75,
           "zone": "Wettkampftempo",
-          "notes": "Volle Simulation. Sub-70-Pace. Zeit messen.",
+          "notes": "Volle Simulation. Frankfurt-Zielpace (Sub 1:21). Zeit messen.",
           "exercises": [
             {
               "name": "SkiErg",
@@ -10770,10 +10779,10 @@
         {
           "day": "sunday",
           "type": "run",
-          "title": "WETTKAMPF: Hyrox Frankfurt · Ziel Sub 70 Min",
+          "title": "WETTKAMPF: Hyrox Frankfurt · Ziel Sub 1:21",
           "durationMin": 75,
           "zone": "Wettkampf",
-          "notes": "Sub 70 Min. Lauftaktik: Läufe 1-2 bei 5:00 min/km. Ab Lauf 3 auf 4:45-4:50 min/km. Keine Reserve lassen."
+          "notes": "Ziel Sub 1:21. Finale Pacing-Vorgabe wird nach Karlsruhe-Auswertung und Build 2 festgelegt."
         },
         {
           "day": "sunday",
