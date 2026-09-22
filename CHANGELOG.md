@@ -6,6 +6,20 @@ Format: `[Datum] Commit · Bereich · Beschreibung · Betroffene Dateien`
 
 ---
 
+## 2026-09-22 · Alle Einheiten bis Frankfurt konkret ausformuliert
+
+### Trainingsplan
+**Wochen 18 (ab Mi 23.09.) bis 30: jede Einheit mit genauem Inhalt (Übungen, Sätze/Wdh./Gewichte, Pace/HF, HRV-Ampel-Varianten)**
+- Woche 18 Mi – Woche 24: bisher nur grob beschriebene Kraft-/Technik-Einheiten bekommen konkrete Übungslisten, Läufe genaue Hauptblock-Vorgaben + Pace-Feld
+- Build 2 (Wochen 25–28) entschärft: vorher zwei volle Simulationen pro Woche (Mi + Sa) und 4 harte Tage am Stück. Jetzt 3 Schlüsseleinheiten (Mo HIIT, Do Schwelle/ETL, Sa Simulation), Di/Mi moderat, So langer lockerer Lauf statt TDL/ETL. rpeTarget 1500–1900 / 1700–2200 / 800–1200 / 1400–1800
+- Simulationen: W25 Halbsim Teil 2, W26 Vollsimulation, W28 Halbsim Teil 1 als Generalprobe
+- Taper-Fix: Woche 30 lag mit Einlaufen/Aktivierung *nach* dem Rennen (So 13.12.). Jetzt W29 Sa = Pre-Race-Aktivierung, W30 Mo–Sa = Erholung nach dem Rennen
+- Mo/So-Doppel-MDL in Wochen 22–24 → Montag LDL (polarisiert)
+- Tag + Typ jeder Session unverändert (Reseed-Matching), vergangene Tage (20.–22.09.) unangetastet
+- Betroffen: `src/data/plan.json` (Version 15→16)
+
+---
+
 ## 2026-09-19 · Wiedereinstieg nach Erkältung + Frankfurt-Zielkorrektur
 
 ### `d73afd0` · Trainingsplan

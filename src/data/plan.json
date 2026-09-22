@@ -1,5 +1,5 @@
 {
-  "version": 15,
+  "version": 16,
   "weeks": [
     {
       "week": 1,
@@ -6571,9 +6571,47 @@
           "day": "wednesday",
           "type": "strength",
           "title": "Stationstechnik locker",
-          "durationMin": 40,
-          "zone": "leicht-moderat",
-          "notes": "Letzter Tag der reinen Zone1-2/Technik-Phase. Saubere Bewegungsausführung, kein Renntempo, kein Max."
+          "durationMin": 45,
+          "zone": "RPE 5/10 · HF <150 bpm",
+          "notes": "Aufwärmen 10 Min: 5 Min RowErg locker + 2 Runden 10 Air Squats, 10 Ausfallschritte, 5 Inchworms. Dann alle Übungen nacheinander, 60–90 s Pause zwischen den Sätzen. Nur saubere Technik, kein Renntempo, nichts bis zur Erschöpfung. Letzter Tag der reinen Zone-1-2/Technik-Phase. HRV Gelb: nur 2 Sätze je Übung. HRV Rot: stattdessen 30 Min lockeres Rad + Mobility.",
+          "exercises": [
+            {
+              "name": "SkiErg Technik",
+              "sets": 3,
+              "reps": 250,
+              "hint": "250m locker (≈2:05–2:15/500m) – Hüftknick, Arme bis zur Hüfte durchziehen"
+            },
+            {
+              "name": "RowErg",
+              "sets": 3,
+              "reps": 250,
+              "hint": "250m ruhig, 24–26 Schläge/Min – Beine → Rumpf → Arme"
+            },
+            {
+              "name": "Sandbag Lunges Technik",
+              "sets": 3,
+              "reps": 20,
+              "hint": "20m mit 10–15kg – aufrechter Rumpf, hinteres Knie leicht absetzen"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 3,
+              "reps": 8,
+              "hint": "ruhig – Hände direkt vor die Füße, weich landen, kein Tempo"
+            },
+            {
+              "name": "Wall Balls",
+              "sets": 3,
+              "reps": 15,
+              "hint": "6kg, tiefe Hocke, Ziel 3m, gleichmäßiger Rhythmus"
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 2,
+              "reps": 40,
+              "hint": "40m – 2×20kg, aufrecht, zügig gehen"
+            }
+          ]
         },
         {
           "day": "wednesday",
@@ -6611,11 +6649,11 @@
         {
           "day": "thursday",
           "type": "run",
-          "title": "Hyrox-Teilsimulation kurz (Reiz 1)",
+          "title": "Renntempo-Intervalle (Reiz 1)",
           "durationMin": 45,
-          "zone": "Renntempo-Abschnitte",
-          "pace": "Karlsruhe-Zielpace (5:00–5:20 min/km)",
-          "notes": "Erster von zwei gezielten intensiven Reizen vor Karlsruhe: kurze Abschnitte im Renntempo, dazwischen volle Erholung. Gesamtvolumen ca. 50–60% von normal.",
+          "zone": "Renntempo, HF max ~160 bpm",
+          "pace": "Karlsruhe-Renntempo 11,5–12,0 km/h (≈5:00–5:10 min/km)",
+          "notes": "4x3 Min im Karlsruhe-Renntempo, dazwischen je 2 Min locker traben, danach 5 Min locker. Rennrhythmus spüren, nicht ausbelasten – am Ende jedes Intervalls max. ~160 bpm. HRV Gelb: 3 statt 4 Intervalle. HRV Rot: 30 Min locker ≤136 bpm statt Intervalle.",
           "intervals": {
             "rounds": 4,
             "workSec": 180,
@@ -6658,9 +6696,9 @@
         {
           "day": "friday",
           "type": "rest",
-          "title": "Locker / Pause",
+          "title": "Ruhetag",
           "durationMin": 0,
-          "notes": "Frei bzw. locker – Erholung zwischen den beiden intensiven Reizen (mind. 48h Abstand)."
+          "notes": "Frei. Optional 20–30 Min Spaziergang. Heute bewusst früh ins Bett (Ziel ≥7,5 h Schlaf) – Schlaf ist dein stärkster Hebel gegen die nächste Erkältung."
         },
         {
           "day": "friday",
@@ -6698,10 +6736,42 @@
         {
           "day": "saturday",
           "type": "strength",
-          "title": "Technik leicht",
+          "title": "Technik leicht + Core",
           "durationMin": 30,
-          "zone": "leicht",
-          "notes": "Stationstechnik locker, kein Renntempo – zweiter intensiver Reiz folgt erst Sonntag (>48h Abstand zu Donnerstag)."
+          "zone": "RPE 4/10",
+          "notes": "Aufwärmen 5 Min RowErg locker. Kurz und locker – Beine schonen, morgen kommt Reiz 2. HRV Rot: auslassen, nur Mobility.",
+          "exercises": [
+            {
+              "name": "SkiErg Technik",
+              "sets": 2,
+              "reps": 250,
+              "hint": "250m locker, Technik"
+            },
+            {
+              "name": "Wall Balls",
+              "sets": 2,
+              "reps": 15,
+              "hint": "6kg, ruhiger Rhythmus"
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 2,
+              "reps": 40,
+              "hint": "40m – 2×20kg"
+            },
+            {
+              "name": "Plank",
+              "sets": 3,
+              "reps": 45,
+              "hint": "45s halten, Po angespannt"
+            },
+            {
+              "name": "Dead Bug",
+              "sets": 2,
+              "reps": 10,
+              "hint": "je Seite, unterer Rücken bleibt am Boden"
+            }
+          ]
         },
         {
           "day": "saturday",
@@ -6750,15 +6820,15 @@
         {
           "day": "sunday",
           "type": "run",
-          "title": "Hyrox-Teilsimulation kurz (Reiz 2)",
+          "title": "Lauf + Wall Balls (Reiz 2)",
           "durationMin": 45,
           "zone": "Renntempo-Abschnitte",
-          "notes": "Zweiter der beiden intensiven Reize vor Karlsruhe, ca. 3 Tage nach dem ersten. Danach Taper.",
-          "pace": "Karlsruhe-Zielpace (5:00–5:20 min/km)",
+          "notes": "3x(1 km im Renntempo → sofort 20 Wall Balls 6kg), danach 2–3 Min gehen/traben, dann nächste Runde. Ziel: Übergang Lauf → Station im Renntempo üben, Wall Balls zügig aber unbroken. HRV Gelb: 2 Runden. HRV Rot: 30 Min locker ≤136 bpm.",
+          "pace": "Karlsruhe-Renntempo 11,5–12,0 km/h (≈5:00–5:10 min/km)",
           "intervals": {
-            "rounds": 4,
-            "workSec": 180,
-            "restSec": 120
+            "rounds": 3,
+            "workSec": 330,
+            "restSec": 150
           }
         },
         {
@@ -6798,9 +6868,10 @@
           "day": "monday",
           "type": "run",
           "title": "Laufen locker",
-          "durationMin": 25,
-          "zone": "locker",
-          "notes": "Ausklang des intensiven Blocks – ganz locker, kein Tempo."
+          "durationMin": 35,
+          "zone": "Z1-2 ≤136 bpm",
+          "notes": "Durchgehend locker ≤136 bpm, Ausklang des intensiven Blocks. Kein Tempo.",
+          "pace": "LDL ≈7,5–8,4 km/h (≈7:10–8:00 min/km) – HF <137 bpm hat Vorrang"
         },
         {
           "day": "monday",
@@ -6839,14 +6910,34 @@
           "day": "tuesday",
           "type": "strength",
           "title": "Priming-Reiz",
-          "durationMin": 30,
+          "durationMin": 35,
           "zone": "Renntempo, volle Pausen",
-          "notes": "3–4×3 Min im Renntempo mit vollen Pausen – kurzer scharfer Reiz, danach nur noch sehr leicht bis Karlsruhe.",
+          "notes": "10 Min einlaufen + 3 Steigerungen. Dann 3x3 Min Lauf im Renntempo (5:00–5:10 min/km) mit je 3 Min Traben. Direkt danach 500m SkiErg im Renntempo + 20 Wall Balls. 10 Min auslaufen. Kurz und scharf – danach nur noch sehr leicht bis Karlsruhe. HRV Gelb: 2x3 Min, SkiErg weglassen. HRV Rot: 20 Min locker.",
           "intervals": {
-            "rounds": 4,
+            "rounds": 3,
             "workSec": 180,
             "restSec": 180
-          }
+          },
+          "exercises": [
+            {
+              "name": "Lauf",
+              "sets": 3,
+              "reps": 3,
+              "hint": "3 Min Renntempo 5:00–5:10 min/km, 3 Min traben"
+            },
+            {
+              "name": "SkiErg",
+              "sets": 1,
+              "reps": 500,
+              "hint": "500m im Renntempo (≈1:55–2:00/500m)"
+            },
+            {
+              "name": "Wall Balls",
+              "sets": 1,
+              "reps": 20,
+              "hint": "6kg, unbroken, zügig"
+            }
+          ]
         },
         {
           "day": "tuesday",
@@ -6886,7 +6977,7 @@
           "type": "rest",
           "title": "Pause",
           "durationMin": 0,
-          "notes": "Sehr leicht/Mobility – Regeneration nach dem Priming-Reiz."
+          "notes": "Frei oder 20 Min Spaziergang + Mobility-Flow. Normal essen, ausreichend trinken, früh schlafen."
         },
         {
           "day": "wednesday",
@@ -6924,10 +7015,11 @@
         {
           "day": "thursday",
           "type": "run",
-          "title": "Sehr leicht auslaufen",
-          "durationMin": 20,
-          "zone": "sehr locker",
-          "notes": "Nur lockeres Einlaufen + 2–3×100m Steigerungen, kein Tempo mehr bis Karlsruhe."
+          "title": "Sehr leicht + Steigerungen",
+          "durationMin": 25,
+          "zone": "sehr locker ≤136 bpm",
+          "notes": "5 Min locker, dann 3x100m Steigerungen bis ca. Renntempo (volle Erholung dazwischen). Kein Tempo mehr bis Karlsruhe.",
+          "pace": "LDL ≈7,5–8,4 km/h (≈7:10–8:00 min/km) – HF <137 bpm hat Vorrang"
         },
         {
           "day": "thursday",
@@ -6967,7 +7059,7 @@
           "type": "rest",
           "title": "Anreise Karlsruhe",
           "durationMin": 0,
-          "notes": "Komplette Ruhe bzw. max. 15 Min. lockeres Shakeout. Fokus: Schlaf, Kohlenhydrate, Ausrüstung, Pacing-Plan."
+          "notes": "Komplette Ruhe bzw. max. 15 Min lockeres Shakeout. Abends kohlenhydratreich essen, Schlaf ≥8 h. Tasche packen: Schuhe, Handschuhe für Sled, Gel/Riegel, Getränk, Pulsgurt. Pacing-Plan: Lauf 1–2 bewusst ~5:15 min/km, Sled Push in 4–5 Blöcken, Burpees gleichmäßig, Lunges ohne Absetzen, Wall Balls 25-25-20-15-15."
         },
         {
           "day": "friday",
@@ -7008,7 +7100,7 @@
           "title": "WETTKAMPF: Hyrox Karlsruhe · Ziel Sub 75 Min",
           "durationMin": 80,
           "zone": "Wettkampf",
-          "notes": "Nach Erkältungspause als Formtest behandeln – nach Effort/Puls fahren statt stur aufs Ziel zu pushen. Realistisch eher 78–85 Min je nach Tagesform; Ergebnis fließt als Datenpunkt in die Frankfurt-Planung ein. Lauftaktik: Läufe 1-2 konservativ (5:20/km), Läufe 3-6 Zielpace (5:00/km), Läufe 7-8 alles geben."
+          "notes": "Nach Erkältungspause als Formtest behandeln – nach Effort/Puls fahren statt stur aufs Ziel zu pushen. Realistisch eher 78–85 Min je nach Tagesform; Ergebnis fließt als Datenpunkt in die Frankfurt-Planung ein. Lauftaktik: Läufe 1-2 konservativ (5:20/km), Läufe 3-6 Zielpace (5:00/km), Läufe 7-8 alles geben. Pacing: Lauf 1–2 bei ~5:15 min/km und HF ≤160, ab Lauf 5 nach Gefühl steigern. Stationen Rhythmus vor Tempo – lieber kurze geplante Pausen als Einbruch."
         },
         {
           "day": "saturday",
@@ -7060,7 +7152,8 @@
           "title": "Aktive Erholung",
           "durationMin": 30,
           "zone": "<130 bpm",
-          "notes": "Tag nach dem Rennen: sehr locker, Beine ausschütteln, kein Tempo."
+          "notes": "Tag nach dem Rennen: 20–30 Min sehr locker laufen ODER 30 Min lockeres Rad. Nur Beine ausschütteln.",
+          "pace": "LDL ≈7,5–8,4 km/h (≈7:10–8:00 min/km) – HF <137 bpm hat Vorrang"
         },
         {
           "day": "sunday",
@@ -7098,9 +7191,9 @@
         {
           "day": "monday",
           "type": "rest",
-          "title": "Pause",
+          "title": "Pause + Rennanalyse",
           "durationMin": 0,
-          "notes": "Regeneration, Beine hoch."
+          "notes": "Regeneration. Rennanalyse Karlsruhe notieren: Zeit je km, Zeit je Station, Roxzone/Übergänge, wo eingebrochen? Das bestimmt den Schwächen-Fokus in Build 2."
         },
         {
           "day": "monday",
@@ -7140,7 +7233,7 @@
           "type": "rest",
           "title": "Pause",
           "durationMin": 0,
-          "notes": "Pause / Mobilität"
+          "notes": "Frei. Optional 30 Min Spaziergang."
         },
         {
           "day": "tuesday",
@@ -7181,7 +7274,8 @@
           "title": "LDL sehr locker",
           "durationMin": 35,
           "zone": "<137 bpm",
-          "notes": "Nur wenn HRV grün, sonst Pause."
+          "notes": "Nur bei HRV Grün: durchgehend LDL <137 bpm. Gelb/Rot: Spaziergang statt Lauf.",
+          "pace": "LDL ≈7,5–8,4 km/h (≈7:10–8:00 min/km) – HF <137 bpm hat Vorrang"
         },
         {
           "day": "wednesday",
@@ -7219,9 +7313,9 @@
         {
           "day": "thursday",
           "type": "rest",
-          "title": "Ruhetag",
+          "title": "Ruhetag / Rad optional",
           "durationMin": 0,
-          "notes": "Ruhetag"
+          "notes": "Optional 30–40 Min lockeres Rad oder Crosstrainer <130 bpm, wenn die Beine frisch sind. Sonst frei."
         },
         {
           "day": "thursday",
@@ -7261,7 +7355,7 @@
           "type": "rest",
           "title": "Ruhetag",
           "durationMin": 0,
-          "notes": "Ruhetag"
+          "notes": "Ruhetag."
         },
         {
           "day": "friday",
@@ -7301,7 +7395,7 @@
           "type": "rest",
           "title": "Pause",
           "durationMin": 0,
-          "notes": "Spaziergang optional."
+          "notes": "Spaziergang optional. Ab morgen langsamer Wiederaufbau."
         },
         {
           "day": "saturday",
@@ -7353,7 +7447,8 @@
           "title": "LDL",
           "durationMin": 45,
           "zone": "<137 bpm",
-          "notes": "Post-Race Woche 2 – weiter locker."
+          "notes": "Durchgehend LDL <137 bpm, flache Strecke, gleichmäßig.",
+          "pace": "LDL ≈7,5–8,4 km/h (≈7:10–8:00 min/km) – HF <137 bpm hat Vorrang"
         },
         {
           "day": "sunday",
@@ -7394,7 +7489,8 @@
           "title": "LDL locker",
           "durationMin": 45,
           "zone": "<137 bpm",
-          "notes": "MDL darf eingebaut werden, wenn HRV grün."
+          "notes": "LDL <137 bpm. Nur bei HRV Grün: die letzten 10 Min im unteren MDL (138–145 bpm).",
+          "pace": "LDL ≈7,5–8,4 km/h (≈7:10–8:00 min/km) – HF <137 bpm hat Vorrang"
         },
         {
           "day": "monday",
@@ -7475,7 +7571,45 @@
           "title": "Grundkraft leicht",
           "durationMin": 45,
           "zone": "RPE max 5",
-          "notes": "Erste Kraft nach dem Rennen – sehr leicht."
+          "notes": "Aufwärmen 10 Min: 5 Min RowErg locker + 2 Runden 10 Air Squats, 10 Ausfallschritte, 5 Inchworms. Erste Kraft nach dem Rennen: Gewichte so wählen, dass nach jedem Satz noch 4–5 Wdh. möglich wären. 90 s Pause.",
+          "exercises": [
+            {
+              "name": "Goblet Squat",
+              "sets": 3,
+              "reps": 10,
+              "hint": "RPE 5 – ca. 16–20kg, tief und kontrolliert"
+            },
+            {
+              "name": "Romanian Deadlift",
+              "sets": 3,
+              "reps": 10,
+              "hint": "RPE 5 – leicht, Hamstrings behutsam (Zerrung im August)"
+            },
+            {
+              "name": "Liegestütz / Bankdrücken",
+              "sets": 3,
+              "reps": 10,
+              "hint": "RPE 5"
+            },
+            {
+              "name": "Lat-Pulldown / Klimmzug",
+              "sets": 3,
+              "reps": 10,
+              "hint": "RPE 5"
+            },
+            {
+              "name": "Rudern am Kabelzug",
+              "sets": 3,
+              "reps": 12,
+              "hint": "RPE 5, Schulterblätter zusammen"
+            },
+            {
+              "name": "Plank",
+              "sets": 3,
+              "reps": 40,
+              "hint": "40s halten"
+            }
+          ]
         },
         {
           "day": "wednesday",
@@ -7515,8 +7649,9 @@
           "type": "run",
           "title": "MDL locker",
           "durationMin": 50,
-          "zone": "138-158 bpm",
-          "notes": "Erster MDL post-race."
+          "zone": "138–150 bpm",
+          "notes": "Erster MDL nach dem Rennen, untere MDL-Hälfte (138–150 bpm), gleichmäßig.",
+          "pace": "MDL ≈9,5–11,0 km/h (≈5:25–6:20 min/km) – HF 138–155 bpm hat Vorrang"
         },
         {
           "day": "thursday",
@@ -7594,9 +7729,9 @@
         {
           "day": "saturday",
           "type": "rest",
-          "title": "Pause",
+          "title": "Aktive Erholung",
           "durationMin": 0,
-          "notes": "Aktive Erholung."
+          "notes": "30–45 Min Spaziergang oder lockeres Rad."
         },
         {
           "day": "saturday",
@@ -7647,8 +7782,9 @@
           "type": "run",
           "title": "MDL",
           "durationMin": 60,
-          "zone": "138-158 bpm",
-          "notes": "Wiederaufbau Woche 1 – Basisvolumen zurück."
+          "zone": "138–150 bpm",
+          "notes": "40 Min MDL gleichmäßig in der unteren Hälfte (138–150 bpm). Basisvolumen zurück.",
+          "pace": "MDL ≈9,5–11,0 km/h (≈5:25–6:20 min/km) – HF 138–155 bpm hat Vorrang"
         },
         {
           "day": "sunday",
@@ -7686,9 +7822,11 @@
         {
           "day": "monday",
           "type": "run",
-          "title": "MDL gleichmäßig",
-          "durationMin": 55,
-          "zone": "138-158 bpm"
+          "title": "LDL locker",
+          "durationMin": 45,
+          "zone": "<137 bpm",
+          "pace": "LDL ≈7,5–8,4 km/h (≈7:10–8:00 min/km) – HF <137 bpm hat Vorrang",
+          "notes": "Durchgehend LDL <137 bpm – lockerer Tag nach dem MDL."
         },
         {
           "day": "monday",
@@ -7729,7 +7867,45 @@
           "title": "Grundkraft",
           "durationMin": 50,
           "zone": "RPE 6",
-          "notes": "Kraft wieder normalisieren."
+          "notes": "Aufwärmen 10 Min: 5 Min RowErg locker + 2 Runden 10 Air Squats, 10 Ausfallschritte, 5 Inchworms. Gewichte so wählen, dass 3–4 Wdh. im Tank bleiben. 2 Min Pause bei den Grundübungen, 60–90 s bei Rumpf.",
+          "exercises": [
+            {
+              "name": "Goblet Squat",
+              "sets": 4,
+              "reps": 8,
+              "hint": "RPE 6 – ca. 20–24kg"
+            },
+            {
+              "name": "Romanian Deadlift",
+              "sets": 3,
+              "reps": 8,
+              "hint": "RPE 6, langsam absenken"
+            },
+            {
+              "name": "Ausfallschritt",
+              "sets": 3,
+              "reps": 10,
+              "hint": "je Bein, mit Kurzhanteln 2×10–12kg"
+            },
+            {
+              "name": "Liegestütz / Bankdrücken",
+              "sets": 3,
+              "reps": 8,
+              "hint": "RPE 6"
+            },
+            {
+              "name": "Lat-Pulldown / Klimmzug",
+              "sets": 3,
+              "reps": 8,
+              "hint": "RPE 6"
+            },
+            {
+              "name": "Hollow Body",
+              "sets": 3,
+              "reps": 30,
+              "hint": "30s halten"
+            }
+          ]
         },
         {
           "day": "tuesday",
@@ -7767,10 +7943,36 @@
         {
           "day": "wednesday",
           "type": "strength",
-          "title": "Stationstechnik",
+          "title": "Stationstechnik Ergs",
           "durationMin": 45,
-          "zone": "technisch",
-          "notes": "SkiErg + RowErg, Technikfokus."
+          "zone": "technisch · RPE 5-6",
+          "notes": "Aufwärmen 5 Min RowErg. Dann SkiErg- und RowErg-Intervalle mit 90 s Pause, danach Burpees und Wall Balls. Technik vor Tempo.",
+          "exercises": [
+            {
+              "name": "SkiErg",
+              "sets": 4,
+              "reps": 500,
+              "hint": "500m bei ≈2:00–2:05/500m, 90s Pause"
+            },
+            {
+              "name": "RowErg",
+              "sets": 4,
+              "reps": 500,
+              "hint": "500m bei ≈1:55–2:00/500m, 26–28 SPM, 90s Pause"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 3,
+              "reps": 10,
+              "hint": "gleichmäßiger Rhythmus"
+            },
+            {
+              "name": "Wall Balls",
+              "sets": 3,
+              "reps": 20,
+              "hint": "6kg, unbroken"
+            }
+          ]
         },
         {
           "day": "wednesday",
@@ -7810,8 +8012,9 @@
           "type": "run",
           "title": "MDL + Fahrtspiel",
           "durationMin": 60,
-          "zone": "138-158 bpm",
-          "notes": "Leichtes Fahrtspiel einbauen."
+          "zone": "138–158 bpm",
+          "notes": "Fahrtspiel: 40 Min MDL, darin 6x1 Min zügig (~12,0 km/h / 5:00 min/km), danach je 2 Min locker.",
+          "pace": "MDL ≈9,5–11,0 km/h (≈5:25–6:20 min/km) – HF 138–155 bpm hat Vorrang"
         },
         {
           "day": "thursday",
@@ -7891,7 +8094,40 @@
           "type": "strength",
           "title": "Kraft + Core leicht",
           "durationMin": 45,
-          "zone": "RPE 5-6"
+          "zone": "RPE 5-6",
+          "notes": "Aufwärmen 10 Min: 5 Min RowErg locker + 2 Runden 10 Air Squats, 10 Ausfallschritte, 5 Inchworms. Hyrox-nahe Kraftausdauer, moderat. 90 s Pause.",
+          "exercises": [
+            {
+              "name": "Sandbag Lunges",
+              "sets": 3,
+              "reps": 20,
+              "hint": "20m mit 15kg"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 3,
+              "reps": 20,
+              "hint": "20m, moderat ~80kg"
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 3,
+              "reps": 50,
+              "hint": "50m – 2×20kg"
+            },
+            {
+              "name": "Dead Bug",
+              "sets": 3,
+              "reps": 10,
+              "hint": "je Seite"
+            },
+            {
+              "name": "Side Plank",
+              "sets": 3,
+              "reps": 30,
+              "hint": "30s je Seite"
+            }
+          ]
         },
         {
           "day": "saturday",
@@ -7943,7 +8179,8 @@
           "title": "LDL lang",
           "durationMin": 75,
           "zone": "<137 bpm",
-          "notes": "Wiederaufbau Woche 2."
+          "notes": "55 Min durchgehend LDL <137 bpm. Längster Lauf seit dem Rennen – gleichmäßig, nicht schneller werden.",
+          "pace": "LDL ≈7,5–8,4 km/h (≈7:10–8:00 min/km) – HF <137 bpm hat Vorrang"
         },
         {
           "day": "sunday",
@@ -7981,9 +8218,11 @@
         {
           "day": "monday",
           "type": "run",
-          "title": "MDL gleichmäßig",
-          "durationMin": 65,
-          "zone": "138-158 bpm"
+          "title": "LDL locker",
+          "durationMin": 50,
+          "zone": "<137 bpm",
+          "pace": "LDL ≈7,5–8,4 km/h (≈7:10–8:00 min/km) – HF <137 bpm hat Vorrang",
+          "notes": "Durchgehend LDL <137 bpm."
         },
         {
           "day": "monday",
@@ -8023,7 +8262,52 @@
           "type": "strength",
           "title": "Grundkraft",
           "durationMin": 55,
-          "zone": "RPE 6-7"
+          "zone": "RPE 6-7",
+          "notes": "Aufwärmen 10 Min: 5 Min RowErg locker + 2 Runden 10 Air Squats, 10 Ausfallschritte, 5 Inchworms. 2–3 Wdh. im Tank lassen. 2 Min Pause bei den Grundübungen.",
+          "exercises": [
+            {
+              "name": "Goblet Squat",
+              "sets": 4,
+              "reps": 8,
+              "hint": "RPE 6-7 – ca. 24–28kg"
+            },
+            {
+              "name": "Romanian Deadlift",
+              "sets": 4,
+              "reps": 8,
+              "hint": "RPE 6-7"
+            },
+            {
+              "name": "Ausfallschritt",
+              "sets": 3,
+              "reps": 10,
+              "hint": "je Bein, 2×12–14kg"
+            },
+            {
+              "name": "Liegestütz / Bankdrücken",
+              "sets": 4,
+              "reps": 8,
+              "hint": "RPE 6-7"
+            },
+            {
+              "name": "Lat-Pulldown / Klimmzug",
+              "sets": 4,
+              "reps": 8,
+              "hint": "RPE 6-7"
+            },
+            {
+              "name": "Hollow Body",
+              "sets": 3,
+              "reps": 30,
+              "hint": "30s halten"
+            },
+            {
+              "name": "Side Plank",
+              "sets": 3,
+              "reps": 30,
+              "hint": "30s je Seite"
+            }
+          ]
         },
         {
           "day": "tuesday",
@@ -8063,8 +8347,28 @@
           "type": "strength",
           "title": "Stationskombis leicht",
           "durationMin": 50,
-          "zone": "moderat",
-          "notes": "Erste Stationskombis, kein Tempo-Zwang."
+          "zone": "moderat · RPE 6",
+          "notes": "Aufwärmen 10 Min locker laufen. Dann 3 Runden: 1 km Lauf (MDL, ~5:45 min/km) → sofort 500m SkiErg → sofort 20 Wall Balls. 3 Min Pause zwischen den Runden. Kein Tempo-Zwang.",
+          "exercises": [
+            {
+              "name": "Lauf",
+              "sets": 3,
+              "reps": 1000,
+              "hint": "1 km MDL ~5:45 min/km, sofort weiter zum SkiErg"
+            },
+            {
+              "name": "SkiErg",
+              "sets": 3,
+              "reps": 500,
+              "hint": "500m moderat ≈2:05/500m, sofort weiter"
+            },
+            {
+              "name": "Wall Balls",
+              "sets": 3,
+              "reps": 20,
+              "hint": "6kg, danach 3 Min Pause"
+            }
+          ]
         },
         {
           "day": "wednesday",
@@ -8104,9 +8408,9 @@
           "type": "run",
           "title": "MDL + TDL-Antastung",
           "durationMin": 70,
-          "zone": "138-161 bpm",
-          "pace": "TDL-Pace 11,9–12,6 km/h (≈4:46–5:02 min/km) für die letzten 10-15 Min",
-          "notes": "Kurzer TDL-Abschnitt gegen Ende – Gefühl für Build 2 aufbauen."
+          "zone": "138–161 bpm",
+          "pace": "TDL 12,0–12,6 km/h (≈4:46–5:00 min/km) · 159–162 bpm",
+          "notes": "35 Min MDL (138–155 bpm), dann 10 Min TDL (159–161 bpm), 5 Min locker. Gefühl für Build 2 aufbauen."
         },
         {
           "day": "thursday",
@@ -8186,7 +8490,40 @@
           "type": "strength",
           "title": "Kraft + Hyrox-Stationen leicht",
           "durationMin": 50,
-          "zone": "RPE 6"
+          "zone": "RPE 6",
+          "notes": "Aufwärmen 10 Min: 5 Min RowErg locker + 2 Runden 10 Air Squats, 10 Ausfallschritte, 5 Inchworms. Stationen mit leicht reduziertem Gewicht, 2 Min Pause.",
+          "exercises": [
+            {
+              "name": "Sled Push",
+              "sets": 4,
+              "reps": 20,
+              "hint": "20m, ~90kg"
+            },
+            {
+              "name": "Sled Pull",
+              "sets": 4,
+              "reps": 20,
+              "hint": "20m, ~70kg"
+            },
+            {
+              "name": "Sandbag Lunges",
+              "sets": 3,
+              "reps": 25,
+              "hint": "25m – 20kg"
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 3,
+              "reps": 50,
+              "hint": "50m – 2×24kg"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 3,
+              "reps": 10,
+              "hint": "gleichmäßig"
+            }
+          ]
         },
         {
           "day": "saturday",
@@ -8235,10 +8572,11 @@
         {
           "day": "sunday",
           "type": "run",
-          "title": "Langer Lauf MDL",
+          "title": "Langer Lauf LDL/MDL",
           "durationMin": 80,
-          "zone": "138-158 bpm",
-          "notes": "Brücke zu Build 2 – letzte Aufbauwoche."
+          "zone": "<137 → 145–150 bpm",
+          "notes": "60 Min: erst 40 Min LDL <137 bpm, dann 20 Min MDL bei 145–150 bpm. Brücke zu Build 2.",
+          "pace": "LDL ≈7,5–8,4 km/h (≈7:10–8:00 min/km) – HF <137 bpm hat Vorrang"
         },
         {
           "day": "sunday",
@@ -8276,9 +8614,11 @@
         {
           "day": "monday",
           "type": "run",
-          "title": "MDL gleichmäßig",
-          "durationMin": 65,
-          "zone": "138-158 bpm"
+          "title": "LDL locker",
+          "durationMin": 45,
+          "zone": "<137 bpm",
+          "pace": "LDL ≈7,5–8,4 km/h (≈7:10–8:00 min/km) – HF <137 bpm hat Vorrang",
+          "notes": "Durchgehend LDL <137 bpm."
         },
         {
           "day": "monday",
@@ -8319,7 +8659,51 @@
           "title": "Grundkraft",
           "durationMin": 60,
           "zone": "RPE 7",
-          "notes": "Wettkampfgewichte langsam wieder heranführen."
+          "notes": "Aufwärmen 10 Min: 5 Min RowErg locker + 2 Runden 10 Air Squats, 10 Ausfallschritte, 5 Inchworms. 2 Wdh. im Tank lassen. 2–2,5 Min Pause bei den Grundübungen.",
+          "exercises": [
+            {
+              "name": "Goblet Squat",
+              "sets": 4,
+              "reps": 6,
+              "hint": "RPE 7 – schwerste Hantel sauber, oder Langhantel-Kniebeuge"
+            },
+            {
+              "name": "Romanian Deadlift",
+              "sets": 4,
+              "reps": 6,
+              "hint": "RPE 7"
+            },
+            {
+              "name": "Ausfallschritt",
+              "sets": 3,
+              "reps": 8,
+              "hint": "je Bein, 2×14–16kg"
+            },
+            {
+              "name": "Liegestütz / Bankdrücken",
+              "sets": 4,
+              "reps": 6,
+              "hint": "RPE 7"
+            },
+            {
+              "name": "Lat-Pulldown / Klimmzug",
+              "sets": 4,
+              "reps": 6,
+              "hint": "RPE 7"
+            },
+            {
+              "name": "Rudern am Kabelzug",
+              "sets": 3,
+              "reps": 10,
+              "hint": "RPE 7"
+            },
+            {
+              "name": "Hollow Body",
+              "sets": 3,
+              "reps": 30,
+              "hint": "30s halten"
+            }
+          ]
         },
         {
           "day": "tuesday",
@@ -8359,8 +8743,40 @@
           "type": "strength",
           "title": "Stationskombis",
           "durationMin": 55,
-          "zone": "moderat",
-          "notes": "2 Stationen + Läufe, Transitions leicht üben."
+          "zone": "moderat · RPE 6-7",
+          "notes": "Aufwärmen 10 Min locker laufen. 4 Runden: 1 km Lauf (~5:15–5:25 min/km) → sofort Station, 2 Min Pause. Runde 1 SkiErg, 2 Sled Push, 3 Burpee Broad Jump, 4 Wall Balls. Übergänge zügig üben.",
+          "exercises": [
+            {
+              "name": "Lauf",
+              "sets": 4,
+              "reps": 1000,
+              "hint": "1 km ~5:15–5:25 min/km, sofort zur Station"
+            },
+            {
+              "name": "SkiErg",
+              "sets": 1,
+              "reps": 500,
+              "hint": "Runde 1: 500m ≈2:00/500m"
+            },
+            {
+              "name": "Sled Push",
+              "sets": 1,
+              "reps": 50,
+              "hint": "Runde 2: 2×25m – 102kg"
+            },
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 1,
+              "reps": 20,
+              "hint": "Runde 3: 20 Wdh. gleichmäßig"
+            },
+            {
+              "name": "Wall Balls",
+              "sets": 1,
+              "reps": 30,
+              "hint": "Runde 4: 30 Wdh. 6kg"
+            }
+          ]
         },
         {
           "day": "wednesday",
@@ -8400,8 +8816,9 @@
           "type": "run",
           "title": "MDL + TDL-Anteil",
           "durationMin": 75,
-          "zone": "138-161 bpm",
-          "pace": "TDL-Pace 11,9–12,6 km/h (≈4:46–5:02 min/km) für die letzten 15-20 Min"
+          "zone": "138–162 bpm",
+          "pace": "TDL 12,0–12,6 km/h (≈4:46–5:00 min/km) · 159–162 bpm",
+          "notes": "30 Min MDL (138–155 bpm), dann 2x10 Min TDL (159–162 bpm) mit 3 Min locker dazwischen, danach 5 Min MDL."
         },
         {
           "day": "thursday",
@@ -8482,7 +8899,39 @@
           "title": "Kraft + Hyrox-Stationen",
           "durationMin": 55,
           "zone": "RPE 7",
-          "notes": "Rennanalyse Karlsruhe einbeziehen: echte Stationszeiten/Transition-Verluste in Build-2-Fokus übersetzen."
+          "notes": "Aufwärmen 10 Min: 5 Min RowErg locker + 2 Runden 10 Air Squats, 10 Ausfallschritte, 5 Inchworms. Wettkampfgewichte, 2 Min Pause. Parallel Rennanalyse Karlsruhe in Build-2-Fokus übersetzen: schwächste 2 Stationen bekommen ab nächster Woche je +1 Satz.",
+          "exercises": [
+            {
+              "name": "Sled Push",
+              "sets": 4,
+              "reps": 25,
+              "hint": "25m – 102kg"
+            },
+            {
+              "name": "Sled Pull",
+              "sets": 4,
+              "reps": 25,
+              "hint": "25m – 78kg"
+            },
+            {
+              "name": "Sandbag Lunges",
+              "sets": 4,
+              "reps": 25,
+              "hint": "25m – 20kg, ohne Absetzen"
+            },
+            {
+              "name": "Farmer's Carry",
+              "sets": 3,
+              "reps": 50,
+              "hint": "50m – 2×24kg"
+            },
+            {
+              "name": "Wall Balls",
+              "sets": 3,
+              "reps": 25,
+              "hint": "6kg, unbroken"
+            }
+          ]
         },
         {
           "day": "saturday",
@@ -8524,20 +8973,20 @@
       "phase": "build2",
       "startDate": "2026-11-08",
       "rpeTarget": {
-        "min": 1800,
-        "max": 2400
+        "min": 1500,
+        "max": 1900
       },
       "sessions": [
         {
           "day": "monday",
           "type": "run",
           "title": "HIIT",
-          "durationMin": 60,
-          "zone": "Max >165 bpm",
-          "pace": "≈13,5–14,5 km/h (≈4:08–4:27 min/km) – HF-gesteuert",
-          "notes": "HIIT: 5×4 Min >165 bpm, 3 Min Pause.",
+          "durationMin": 57,
+          "zone": "163–168 bpm",
+          "pace": "≈13,0–13,8 km/h (≈4:21–4:37 min/km) – HF-gesteuert",
+          "notes": "HIIT: 4×4 Min bei 163–168 bpm, 3 Min Trabpause. Erster HIIT seit Karlsruhe – nicht überpacen. HRV Gelb: Umfang −30 %, Tempo eine Zone runter. HRV Rot: nur 30 Min locker oder Pause.",
           "intervals": {
-            "rounds": 5,
+            "rounds": 4,
             "workSec": 240,
             "restSec": 180
           }
@@ -8580,38 +9029,44 @@
           "type": "strength",
           "title": "Schwächen-Fokus",
           "durationMin": 60,
-          "zone": "intensiv",
-          "notes": "Aus Karlsruhe-Analyse: schwächste Stationen gezielt angehen.",
+          "zone": "RPE 6-7 · Technik unter Last",
+          "notes": "Aufwärmen 10 Min: 5 Min RowErg locker + 2 Runden 10 Air Squats, 10 Ausfallschritte, 5 Inchworms. Technik unter Last, nicht bis zum Versagen. Aus der Karlsruhe-Analyse: die 2 schwächsten Stationen je +1 Satz. 90 s Pause.",
           "exercises": [
-            {
-              "name": "Sandbag Lunges",
-              "sets": 4,
-              "reps": 20,
-              "hint": "20m – 20kg Wettkampfgewicht"
-            },
             {
               "name": "Burpee Broad Jump",
               "sets": 4,
-              "reps": 12,
-              "hint": "zügig, mit Sprung, Wettkampftempo"
+              "reps": 10,
+              "hint": "10 Wdh. im Wettkampfrhythmus, 60s Pause"
+            },
+            {
+              "name": "Sandbag Lunges",
+              "sets": 3,
+              "reps": 25,
+              "hint": "25m – 20kg, ohne Absetzen"
+            },
+            {
+              "name": "Wall Balls",
+              "sets": 3,
+              "reps": 25,
+              "hint": "6kg, unbroken, 3m Ziel"
             },
             {
               "name": "Sled Push",
-              "sets": 4,
+              "sets": 3,
               "reps": 25,
-              "hint": "25m – Richtung 102kg"
+              "hint": "25m – 102kg"
             },
             {
               "name": "Sled Pull",
-              "sets": 4,
+              "sets": 3,
               "reps": 25,
-              "hint": "25m – Richtung 78kg"
+              "hint": "25m – 78kg"
             },
             {
               "name": "Farmer's Carry",
               "sets": 3,
-              "reps": 40,
-              "hint": "40m – 2×24kg"
+              "reps": 50,
+              "hint": "50m – 2×24kg, ohne Absetzen"
             }
           ]
         },
@@ -8651,58 +9106,40 @@
         {
           "day": "wednesday",
           "type": "strength",
-          "title": "Vollsimulation",
-          "durationMin": 75,
-          "zone": "Wettkampftempo",
-          "notes": "Alle 8 Stationen + 8×1 km. Zeit messen, Transitions.",
+          "title": "Compromised Running",
+          "durationMin": 60,
+          "zone": "moderat · ≤155 bpm",
+          "notes": "Aufwärmen 10 Min locker laufen. 4 Runden: 1 km Lauf → sofort 1 Station, 2 Min Pause. Stationen sauber, Lauf danach bewusst kontrolliert – Ziel: Laufgefühl mit schweren Beinen, nicht Tempo.",
           "exercises": [
+            {
+              "name": "Lauf",
+              "sets": 4,
+              "reps": 1000,
+              "hint": "1 km MDL-oben ~5:30 min/km (≤155 bpm), sofort zur Station"
+            },
             {
               "name": "SkiErg",
               "sets": 1,
               "reps": 1000,
-              "hint": "1.000m nach 1km Lauf"
-            },
-            {
-              "name": "Sled Push",
-              "sets": 1,
-              "reps": 50,
-              "hint": "50m / 102kg nach 1km Lauf"
+              "hint": "Runde 1: 1.000m moderat ≈2:05/500m"
             },
             {
               "name": "Sled Pull",
               "sets": 1,
               "reps": 50,
-              "hint": "50m / 78kg nach 1km Lauf"
-            },
-            {
-              "name": "Burpee Broad Jump",
-              "sets": 1,
-              "reps": 80,
-              "hint": "80m nach 1km Lauf"
+              "hint": "Runde 2: 50m – 78kg"
             },
             {
               "name": "RowErg",
               "sets": 1,
               "reps": 1000,
-              "hint": "1.000m nach 1km Lauf"
-            },
-            {
-              "name": "Farmer's Carry",
-              "sets": 1,
-              "reps": 200,
-              "hint": "200m / 2×24kg nach 1km Lauf"
+              "hint": "Runde 3: 1.000m moderat ≈2:00/500m"
             },
             {
               "name": "Sandbag Lunges",
               "sets": 1,
-              "reps": 100,
-              "hint": "100m / 20kg nach 1km Lauf"
-            },
-            {
-              "name": "Wall Balls",
-              "sets": 1,
-              "reps": 100,
-              "hint": "100 Reps / 6kg / 3m Ziel nach 1km Lauf"
+              "reps": 50,
+              "hint": "Runde 4: 50m – 20kg"
             }
           ]
         },
@@ -8742,11 +9179,11 @@
         {
           "day": "thursday",
           "type": "run",
-          "title": "Intervalle schnell",
-          "durationMin": 90,
-          "zone": "ETL/Max 12,4+ km/h",
-          "pace": "≈12,6 km/h – Ziel 4:45 min/km",
-          "notes": "7×1 km, Ziel 4:45 min/km. 90s Pause."
+          "title": "Schwellen-Intervalle",
+          "durationMin": 60,
+          "zone": "TDL 159–162 bpm",
+          "pace": "TDL 12,0–12,6 km/h (≈4:46–5:00 min/km) · 159–162 bpm",
+          "notes": "5x1 km im TDL, 2 Min Trabpause. Gleichmäßig – der letzte km so schnell wie der erste. HRV Gelb: Umfang −30 %, Tempo eine Zone runter. HRV Rot: nur 30 Min locker oder Pause."
         },
         {
           "day": "thursday",
@@ -8825,40 +9262,16 @@
         {
           "day": "saturday",
           "type": "strength",
-          "title": "Race Simulation",
-          "durationMin": 75,
-          "zone": "Wettkampftempo",
-          "notes": "Volle Simulation. Frankfurt-Zielpace (Sub 1:21). Zeit messen.",
+          "title": "Halbsimulation (Teil 2)",
+          "durationMin": 60,
+          "zone": "Frankfurt-Pace",
+          "notes": "Aufwärmen 10 Min + 2 Steigerungen. 4× (1 km Lauf + Station) in Frankfurt-Pace (5:15–5:25 min/km), Stationen 5–8 mit Wettkampfgewicht, keine Pausen außer Übergängen. Zeit je Lauf und Station notieren. HRV Gelb: Umfang −30 %, Tempo eine Zone runter. HRV Rot: nur 30 Min locker oder Pause.",
           "exercises": [
-            {
-              "name": "SkiErg",
-              "sets": 1,
-              "reps": 1000,
-              "hint": "1.000m nach 1km Lauf"
-            },
-            {
-              "name": "Sled Push",
-              "sets": 1,
-              "reps": 50,
-              "hint": "50m / 102kg nach 1km Lauf"
-            },
-            {
-              "name": "Sled Pull",
-              "sets": 1,
-              "reps": 50,
-              "hint": "50m / 78kg nach 1km Lauf"
-            },
-            {
-              "name": "Burpee Broad Jump",
-              "sets": 1,
-              "reps": 80,
-              "hint": "80m nach 1km Lauf"
-            },
             {
               "name": "RowErg",
               "sets": 1,
               "reps": 1000,
-              "hint": "1.000m nach 1km Lauf"
+              "hint": "1.000m nach 1km Lauf – ≈1:55–2:00/500m"
             },
             {
               "name": "Farmer's Carry",
@@ -8876,7 +9289,7 @@
               "name": "Wall Balls",
               "sets": 1,
               "reps": 100,
-              "hint": "100 Reps / 6kg / 3m Ziel nach 1km Lauf"
+              "hint": "100 Wdh. / 6kg nach 1km Lauf – Sätze 25-25-20-15-15"
             }
           ]
         },
@@ -8916,10 +9329,11 @@
         {
           "day": "sunday",
           "type": "run",
-          "title": "Langer Lauf TDL/ETL",
+          "title": "Langer Lauf LDL/MDL",
           "durationMin": 75,
-          "zone": "159-165 bpm",
-          "notes": "TDL/ETL-Mix, gleichmäßig."
+          "zone": "<137 → 145–155 bpm",
+          "notes": "55 Min: 45 Min LDL <137 bpm, letzte 10 Min MDL 145–155 bpm.",
+          "pace": "LDL ≈7,5–8,4 km/h (≈7:10–8:00 min/km) – HF <137 bpm hat Vorrang"
         },
         {
           "day": "sunday",
@@ -8961,8 +9375,8 @@
       "phase": "build2",
       "startDate": "2026-11-15",
       "rpeTarget": {
-        "min": 2000,
-        "max": 2600
+        "min": 1700,
+        "max": 2200
       },
       "sessions": [
         {
@@ -8970,9 +9384,9 @@
           "type": "run",
           "title": "HIIT",
           "durationMin": 60,
-          "zone": "Max >165 bpm",
-          "pace": "≈13,5–14,5 km/h (≈4:08–4:27 min/km) – HF-gesteuert",
-          "notes": "HIIT: 5×4 Min >165 bpm, 3 Min Pause.",
+          "zone": "163–168 bpm",
+          "pace": "≈13,0–13,8 km/h (≈4:21–4:37 min/km) – HF-gesteuert",
+          "notes": "HIIT: 5×4 Min bei 163–168 bpm, 3 Min Trabpause. HRV Gelb: Umfang −30 %, Tempo eine Zone runter. HRV Rot: nur 30 Min locker oder Pause.",
           "intervals": {
             "rounds": 5,
             "workSec": 240,
@@ -9017,38 +9431,44 @@
           "type": "strength",
           "title": "Schwächen-Fokus",
           "durationMin": 60,
-          "zone": "intensiv",
-          "notes": "Aus Karlsruhe-Analyse: schwächste Stationen gezielt angehen.",
+          "zone": "RPE 6-7 · Technik unter Last",
+          "notes": "Aufwärmen 10 Min: 5 Min RowErg locker + 2 Runden 10 Air Squats, 10 Ausfallschritte, 5 Inchworms. Volle Sätze, Technik bleibt sauber. Aus der Karlsruhe-Analyse: die 2 schwächsten Stationen je +1 Satz. 90 s Pause.",
           "exercises": [
+            {
+              "name": "Burpee Broad Jump",
+              "sets": 5,
+              "reps": 10,
+              "hint": "10 Wdh. im Wettkampfrhythmus, 60s Pause"
+            },
             {
               "name": "Sandbag Lunges",
               "sets": 4,
-              "reps": 20,
-              "hint": "20m – 20kg Wettkampfgewicht"
+              "reps": 25,
+              "hint": "25m – 20kg, ohne Absetzen"
             },
             {
-              "name": "Burpee Broad Jump",
+              "name": "Wall Balls",
               "sets": 4,
-              "reps": 12,
-              "hint": "zügig, mit Sprung, Wettkampftempo"
+              "reps": 25,
+              "hint": "6kg, unbroken, 3m Ziel"
             },
             {
               "name": "Sled Push",
               "sets": 4,
               "reps": 25,
-              "hint": "25m – Richtung 102kg"
+              "hint": "25m – 102kg"
             },
             {
               "name": "Sled Pull",
               "sets": 4,
               "reps": 25,
-              "hint": "25m – Richtung 78kg"
+              "hint": "25m – 78kg"
             },
             {
               "name": "Farmer's Carry",
               "sets": 3,
-              "reps": 40,
-              "hint": "40m – 2×24kg"
+              "reps": 50,
+              "hint": "50m – 2×24kg, ohne Absetzen"
             }
           ]
         },
@@ -9088,58 +9508,40 @@
         {
           "day": "wednesday",
           "type": "strength",
-          "title": "Vollsimulation",
-          "durationMin": 75,
-          "zone": "Wettkampftempo",
-          "notes": "Alle 8 Stationen + 8×1 km. Zeit messen, Transitions.",
+          "title": "Compromised Running",
+          "durationMin": 60,
+          "zone": "moderat · ≤155 bpm",
+          "notes": "Aufwärmen 10 Min locker laufen. 4 Runden: 1 km Lauf → sofort 1 Station, 90 s Pause. Moderat halten – Samstag ist die Vollsimulation.",
           "exercises": [
+            {
+              "name": "Lauf",
+              "sets": 4,
+              "reps": 1000,
+              "hint": "1 km ~5:25 min/km (≤155 bpm), sofort zur Station"
+            },
             {
               "name": "SkiErg",
               "sets": 1,
               "reps": 1000,
-              "hint": "1.000m nach 1km Lauf"
-            },
-            {
-              "name": "Sled Push",
-              "sets": 1,
-              "reps": 50,
-              "hint": "50m / 102kg nach 1km Lauf"
+              "hint": "Runde 1: 1.000m moderat ≈2:05/500m"
             },
             {
               "name": "Sled Pull",
               "sets": 1,
               "reps": 50,
-              "hint": "50m / 78kg nach 1km Lauf"
-            },
-            {
-              "name": "Burpee Broad Jump",
-              "sets": 1,
-              "reps": 80,
-              "hint": "80m nach 1km Lauf"
+              "hint": "Runde 2: 50m – 78kg"
             },
             {
               "name": "RowErg",
               "sets": 1,
               "reps": 1000,
-              "hint": "1.000m nach 1km Lauf"
-            },
-            {
-              "name": "Farmer's Carry",
-              "sets": 1,
-              "reps": 200,
-              "hint": "200m / 2×24kg nach 1km Lauf"
+              "hint": "Runde 3: 1.000m moderat ≈2:00/500m"
             },
             {
               "name": "Sandbag Lunges",
               "sets": 1,
-              "reps": 100,
-              "hint": "100m / 20kg nach 1km Lauf"
-            },
-            {
-              "name": "Wall Balls",
-              "sets": 1,
-              "reps": 100,
-              "hint": "100 Reps / 6kg / 3m Ziel nach 1km Lauf"
+              "reps": 50,
+              "hint": "Runde 4: 50m – 20kg"
             }
           ]
         },
@@ -9179,11 +9581,11 @@
         {
           "day": "thursday",
           "type": "run",
-          "title": "Intervalle schnell",
-          "durationMin": 90,
-          "zone": "ETL/Max 12,4+ km/h",
-          "pace": "≈12,6 km/h – Ziel 4:45 min/km",
-          "notes": "8×1 km, Ziel 4:45 min/km. 90s Pause."
+          "title": "ETL-Intervalle",
+          "durationMin": 65,
+          "zone": "ETL 161–165 bpm",
+          "pace": "ETL 12,6–13,3 km/h (≈4:30–4:45 min/km) · 161–165 bpm",
+          "notes": "6x1 km im ETL, 90 s Trabpause. Ziel 4:35–4:45 min/km. HRV Gelb: Umfang −30 %, Tempo eine Zone runter. HRV Rot: nur 30 Min locker oder Pause."
         },
         {
           "day": "thursday",
@@ -9262,10 +9664,10 @@
         {
           "day": "saturday",
           "type": "strength",
-          "title": "Race Simulation",
-          "durationMin": 75,
+          "title": "Race Simulation (voll)",
+          "durationMin": 85,
           "zone": "Wettkampftempo",
-          "notes": "Volle Simulation. Frankfurt-Zielpace (Sub 1:21). Zeit messen.",
+          "notes": "Aufwärmen 15 Min inkl. Steigerungen. Volle Simulation: 8×1 km + alle 8 Stationen mit Wettkampfgewicht. Läufe in Frankfurt-Pace (5:15–5:25 min/km), Stationen im geplanten Rennrhythmus. Gesamtzeit + jede Station stoppen – Basis für die finale Frankfurt-Pacing-Vorgabe (Ziel Sub 1:21). HRV Gelb: Umfang −30 %, Tempo eine Zone runter. HRV Rot: nur 30 Min locker oder Pause.",
           "exercises": [
             {
               "name": "SkiErg",
@@ -9353,10 +9755,11 @@
         {
           "day": "sunday",
           "type": "run",
-          "title": "Langer Lauf TDL/ETL",
-          "durationMin": 75,
-          "zone": "159-165 bpm",
-          "notes": "TDL/ETL-Mix, gleichmäßig."
+          "title": "Langer Lauf LDL/MDL",
+          "durationMin": 80,
+          "zone": "<137 → 145–155 bpm",
+          "notes": "60 Min: 40 Min LDL <137 bpm, dann 20 Min MDL 145–155 bpm.",
+          "pace": "LDL ≈7,5–8,4 km/h (≈7:10–8:00 min/km) – HF <137 bpm hat Vorrang"
         },
         {
           "day": "sunday",
@@ -9407,8 +9810,9 @@
           "type": "run",
           "title": "MDL locker",
           "durationMin": 45,
-          "zone": "138-158 bpm",
-          "notes": "Build 2 Deload – MDL locker."
+          "zone": "138–150 bpm",
+          "notes": "Deload: 25 Min MDL untere Hälfte, keine Intervalle.",
+          "pace": "MDL ≈9,5–11,0 km/h (≈5:25–6:20 min/km) – HF 138–155 bpm hat Vorrang"
         },
         {
           "day": "monday",
@@ -9449,25 +9853,37 @@
           "title": "Kraft leicht",
           "durationMin": 45,
           "zone": "RPE max 5",
-          "notes": "Deload: leicht.",
+          "notes": "Aufwärmen 10 Min: 5 Min RowErg locker + 2 Runden 10 Air Squats, 10 Ausfallschritte, 5 Inchworms. Deload: Gewichte ca. 20 % leichter als Woche 24, 4–5 Wdh. im Tank.",
           "exercises": [
             {
               "name": "Goblet Squat",
-              "sets": 2,
+              "sets": 3,
               "reps": 8,
-              "hint": "leicht"
+              "hint": "RPE 5"
             },
             {
               "name": "Romanian Deadlift",
-              "sets": 2,
+              "sets": 3,
               "reps": 8,
-              "hint": "leicht"
+              "hint": "RPE 5"
+            },
+            {
+              "name": "Liegestütz / Bankdrücken",
+              "sets": 3,
+              "reps": 8,
+              "hint": "RPE 5"
+            },
+            {
+              "name": "Lat-Pulldown / Klimmzug",
+              "sets": 3,
+              "reps": 8,
+              "hint": "RPE 5"
             },
             {
               "name": "Plank",
-              "sets": 2,
-              "reps": 30,
-              "hint": "30s"
+              "sets": 3,
+              "reps": 45,
+              "hint": "45s halten"
             }
           ]
         },
@@ -9509,20 +9925,32 @@
           "type": "strength",
           "title": "Stationen locker",
           "durationMin": 40,
-          "zone": "locker",
-          "notes": "Deload: Technik locker.",
+          "zone": "locker · RPE 5",
+          "notes": "Aufwärmen 5 Min RowErg. Deload: Technik locker, 90 s Pause.",
           "exercises": [
             {
-              "name": "SkiErg",
+              "name": "SkiErg Technik",
               "sets": 3,
-              "reps": 500,
-              "hint": "locker"
+              "reps": 250,
+              "hint": "250m locker"
             },
             {
-              "name": "Burpee Technik",
+              "name": "Burpee Broad Jump",
               "sets": 3,
               "reps": 8,
-              "hint": "langsam"
+              "hint": "ruhig, Technik"
+            },
+            {
+              "name": "Wall Balls",
+              "sets": 3,
+              "reps": 15,
+              "hint": "6kg, ruhig"
+            },
+            {
+              "name": "Sandbag Lunges Technik",
+              "sets": 2,
+              "reps": 20,
+              "hint": "20m – 15kg"
             }
           ]
         },
@@ -9564,9 +9992,9 @@
           "type": "run",
           "title": "MDL Intervalle",
           "durationMin": 60,
-          "zone": "138-158 bpm",
-          "pace": "MDL-Pace 8,4–11,9 km/h (≈5:02–7:09 min/km) – locker, keine festen Splits (Deload)",
-          "notes": "Deload: MDL, keine vollen Intervalle."
+          "zone": "145–155 bpm",
+          "pace": "MDL ≈9,5–11,0 km/h (≈5:25–6:20 min/km) – HF 138–155 bpm hat Vorrang",
+          "notes": "3x8 Min MDL-oben (145–155 bpm), 2 Min locker dazwischen. Deload – keine vollen Intervalle."
         },
         {
           "day": "thursday",
@@ -9648,7 +10076,7 @@
           "title": "Pause",
           "durationMin": 0,
           "zone": null,
-          "notes": "Aktive Erholung"
+          "notes": "Aktive Erholung: Spaziergang oder 30 Min lockeres Rad."
         },
         {
           "day": "saturday",
@@ -9686,10 +10114,11 @@
         {
           "day": "sunday",
           "type": "run",
-          "title": "LDL/MDL",
+          "title": "LDL",
           "durationMin": 60,
-          "zone": "<148 bpm",
-          "notes": "Deload – Beine locker."
+          "zone": "<137 bpm",
+          "notes": "Tag nach der Vollsimulation: 40 Min durchgehend LDL <137 bpm, Beine locker.",
+          "pace": "LDL ≈7,5–8,4 km/h (≈7:10–8:00 min/km) – HF <137 bpm hat Vorrang"
         },
         {
           "day": "sunday",
@@ -9731,8 +10160,8 @@
       "phase": "build2",
       "startDate": "2026-11-29",
       "rpeTarget": {
-        "min": 2000,
-        "max": 2600
+        "min": 1400,
+        "max": 1800
       },
       "sessions": [
         {
@@ -9740,9 +10169,9 @@
           "type": "run",
           "title": "HIIT",
           "durationMin": 60,
-          "zone": "Max >165 bpm",
-          "pace": "≈13,5–14,5 km/h (≈4:08–4:27 min/km) – HF-gesteuert",
-          "notes": "HIIT: 5×4 Min >165 bpm, 3 Min Pause.",
+          "zone": "163–168 bpm",
+          "pace": "≈13,0–13,8 km/h (≈4:21–4:37 min/km) – HF-gesteuert",
+          "notes": "HIIT: 5×4 Min bei 163–168 bpm, 3 Min Trabpause. Letzter voller HIIT vor Frankfurt. HRV Gelb: Umfang −30 %, Tempo eine Zone runter. HRV Rot: nur 30 Min locker oder Pause.",
           "intervals": {
             "rounds": 5,
             "workSec": 240,
@@ -9787,38 +10216,44 @@
           "type": "strength",
           "title": "Schwächen-Fokus",
           "durationMin": 60,
-          "zone": "intensiv",
-          "notes": "Aus Karlsruhe-Analyse: schwächste Stationen gezielt angehen.",
+          "zone": "RPE 6-7 · Technik unter Last",
+          "notes": "Aufwärmen 10 Min: 5 Min RowErg locker + 2 Runden 10 Air Squats, 10 Ausfallschritte, 5 Inchworms. Etwas weniger Volumen als Woche 26 – Qualität vor Menge. Aus der Karlsruhe-Analyse: die 2 schwächsten Stationen je +1 Satz. 90 s Pause.",
           "exercises": [
-            {
-              "name": "Sandbag Lunges",
-              "sets": 4,
-              "reps": 20,
-              "hint": "20m – 20kg Wettkampfgewicht"
-            },
             {
               "name": "Burpee Broad Jump",
               "sets": 4,
-              "reps": 12,
-              "hint": "zügig, mit Sprung, Wettkampftempo"
+              "reps": 10,
+              "hint": "10 Wdh. im Wettkampfrhythmus, 60s Pause"
+            },
+            {
+              "name": "Sandbag Lunges",
+              "sets": 3,
+              "reps": 25,
+              "hint": "25m – 20kg, ohne Absetzen"
+            },
+            {
+              "name": "Wall Balls",
+              "sets": 3,
+              "reps": 25,
+              "hint": "6kg, unbroken, 3m Ziel"
             },
             {
               "name": "Sled Push",
-              "sets": 4,
+              "sets": 3,
               "reps": 25,
-              "hint": "25m – Richtung 102kg"
+              "hint": "25m – 102kg"
             },
             {
               "name": "Sled Pull",
-              "sets": 4,
+              "sets": 3,
               "reps": 25,
-              "hint": "25m – Richtung 78kg"
+              "hint": "25m – 78kg"
             },
             {
               "name": "Farmer's Carry",
               "sets": 3,
-              "reps": 40,
-              "hint": "40m – 2×24kg"
+              "reps": 50,
+              "hint": "50m – 2×24kg, ohne Absetzen"
             }
           ]
         },
@@ -9858,58 +10293,40 @@
         {
           "day": "wednesday",
           "type": "strength",
-          "title": "Vollsimulation",
-          "durationMin": 75,
-          "zone": "Wettkampftempo",
-          "notes": "Alle 8 Stationen + 8×1 km. Zeit messen, Transitions.",
+          "title": "Compromised Running",
+          "durationMin": 60,
+          "zone": "moderat · ≤155 bpm",
+          "notes": "Aufwärmen 10 Min locker laufen. 4 Runden: 1 km Lauf in Frankfurt-Pace → sofort 1 Station, 2 Min Pause. Übergänge wie im Rennen.",
           "exercises": [
+            {
+              "name": "Lauf",
+              "sets": 4,
+              "reps": 1000,
+              "hint": "1 km in Frankfurt-Pace 5:15–5:25 min/km, sofort zur Station"
+            },
             {
               "name": "SkiErg",
               "sets": 1,
               "reps": 1000,
-              "hint": "1.000m nach 1km Lauf"
-            },
-            {
-              "name": "Sled Push",
-              "sets": 1,
-              "reps": 50,
-              "hint": "50m / 102kg nach 1km Lauf"
+              "hint": "Runde 1: 1.000m moderat ≈2:05/500m"
             },
             {
               "name": "Sled Pull",
               "sets": 1,
               "reps": 50,
-              "hint": "50m / 78kg nach 1km Lauf"
-            },
-            {
-              "name": "Burpee Broad Jump",
-              "sets": 1,
-              "reps": 80,
-              "hint": "80m nach 1km Lauf"
+              "hint": "Runde 2: 50m – 78kg"
             },
             {
               "name": "RowErg",
               "sets": 1,
               "reps": 1000,
-              "hint": "1.000m nach 1km Lauf"
-            },
-            {
-              "name": "Farmer's Carry",
-              "sets": 1,
-              "reps": 200,
-              "hint": "200m / 2×24kg nach 1km Lauf"
+              "hint": "Runde 3: 1.000m moderat ≈2:00/500m"
             },
             {
               "name": "Sandbag Lunges",
               "sets": 1,
-              "reps": 100,
-              "hint": "100m / 20kg nach 1km Lauf"
-            },
-            {
-              "name": "Wall Balls",
-              "sets": 1,
-              "reps": 100,
-              "hint": "100 Reps / 6kg / 3m Ziel nach 1km Lauf"
+              "reps": 50,
+              "hint": "Runde 4: 50m – 20kg"
             }
           ]
         },
@@ -9949,11 +10366,11 @@
         {
           "day": "thursday",
           "type": "run",
-          "title": "Intervalle schnell",
-          "durationMin": 90,
-          "zone": "ETL/Max 12,4+ km/h",
-          "pace": "≈12,6 km/h – Ziel 4:45 min/km",
-          "notes": "8×1 km, Ziel 4:45 min/km. 90s Pause."
+          "title": "ETL-Intervalle kurz",
+          "durationMin": 55,
+          "zone": "ETL 161–165 bpm",
+          "pace": "ETL 12,6–13,3 km/h (≈4:30–4:45 min/km) · 161–165 bpm",
+          "notes": "4x1 km im ETL, 90 s Trabpause. Ziel 4:35–4:45 min/km. Weniger Umfang, gleiche Intensität. HRV Gelb: Umfang −30 %, Tempo eine Zone runter. HRV Rot: nur 30 Min locker oder Pause."
         },
         {
           "day": "thursday",
@@ -10032,16 +10449,16 @@
         {
           "day": "saturday",
           "type": "strength",
-          "title": "Race Simulation",
-          "durationMin": 75,
-          "zone": "Wettkampftempo",
-          "notes": "Volle Simulation. Frankfurt-Zielpace (Sub 1:21). Zeit messen.",
+          "title": "Halbsimulation (Teil 1) – Generalprobe",
+          "durationMin": 60,
+          "zone": "Frankfurt-Pace",
+          "notes": "Aufwärmen 10 Min + 2 Steigerungen. 4× (1 km Lauf + Station) in Frankfurt-Pace, Stationen 1–4 mit Wettkampfgewicht. Generalprobe: Rennkleidung, Schuhe, Verpflegung wie am Renntag testen. HRV Gelb: Umfang −30 %, Tempo eine Zone runter. HRV Rot: nur 30 Min locker oder Pause.",
           "exercises": [
             {
               "name": "SkiErg",
               "sets": 1,
               "reps": 1000,
-              "hint": "1.000m nach 1km Lauf"
+              "hint": "1.000m nach 1km Lauf – ≈1:55–2:00/500m"
             },
             {
               "name": "Sled Push",
@@ -10059,31 +10476,7 @@
               "name": "Burpee Broad Jump",
               "sets": 1,
               "reps": 80,
-              "hint": "80m nach 1km Lauf"
-            },
-            {
-              "name": "RowErg",
-              "sets": 1,
-              "reps": 1000,
-              "hint": "1.000m nach 1km Lauf"
-            },
-            {
-              "name": "Farmer's Carry",
-              "sets": 1,
-              "reps": 200,
-              "hint": "200m / 2×24kg nach 1km Lauf"
-            },
-            {
-              "name": "Sandbag Lunges",
-              "sets": 1,
-              "reps": 100,
-              "hint": "100m / 20kg nach 1km Lauf"
-            },
-            {
-              "name": "Wall Balls",
-              "sets": 1,
-              "reps": 100,
-              "hint": "100 Reps / 6kg / 3m Ziel nach 1km Lauf"
+              "hint": "80m nach 1km Lauf – gleichmäßiger Rhythmus"
             }
           ]
         },
@@ -10123,10 +10516,11 @@
         {
           "day": "sunday",
           "type": "run",
-          "title": "Langer Lauf TDL/ETL",
-          "durationMin": 75,
-          "zone": "159-165 bpm",
-          "notes": "TDL/ETL-Mix, gleichmäßig."
+          "title": "Langer Lauf LDL/MDL",
+          "durationMin": 70,
+          "zone": "<137 → 145–155 bpm",
+          "notes": "50 Min: 40 Min LDL <137 bpm, 10 Min MDL 145–155 bpm.",
+          "pace": "LDL ≈7,5–8,4 km/h (≈7:10–8:00 min/km) – HF <137 bpm hat Vorrang"
         },
         {
           "day": "sunday",
@@ -10169,17 +10563,17 @@
       "startDate": "2026-12-06",
       "rpeTarget": {
         "min": 600,
-        "max": 1000
+        "max": 900
       },
       "sessions": [
         {
           "day": "monday",
           "type": "run",
           "title": "HIIT kurz",
-          "durationMin": 50,
-          "zone": "Max >165 bpm",
-          "pace": "≈13,5–14,5 km/h (≈4:08–4:27 min/km) – HF-gesteuert",
-          "notes": "Letzte Schärfung: 3×4 Min >165 bpm, 3 Min Pause.",
+          "durationMin": 45,
+          "zone": "163–168 bpm",
+          "pace": "≈13,0–13,8 km/h (≈4:21–4:37 min/km) – HF-gesteuert",
+          "notes": "HIIT: 3×4 Min bei 163–168 bpm, 3 Min Trabpause. Letzte Schärfung – danach nichts Hartes mehr. HRV Gelb: Umfang −30 %, Tempo eine Zone runter. HRV Rot: nur 30 Min locker oder Pause.",
           "intervals": {
             "rounds": 3,
             "workSec": 240,
@@ -10224,26 +10618,26 @@
           "type": "strength",
           "title": "Stationen leicht",
           "durationMin": 40,
-          "zone": "leicht",
-          "notes": "2-3 Stationen Technik, kein Max.",
+          "zone": "Renntempo, volle Pausen",
+          "notes": "Aufwärmen 10 Min. 2 Runden, je Übung im Renntempo aber kurz, 2–3 Min Pause. Kein Max, keine Ermüdung.",
           "exercises": [
             {
-              "name": "SkiErg Technik",
+              "name": "SkiErg",
               "sets": 2,
               "reps": 500,
-              "hint": "locker"
+              "hint": "500m im Renntempo ≈1:55–2:00/500m"
             },
             {
-              "name": "Burpee Broad Jump",
+              "name": "Sled Push",
               "sets": 2,
-              "reps": 8,
-              "hint": "locker"
+              "reps": 25,
+              "hint": "25m – 102kg"
             },
             {
-              "name": "Sandbag Lunges Technik",
+              "name": "Wall Balls",
               "sets": 2,
-              "reps": 10,
-              "hint": "10m locker"
+              "reps": 20,
+              "hint": "6kg, zügig"
             }
           ]
         },
@@ -10286,7 +10680,8 @@
           "title": "Aktivierungslauf",
           "durationMin": 30,
           "zone": "locker",
-          "notes": "20 Min einlaufen + 3×200m Strides."
+          "notes": "10 Min locker, dann 3x200m Steigerungen bis Frankfurt-Pace+ (volle Erholung).",
+          "pace": "LDL ≈7,5–8,4 km/h (≈7:10–8:00 min/km) – HF <137 bpm hat Vorrang"
         },
         {
           "day": "wednesday",
@@ -10327,7 +10722,7 @@
           "title": "Pause",
           "durationMin": 0,
           "zone": null,
-          "notes": "Pause / Mobilität"
+          "notes": "Frei. Mobility-Flow, früh schlafen."
         },
         {
           "day": "thursday",
@@ -10368,7 +10763,7 @@
           "title": "Ruhetag",
           "durationMin": 0,
           "zone": null,
-          "notes": "Ruhetag"
+          "notes": "Frei. Ab heute kohlenhydratbetont essen, viel trinken. Tasche packen: Schuhe, Handschuhe, Gel/Riegel, Getränk, Pulsgurt."
         },
         {
           "day": "friday",
@@ -10406,28 +10801,22 @@
         {
           "day": "saturday",
           "type": "strength",
-          "title": "Kurze Simulation",
-          "durationMin": 30,
-          "zone": "Wettkampftempo",
-          "notes": "2-3 Stationen, Wettkampfgefühl aktivieren.",
+          "title": "Pre-Race Aktivierung",
+          "durationMin": 20,
+          "zone": "sehr leicht",
+          "notes": "Tag vor dem Rennen: 10 Min locker traben + 3×1 Min in Frankfurt-Pace, dann 10 Wall Balls und 5 Burpee Broad Jumps. Nur wach machen – danach Beine hoch. Anreise / Ausrüstung / Schlaf ≥8 h.",
           "exercises": [
             {
-              "name": "SkiErg",
+              "name": "Wall Balls",
               "sets": 1,
-              "reps": 500,
-              "hint": "Wettkampftempo"
+              "reps": 10,
+              "hint": "6kg, locker"
             },
             {
               "name": "Burpee Broad Jump",
               "sets": 1,
-              "reps": 20,
-              "hint": "Wettkampftempo"
-            },
-            {
-              "name": "Sandbag Lunges",
-              "sets": 1,
-              "reps": 25,
-              "hint": "25m Wettkampftempo"
+              "reps": 5,
+              "hint": "locker"
             }
           ]
         },
@@ -10469,8 +10858,9 @@
           "type": "run",
           "title": "MDL locker",
           "durationMin": 45,
-          "zone": "138-158 bpm",
-          "notes": "Beine frisch halten – MDL locker."
+          "zone": "138–150 bpm",
+          "notes": "25 Min MDL untere Hälfte. Beine frisch halten.",
+          "pace": "MDL ≈9,5–11,0 km/h (≈5:25–6:20 min/km) – HF 138–155 bpm hat Vorrang"
         },
         {
           "day": "sunday",
@@ -10512,17 +10902,18 @@
       "phase": "race2",
       "startDate": "2026-12-13",
       "rpeTarget": {
-        "min": 0,
-        "max": 0
+        "min": 200,
+        "max": 400
       },
       "sessions": [
         {
           "day": "monday",
           "type": "run",
-          "title": "Einlaufen + Strides",
+          "title": "Aktive Erholung (optional)",
           "durationMin": 30,
-          "zone": "locker",
-          "notes": "20 Min einlaufen + 3×200m Strides."
+          "zone": "<130 bpm",
+          "notes": "Tag nach dem Rennen: 20–30 Min spazieren oder sehr locker traben. Kein Muss.",
+          "pace": "LDL ≈7,5–8,4 km/h (≈7:10–8:00 min/km) – HF <137 bpm hat Vorrang"
         },
         {
           "day": "monday",
@@ -10560,22 +10951,22 @@
         {
           "day": "tuesday",
           "type": "strength",
-          "title": "Aktivierung leicht",
+          "title": "Mobility & Core leicht",
           "durationMin": 25,
-          "zone": "leicht",
-          "notes": "2 Stationen sehr kurz + Core.",
+          "zone": "sehr leicht",
+          "notes": "Nur Beweglichkeit und leichter Rumpf. Rennanalyse Frankfurt notieren.",
           "exercises": [
             {
-              "name": "Burpee",
+              "name": "Dead Bug",
               "sets": 2,
-              "reps": 5,
-              "hint": "locker"
+              "reps": 10,
+              "hint": "je Seite"
             },
             {
-              "name": "Plank",
+              "name": "Side Plank",
               "sets": 2,
               "reps": 30,
-              "hint": "30s"
+              "hint": "30s je Seite"
             }
           ]
         },
@@ -10618,7 +11009,7 @@
           "title": "Pause",
           "durationMin": 0,
           "zone": null,
-          "notes": "Spaziergang / Beine hoch"
+          "notes": "Spaziergang / Beine hoch."
         },
         {
           "day": "wednesday",
@@ -10656,10 +11047,11 @@
         {
           "day": "thursday",
           "type": "run",
-          "title": "15 Min sehr locker",
-          "durationMin": 20,
+          "title": "LDL locker",
+          "durationMin": 30,
           "zone": "<137 bpm",
-          "notes": "Sehr locker, Beine locker halten."
+          "notes": "Nur bei HRV Grün: 30 Min locker <137 bpm, sonst Pause.",
+          "pace": "LDL ≈7,5–8,4 km/h (≈7:10–8:00 min/km) – HF <137 bpm hat Vorrang"
         },
         {
           "day": "thursday",
@@ -10700,7 +11092,7 @@
           "title": "Pause",
           "durationMin": 0,
           "zone": null,
-          "notes": "Beine hoch / Schlaf maximieren"
+          "notes": "Frei."
         },
         {
           "day": "friday",
@@ -10738,10 +11130,10 @@
         {
           "day": "saturday",
           "type": "rest",
-          "title": "Pause",
+          "title": "Saisonabschluss",
           "durationMin": 0,
           "zone": null,
-          "notes": "Anreise Frankfurt / Verpflegung / Ausrüstung"
+          "notes": "Saison geschafft. Die nächsten 1–2 Wochen nur Training nach Lust und Laune, dann Planung 2027."
         },
         {
           "day": "saturday",
@@ -10782,7 +11174,7 @@
           "title": "WETTKAMPF: Hyrox Frankfurt · Ziel Sub 1:21",
           "durationMin": 75,
           "zone": "Wettkampf",
-          "notes": "Ziel Sub 1:21. Finale Pacing-Vorgabe wird nach Karlsruhe-Auswertung und Build 2 festgelegt."
+          "notes": "Ziel Sub 1:21. Richtwert: Läufe 5:15–5:25 min/km (Lauf 1 bewusst ruhig), Stationen im Rhythmus aus der Vollsimulation (Woche 26). Finale Pacing-Vorgabe nach Karlsruhe-Analyse + Simulationszeiten anpassen. 30 Min vorher einlaufen inkl. 3 Steigerungen."
         },
         {
           "day": "sunday",
